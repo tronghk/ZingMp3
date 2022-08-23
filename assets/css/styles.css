@@ -213,6 +213,10 @@ img{
 .cart_use-sub-actions .cart_use_timeRun-bar{
     
 }
+.sub_runTimeCart{
+    width: 0%;
+    background-color: white;
+}
 .cart_use_duration-bar{
     position: relative;
     margin: 8px 20px;
@@ -220,7 +224,7 @@ img{
    height: 3px;
    border-radius: 4px;
    padding: 0 10px;
-   background: linear-gradient(to right, #fff 0%, #fff 4.50978%, hsla(0,0%,100%,0.3) 4.50978%, hsla(0,0%,100%,0.3) 100%);
+   background-color: hsla(0,0%,100%,0.1);
 }
 .cart_use_timeRun-bar{
     border-radius: 4px;

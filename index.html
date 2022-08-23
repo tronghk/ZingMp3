@@ -42,7 +42,7 @@
                                 <button class="cart_use_action-button">
                                     <i   class="fa-solid fa-backward-step"></i>
                                 </button>
-                                <button class="cart_use_action-button button_play">
+                                <button onclick="play_cart()" class="cart_use_action-button button_play">
                                     <i class="fa-solid fa-play "></i>
                                 </button>
                                 <button class="cart_use_action-button">
@@ -58,10 +58,10 @@
                                 <div class="cart_use-sub-left">
                                     <span>00:00</span>
                                 </div>
-                                <div class="cart_use_duration-bar">
-                                    <div class="cart_use_timeRun-bar"></div>
+                                <div class="cart_use_duration-bar runTimeCart">
+                                    <div class="cart_use_timeRun-bar sub_runTimeCart"></div>
                                 </div>
-                                <div class="cart_use-sub-right"><span> 5:00</span></div>
+                                <div class="cart_use-sub-right"><span> 5:21</span></div>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
 
                     <div class="cart_use_icon-level-button "><button>
                     <span class="player_right-jamb"></span>
-                        <i class="fa-solid fa-list-music"></i>
+                        <i class="fa-solid fa-list-music" style="background: none;"></i>
                     </button>
                 </div>
                 </div>
@@ -234,7 +234,7 @@
        
      </div>
 </body>
-    <script language="javascript" >
+    <script language="javascript">
         //sự kiện trái tim
         var heart_icon = document.querySelector('i.fa-heart');
         let boolean_heart = 0;
@@ -256,7 +256,7 @@
             }  
         }
 
-        // sự kiện bài hát ngẫu nhiên chưa biết làm :))))
+        // sự kiện bài hát đã làm và chưa xử lý ngẫu nhiên
             const btn_action =document.querySelectorAll('.cart_use-actions i');
             var arr = new Map();
             function arr_runArrMaxLength(length){
@@ -278,6 +278,47 @@
                         arr.set(index,0);
                     }
             }
+
+        // sự kiện click play thì chạy thời lượng
+         const subCrossbar_timePlay = document.querySelector('.sub_runTimeCart');
+         const crossbar_timePlay = document.querySelector('.runTimeCart');
+            function crossbar_playMusic(value){
+                var maxTimeCart = document.querySelector('.cart_use-sub-right span').innerHTML;
+                const arr_time = maxTimeCart.split(":");
+                let sum_time = 0;
+                for(var i = 0;i<arr_time.length;i++){
+                    const temp = new Number(arr_time[i]);
+                    if(i+1 != arr_time.length)
+                        sum_time = sum_time + temp*60;
+                    else
+                        sum_time = sum_time+temp;
+                }
+                return sum_time/1000;
+            }
+            function play_cart(){
+               let width_crossbar1s =  crossbar_playMusic(10);
+               let width_subCrossbarPause  = getComputedStyle(subCrossbar_timePlay).width;
+               let with_crossbar = getComputedStyle(crossbar_timePlay).width;
+               width_subCrossbarPause = parseFloat(width_subCrossbarPause.replace(".px", ""));
+               with_crossbar = parseFloat(with_crossbar.replace(".px",""));
+               let widthPxCrossbar = with_crossbar/100/width_crossbar1s/10;
+                run_crossbar(widthPxCrossbar, width_subCrossbarPause,with_crossbar);
+            }
+            function run_crossbar(width1S, widthPause, maxWidth){       
+                setInterval(function() {
+                    let temp = 0+ ""+ getComputedStyle(subCrossbar_timePlay).width;
+                            temp = parseFloat(temp.replace(".px",""));
+                            temp = temp + width1S;
+
+                            if(temp > maxWidth)
+                            clearInterval();
+
+                            temp = temp + "px";
+                            subCrossbar_timePlay.style.width = temp;   
+                }, 1000);
+            }
+
+
         
     </script>
 </html>
