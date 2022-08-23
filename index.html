@@ -15,13 +15,14 @@
                 <div class="cart_use_info"> 
                         <img class="cart_use_img" src="./assets/fonts/img/LeBaoBinh.jpg" alt="Bài hát đang nghe">
                         <div class="cart_use_name">
-                            <p class="cart_use_name_Music">Cuộc vui cô đơn</p>
-                            <p class="cart_use_name_singer">Lê Bảo Bình</p>      
+                           <a href=""> <p class="cart_use_name_Music">Cuộc vui cô đơn</p> </a>
+                           <a href=""><p class="cart_use_name_singer">Lê Bảo Bình</p>    </a>   
                         </div>
                         <div class="cart_use_icon">
                             <div class="cart_use_icon-level-button">
                                 <button>
-                                    <i class="fa-solid fa-heart"></i>
+                                    
+                                    <i onclick="display_color()" class="fa-solid fa-heart"></i>
                                 </button>
                             </div>
                             <div class="cart_use_icon-level-button">
@@ -34,21 +35,21 @@
                 <div class="cart_use_between">
                     <div>
                         <div class="cart_use_between-level-item">
-                            <div class="cart_use-actions">
+                            <div  class="cart_use-actions">
                                 <button class="cart_use_action-button">
-                                    <i class="fa-solid fa-shuffle"></i>
+                                    <i onclick="change_color_action(0)" class="fa-solid fa-shuffle"></i>
                                 </button>
                                 <button class="cart_use_action-button">
-                                    <i class="fa-solid fa-backward-step"></i>
+                                    <i   class="fa-solid fa-backward-step"></i>
                                 </button>
                                 <button class="cart_use_action-button button_play">
-                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-play "></i>
                                 </button>
                                 <button class="cart_use_action-button">
                                     <i class="fa-solid fa-forward-step"></i>
                                 </button>
                                 <button class="cart_use_action-button">
-                                    <i class="fa-solid fa-repeat"></i>
+                                    <i onclick="change_color_action(4)"  class="fa-solid fa-repeat"></i>
                                 </button>
                             </div>
                         </div>
@@ -69,7 +70,7 @@
 
                 <div class="cart_use-player-right">
                     <div class="cart_use_icon-level-button"><button>
-                            <img src="./assets/fonts/img/Screenshot (19).png" alt="Mv">
+                        <i class="fa-solid fa-clapperboard"></i>
                         </button>
                     </div>
 
@@ -233,4 +234,50 @@
        
      </div>
 </body>
+    <script language="javascript" >
+        //sự kiện trái tim
+        var heart_icon = document.querySelector('i.fa-heart');
+        let boolean_heart = 0;
+        
+        function display_color(){
+            if(!Boolean(boolean_heart)){
+                Object.assign(heart_icon.style,{
+                    color: '#c662ef',
+                    fontWeight: '1000',
+                } );
+                boolean_heart = 1;
+            }
+            else{
+                Object.assign(heart_icon.style,{
+                    color: '#fff',
+                    fontWeight: '500',
+                } );
+                boolean_heart = 0;
+            }  
+        }
+
+        // sự kiện bài hát ngẫu nhiên chưa biết làm :))))
+            const btn_action =document.querySelectorAll('.cart_use-actions i');
+            var arr = new Map();
+            function arr_runArrMaxLength(length){
+                for(var i = 0;i<length;i++)
+                    {
+                        arr.set(i,0);
+                    }
+                    return arr;
+            }
+            arr_runArrMaxLength(btn_action.length);
+            function change_color_action(index){
+                    var value = arr.get(index);
+                    if(value == 0){
+                        btn_action[index].style.color = 'red';
+                        arr.set(index, 1);
+                    }
+                    else{
+                        btn_action[index].style.color = '#fff';
+                        arr.set(index,0);
+                    }
+            }
+        
+    </script>
 </html>

@@ -12,7 +12,7 @@ span {
 }
 :root{
     --primary-bg: #432275;
-    --layout-bg: #37075d;;
+    --layout-bg: #37075d;
     --sidebar-popup-bg: #2a213a;
     --alpha-layout-bg: rgba(41,21,71,0.8);
     --queue-player-popup-bg: #120822;
@@ -36,16 +36,20 @@ button{
     border: none;
 }
 .main{
-    
+    display: flex;
 }
 i{
+    cursor: pointer;
     font-size: 1.6rem;
     padding: 0 2px;
     margin: 0 10px;
     color: #fff;
-    font-style: italic;
-
-    
+    border: none;
+    padding: 0;
+    background: none;
+}
+button{
+    cursor: pointer;
 }
 img{
     max-width: 100px;
@@ -58,6 +62,7 @@ img{
     justify-content: space-around;
     bottom: 0;
     z-index: 1;
+    cursor: pointer;
 }
 
 
@@ -67,14 +72,26 @@ img{
     justify-content: space-around;
 
 }
-.cart_use_info .cart_use_icon-level-button button{
-    margin-top: 4px;
+.cart_use-player-right i{
+    margin: 0 4px;
 }
 
 .cart_use_icon-level-button button i{
     font-size: 1.6rem;
     font-weight: 400;
-    padding: 5px;
+    padding: 8px 8px 6px 7px;
+    border: 1px solid var(--player-bg);
+    border-radius: 50%;
+    
+}
+.cart_use_icon-level-button button i:hover{
+    border-color: #ccc;
+    background-color: hsla(0,0%,100%,.1);
+    
+
+}
+.container i{
+    max-width: 20px;
 }
 .cart_use_icon{
     display: flex;
@@ -96,7 +113,7 @@ img{
 .cart_use_name{
     
 }
-.cart_use_name >p, .cart_use_icon {
+.cart_use_name p, .cart_use_icon {
     position: relative;
     top: 25%;
    text-align:left;
@@ -116,7 +133,7 @@ img{
 }
 
 .cart_use_info .cart_use_icon-level-button i {
-    margin-right: 4px !important;
+    margin-right: -10px !important;
 
 }
 .cart_use_between{
@@ -143,6 +160,13 @@ img{
 .cart_use-actions button:first-child{
     margin-left: 12rem;
 }
+.cart_use_action-button{
+    border: 1px solid var(--player-bg);
+    border-radius: 50%;
+    padding: 4px 6px;
+    margin: 0 7px;
+    line-height: 50%;
+}
 .cart_use-actions button:last-child{
     margin-right: 12rem;
 }
@@ -152,10 +176,14 @@ img{
 .cart_use-actions .cart_use_action-button i{
     color: #fff;
     font-weight: 600;
+    margin: 0;
+    min-width: 26px;
 }
-.cart_use_action-button{
-    margin: 0 7px;
-    line-height: 50%;
+.fa-play{
+    margin: 2px 8px !important;
+}
+.cart_use_action-button:hover{
+    border-color: #ccc;
 }
 .cart_use-sub-actions{
     display: flex;
@@ -168,6 +196,12 @@ img{
     padding: 4px 0px;
     border-radius: 50%;
     border: 2px solid #fff;
+}
+.button_play:hover{
+    border-color: var(--purple-primary) ;
+}
+.button_play:hover i{
+    color: var(--purple-primary);
 }
 .cart_use-sub-actions span{
     color: white;
@@ -253,6 +287,7 @@ img{
     flex: 5;
 }
 .app{
+    width: 100%;
     display: flex;
     position: relative;
 }
@@ -303,6 +338,9 @@ img{
     font-size: 2rem;
     font-weight: 600;
     color:#fff;
+    border: none;
+    padding: 0;
+    background: none;
 }
 .navMenu-item span{
     font-size: 1.3rem;
@@ -344,4 +382,9 @@ img{
     border-radius: 50px;
     color: #fff;
     font-weight: lighter;
+}
+.cart_use_name_singer:hover{
+    text-decoration: dashed;
+    color: green;
+
 }
