@@ -40,16 +40,17 @@
                                     <i onclick="change_color_action(0)" class="fa-solid fa-shuffle"></i>
                                 </button>
                                 <button class="cart_use_action-button">
-                                    <i   class="fa-solid fa-backward-step"></i>
+                                    <i   class="fa-solid fa-backward-step action_button-active"></i>
                                 </button>
-                                <button onclick="play_cart()" class="cart_use_action-button button_play">
-                                    <i class="fa-solid fa-play "></i>
-                                </button>
-                                <button class="cart_use_action-button">
-                                    <i class="fa-solid fa-forward-step"></i>
+                                <button onclick="change_playOrPause(this)" class="cart_use_action-button button_play">
+                                    <i class="action_icon-play fa-solid fa-play "></i>
+                                    <i class="fa-solid fa-pause"></i>
                                 </button>
                                 <button class="cart_use_action-button">
-                                    <i onclick="change_color_action(4)"  class="fa-solid fa-repeat"></i>
+                                    <i class="fa-solid fa-forward-step  action_button-active"></i>
+                                </button>
+                                <button class="cart_use_action-button">
+                                    <i onclick="change_color_action(5)"  class="fa-solid fa-repeat"></i>
                                 </button>
                             </div>
                         </div>
@@ -60,8 +61,9 @@
                                 </div>
                                 <div class="cart_use_duration-bar runTimeCart">
                                     <div class="cart_use_timeRun-bar sub_runTimeCart"></div>
+                                    <div class="cart_use_timeRun-bar sub_runTimeCart time_hover"></div>
                                 </div>
-                                <div class="cart_use-sub-right"><span> 5:21</span></div>
+                                <div class="cart_use-sub-right"><span> 00:10</span></div>
                             </div>
                         </div>
                     </div>
@@ -267,6 +269,7 @@
                     return arr;
             }
             arr_runArrMaxLength(btn_action.length);
+            
             function change_color_action(index){
                     var value = arr.get(index);
                     if(value == 0){
@@ -280,9 +283,12 @@
             }
 
         // sự kiện click play thì chạy thời lượng
+         var bool_buttonPlay = 0;
          const subCrossbar_timePlay = document.querySelector('.sub_runTimeCart');
          const crossbar_timePlay = document.querySelector('.runTimeCart');
-            function crossbar_playMusic(value){
+
+         //thời gian chạy 1s
+            function crossbar_playMusic(){
                 var maxTimeCart = document.querySelector('.cart_use-sub-right span').innerHTML;
                 const arr_time = maxTimeCart.split(":");
                 let sum_time = 0;
@@ -295,8 +301,33 @@
                 }
                 return sum_time/1000;
             }
+            //lấy các phần tử cần dùng
+            var run_cr = 0;
+            function change_playOrPause(e){
+                const children_btn = e.children;
+                for(var i = 0;i<children_btn.length;i++){
+                    var displayIcon = ""+getComputedStyle(children_btn[i]).display;
+                    if(displayIcon.endsWith("none")){
+                        displayIcon = "block";   
+                    }else{
+                        displayIcon = "none";
+                    }
+                    children_btn[i].style.display = displayIcon;
+                }
+                change_play();
+            }
+            function change_play(){
+                const classPlay = document.querySelector('.action_icon-play');
+                const displayclassPlay = classPlay.style.display;
+                if(displayclassPlay.endsWith("none"))
+                    play_cart();
+                else
+                    pause_cart();
+            }
+
             function play_cart(){
-               let width_crossbar1s =  crossbar_playMusic(10);
+                
+               let width_crossbar1s =  crossbar_playMusic();
                let width_subCrossbarPause  = getComputedStyle(subCrossbar_timePlay).width;
                let with_crossbar = getComputedStyle(crossbar_timePlay).width;
                width_subCrossbarPause = parseFloat(width_subCrossbarPause.replace(".px", ""));
@@ -304,20 +335,87 @@
                let widthPxCrossbar = with_crossbar/100/width_crossbar1s/10;
                 run_crossbar(widthPxCrossbar, width_subCrossbarPause,with_crossbar);
             }
-            function run_crossbar(width1S, widthPause, maxWidth){       
-                setInterval(function() {
-                    let temp = 0+ ""+ getComputedStyle(subCrossbar_timePlay).width;
+            // stop crossbar 
+            function pause_cart(){
+                stopCrossbar();
+            }
+            //restart cart crossbar
+            function restartCartCrossbar(){
+                document.querySelector(".cart_use-sub-left span").innerHTML = "00" + ":"+ "00";
+                subCrossbar_timePlay.style.width = '0%';
+            }
+            // thực hiện chạy crossbar
+            var evStop = document.querySelector('.button_play');
+            function run_crossbar(width1S, widthPause, maxWidth){  
+                //stop when full time
+                
+                if(widthPause+width1S >= maxWidth){
+                    restartCartCrossbar();
+                    play_cart();
+                    return;  
+
+                }
+                      
+               run_cr = setInterval(function() {
+                            let temp = 0+ ""+ getComputedStyle(subCrossbar_timePlay).width;
                             temp = parseFloat(temp.replace(".px",""));
                             temp = temp + width1S;
-
-                            if(temp > maxWidth)
-                            clearInterval();
+                            if(temp+width1S > maxWidth){
+                                change_playOrPause(evStop);
+                                stopCrossbar();
+                            }
 
                             temp = temp + "px";
                             subCrossbar_timePlay.style.width = temp;   
-                }, 1000);
+                            runTimeLeft();
+                            subCrossbar_Hover(width1S,maxWidth);
+                }, 1000, 'false');
             }
 
+            //crossbar Hover
+            function subCrossbar_Hover(width1S, maxWidth){
+                var crossbarHover = document.querySelector('.time_hover');
+                var marginCrossbar = getComputedStyle(crossbarHover).margin
+                marginCrossbar = parseFloat(marginCrossbar.replace(".px",""));
+                marginCrossbar = marginCrossbar + width1S;
+                marginCrossbar = marginCrossbar + "px";
+                crossbarHover.style.marginLeft = marginCrossbar;
+            }
+
+            //fc stop
+            function stopCrossbar() {
+            clearInterval(run_cr);
+            }
+
+            // create method runtime
+            function runTimeStartLeft(){
+                var timeStart = document.querySelector(".cart_use-sub-left span").innerHTML;
+                const arr_time = timeStart.split(":");
+                let sum_time = 0;
+                for(var i = 0;i<arr_time.length;i++){
+                    const temp = new Number(arr_time[i]);
+                    if(i+1 != arr_time.length)
+                        sum_time = sum_time + temp*60;
+                    else
+                        sum_time = sum_time+temp;
+                }
+                return sum_time;
+            }
+            function runTimeLeft(){
+                var timeStart = runTimeStartLeft();
+                timeStart = timeStart+1;
+                
+                var timeMinutes = parseInt(timeStart/60+"");
+                var timeSecond = parseInt(timeStart%60 +"");
+                if(timeMinutes <10)
+                timeMinutes = "0" + timeMinutes;
+
+                if(timeSecond < 10)
+                timeSecond = "0" +timeSecond;
+
+                document.querySelector(".cart_use-sub-left span").innerHTML = timeMinutes + ":"+timeSecond;
+
+            }
 
         
     </script>

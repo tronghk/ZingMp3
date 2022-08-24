@@ -179,11 +179,14 @@ img{
     margin: 0;
     min-width: 26px;
 }
-.fa-play{
+.fa-play,  .fa-pause{
     margin: 2px 8px !important;
 }
 .cart_use_action-button:hover{
     border-color: #ccc;
+}
+ .cart_use_action-button .action_button-active:active{
+    color: red ;
 }
 .cart_use-sub-actions{
     display: flex;
@@ -196,6 +199,18 @@ img{
     padding: 4px 0px;
     border-radius: 50%;
     border: 2px solid #fff;
+}
+.cart_use-sub-actions .sub_runTimeCart:hover, .time_hover:hover{
+    top: -1.5px;
+    padding: 3px 0;
+}
+.cart_use-sub-actions .runTimeCart .time_hover{
+    display: none;
+    width: 100% ;
+}
+.cart_use-sub-actions .runTimeCart:hover .time_hover{
+    display: block;
+    background-color: red;
 }
 .button_play:hover{
     border-color: var(--purple-primary) ;
@@ -216,6 +231,9 @@ img{
 .sub_runTimeCart{
     width: 0%;
     background-color: white;
+}
+.cart_use-actions .button_play .fa-pause{
+    display: none;
 }
 .cart_use_duration-bar{
     position: relative;
