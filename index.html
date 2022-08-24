@@ -61,8 +61,7 @@
                                     <span>00:00</span>
                                 </div>
                                 <div class="cart_use_duration-bar runTimeCart">
-                                    <div class="cart_use_timeRun-bar sub_runTimeCart"></div>
-                                    <div class="cart_use_timeRun-bar sub_runTimeCart time_hover"></div>
+                                    <input type="range" max="100" value="0" min="0" step="1" class="cart_use_timeRun-bar sub_runTimeCart"></input>
                                 </div>
                                 <div class="cart_use-sub-right"><span> 00:10</span></div>
                             </div>
@@ -282,149 +281,95 @@
                         arr.set(index,0);
                     }
             }
+            // chạy thanh crossbar
+            var input_SubtimeCart = document.querySelector('.cart_use_duration-bar .sub_runTimeCart');
+            var span_MaxTimeCart = document.querySelector('.cart_use-sub-right span');
+            var icon_play = document.querySelector('.fa-play');
+            var playCart_Interval = 0;
+            var span_timeStartCart = document.querySelector('.cart_use-sub-left span');
+            var div_timeAction = document.querySelector('.cart_use-sub-actions .runTimeCart');
 
-        // sự kiện click play thì chạy thời lượng
-         var bool_buttonPlay = 0;
-         const subCrossbar_timePlay = document.querySelector('.sub_runTimeCart');
-         const crossbar_timePlay = document.querySelector('.runTimeCart');
-
-         //thời gian chạy 1s
-            function crossbar_playMusic(){
-                var maxTimeCart = document.querySelector('.cart_use-sub-right span').innerHTML;
-                const arr_time = maxTimeCart.split(":");
-                let sum_time = 0;
-                for(var i = 0;i<arr_time.length;i++){
-                    const temp = new Number(arr_time[i]);
-                    if(i+1 != arr_time.length)
-                        sum_time = sum_time + temp*60;
-                    else
-                        sum_time = sum_time+temp;
-                }
-                return sum_time/1000;
+            maxValueInput();
+            //quy đổi thời lượng sang giây
+            function maxTimeCart(time){
+                time = time.split(":");
+                var sum = parseInt(time[0]) + parseInt(time[1]);
+                return sum;
             }
-            //lấy các phần tử cần dùng
-            var run_cr = 0;
+            //trả về maxValue input range
+            function maxValueInput(){
+                let sumTime = maxTimeCart(span_MaxTimeCart.innerHTML);
+                input_SubtimeCart.attributes.max.value= ""+sumTime;
+            }
+            // chơi nhạc hay dừng
             function change_playOrPause(e){
-                const children_btn = e.children;
-                for(var i = 0;i<children_btn.length;i++){
-                    var displayIcon = ""+getComputedStyle(children_btn[i]).display;
-                    if(displayIcon.endsWith("none")){
-                        displayIcon = "block";   
+                var children = e.children;
+               for(var i =0;i<children.length;i++){
+                
+                    if(getComputedStyle(children[i]).display.endsWith("none")){
+                        children[i].style.display = 'block';
                     }else{
-                        displayIcon = "none";
+                        children[i].style.display = 'none';
                     }
-                    children_btn[i].style.display = displayIcon;
-                }
-                change_play();
+               }
+               playOrPause();
             }
-            function change_play(){
-                const classPlay = document.querySelector('.action_icon-play');
-                const displayclassPlay = classPlay.style.display;
-                if(displayclassPlay.endsWith("none"))
+
+            function playOrPause(){
+                if(getComputedStyle(icon_play).display.endsWith("none"))
+                {
                     play_cart();
-                else
-                    pause_cart();
+                }else{
+                    pauseCart();
+                }
             }
 
             function play_cart(){
-                
-               let width_crossbar1s =  crossbar_playMusic();
-               let width_subCrossbarPause  = getComputedStyle(subCrossbar_timePlay).width;
-               let with_crossbar = getComputedStyle(crossbar_timePlay).width;
-               width_subCrossbarPause = parseFloat(width_subCrossbarPause.replace(".px", ""));
-               with_crossbar = parseFloat(with_crossbar.replace(".px",""));
-               let widthPxCrossbar = with_crossbar/100/width_crossbar1s/10;
-                run_crossbar(widthPxCrossbar, width_subCrossbarPause,with_crossbar);
-            }
-            // stop crossbar 
-            function pause_cart(){
-                stopCrossbar();
-            }
-            //restart cart crossbar
-            function restartCartCrossbar(){
-                document.querySelector(".cart_use-sub-left span").innerHTML = "00" + ":"+ "00";
-                subCrossbar_timePlay.style.width = '0%';
-            }
-            // thực hiện chạy crossbar
-            var evStop = document.querySelector('.button_play');
-            function run_crossbar(width1S, widthPause, maxWidth){  
-                //stop when full time
-                
-                if(widthPause+width1S >= maxWidth){
-                    restartCartCrossbar();
-                    play_cart();
-                    crossbarHover.style.width = '100%';
-                    crossbarHover.style.marginLeft = '0px';
-                    return;  
-
+                let valueCart =parseInt(input_SubtimeCart.attributes.value.value);
+                let maxValueCart = parseInt(input_SubtimeCart.attributes.max.value);
+                if(valueCart == maxValueCart){
+                  input_SubtimeCart.attributes.value.value='0';
+                  span_timeStartCart.innerHTML = "00:00";
                 }
-                      
-               run_cr = setInterval(function() {
-                            let temp = 0+ ""+ getComputedStyle(subCrossbar_timePlay).width;
-                            temp = parseFloat(temp.replace(".px",""));
-                            temp = temp + width1S;
-                            if(temp+width1S > maxWidth){
-                                change_playOrPause(evStop);
-                                stopCrossbar();
-                            }
+                playCart_Interval = setInterval(function(){
+                    valueCart = parseInt(input_SubtimeCart.attributes.value.value);
+                    if(   valueCart +1 == maxValueCart){
+                        pauseCart();
+                        change_playOrPause(document.querySelector('.button_play'));
+                    }
+                    valueCart += 1;
+                    input_SubtimeCart.attributes.value.value = ''+valueCart;
+                    runTime(valueCart);
+                },1000,'false');
+            }
+            
+            function stopCartInterval(){
+                clearInterval(playCart_Interval);
+            }
+            
 
-                            temp = temp + "px";
-                            subCrossbar_timePlay.style.width = temp;   
-                            runTimeLeft();
-                            subCrossbar_Hover(width1S,maxWidth);
-                }, 1000, 'false');
+            function pauseCart(){        
+                stopCartInterval(playCart_Interval);
             }
 
-            //crossbar Hover
+            function runTime(valueCart){
+                let minutesTime = parseInt(valueCart/60+"");
+                let secondTime = parseInt(valueCart%60+"");
 
-            var crossbarHover = document.querySelector('.time_hover');
-            function subCrossbar_Hover(width1S, maxWidth){
-                
-                var marginCrossbar = getComputedStyle(crossbarHover).marginLeft;
-                marginCrossbar = parseFloat(marginCrossbar.replace(".px",""));
-                marginCrossbar = marginCrossbar + width1S;
-                var widthDownCross = maxWidth - marginCrossbar;
-
-                marginCrossbar = marginCrossbar + "px";
-                widthDownCross = widthDownCross + "px";
-                crossbarHover.style.marginLeft = marginCrossbar;
-                crossbarHover.style.width = widthDownCross;
+                if(minutesTime <10)
+                     minutesTime  = "0" + minutesTime;
+                if(secondTime <10)
+                    secondTime = "0" +secondTime;
+                span_timeStartCart.innerHTML = minutesTime+":"+secondTime;
             }
-
-            //fc stop
-            function stopCrossbar() {
-            clearInterval(run_cr);
+            input_SubtimeCart.onchange = function(){
+                console.log(this.attributes.value.value);
             }
+            div_timeAction.onclick = function(){
+               
+            };
 
-            // create method runtime
-            function runTimeStartLeft(){
-                var timeStart = document.querySelector(".cart_use-sub-left span").innerHTML;
-                const arr_time = timeStart.split(":");
-                let sum_time = 0;
-                for(var i = 0;i<arr_time.length;i++){
-                    const temp = new Number(arr_time[i]);
-                    if(i+1 != arr_time.length)
-                        sum_time = sum_time + temp*60;
-                    else
-                        sum_time = sum_time+temp;
-                }
-                return sum_time;
-            }
-            function runTimeLeft(){
-                var timeStart = runTimeStartLeft();
-                timeStart = timeStart+1;
-                
-                var timeMinutes = parseInt(timeStart/60+"");
-                var timeSecond = parseInt(timeStart%60 +"");
-                if(timeMinutes <10)
-                timeMinutes = "0" + timeMinutes;
-
-                if(timeSecond < 10)
-                timeSecond = "0" +timeSecond;
-                document.querySelector(".cart_use-sub-left span").innerHTML = timeMinutes + ":"+timeSecond;
-
-            }
-
+           
         
     </script>
 </html>

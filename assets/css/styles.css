@@ -208,9 +208,19 @@ img{
     display: none;
     width: 100% ;
 }
+.time_hover::after{
+    position: relative;
+    top: -4px;
+    left: -5.5px;
+    content: "";
+    border: 3px solid #fff;
+    border-radius: 50%;
+    padding: 0 3px;
+    background-color: #fff;
+}
 .cart_use-sub-actions .runTimeCart:hover .time_hover{
     display: block;
-    background-color: red;
+    background-color: #2a213a;
 }
 .button_play:hover{
     border-color: var(--purple-primary) ;
@@ -229,7 +239,7 @@ img{
     
 }
 .sub_runTimeCart{
-    width: 0%;
+    width: 100%;
     background-color: white;
 }
 .cart_use-actions .button_play .fa-pause{
@@ -242,7 +252,7 @@ img{
    height: 3px;
    border-radius: 4px;
    padding: 0 10px;
-   background-color: hsla(0,0%,100%,0.1);
+   background-color: #2a213a;
 }
 .cart_use_timeRun-bar{
     border-radius: 4px;
