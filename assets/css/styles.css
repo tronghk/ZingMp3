@@ -200,7 +200,7 @@ img{
     border-radius: 50%;
     border: 2px solid #fff;
 }
-.cart_use-sub-actions .sub_runTimeCart:hover, .time_hover:hover{
+.runTimeCart:hover .sub_runTimeCart{
     top: -1.5px;
     padding: 3px 0;
 }

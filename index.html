@@ -353,6 +353,8 @@
                 if(widthPause+width1S >= maxWidth){
                     restartCartCrossbar();
                     play_cart();
+                    crossbarHover.style.width = '100%';
+                    crossbarHover.style.marginLeft = '0px';
                     return;  
 
                 }
@@ -374,13 +376,19 @@
             }
 
             //crossbar Hover
+
+            var crossbarHover = document.querySelector('.time_hover');
             function subCrossbar_Hover(width1S, maxWidth){
-                var crossbarHover = document.querySelector('.time_hover');
-                var marginCrossbar = getComputedStyle(crossbarHover).margin
+                
+                var marginCrossbar = getComputedStyle(crossbarHover).marginLeft;
                 marginCrossbar = parseFloat(marginCrossbar.replace(".px",""));
                 marginCrossbar = marginCrossbar + width1S;
+                var widthDownCross = maxWidth - marginCrossbar;
+
                 marginCrossbar = marginCrossbar + "px";
+                widthDownCross = widthDownCross + "px";
                 crossbarHover.style.marginLeft = marginCrossbar;
+                crossbarHover.style.width = widthDownCross;
             }
 
             //fc stop
@@ -413,7 +421,6 @@
 
                 if(timeSecond < 10)
                 timeSecond = "0" +timeSecond;
-
                 document.querySelector(".cart_use-sub-left span").innerHTML = timeMinutes + ":"+timeSecond;
 
             }
