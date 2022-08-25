@@ -38,6 +38,29 @@ button{
 .main{
     display: flex;
 }
+
+#input_run{
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+#input_run::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+}
+#input_run::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #04AA6D;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -5px;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(32,19,53,0.2);
+}
+
+
 i{
     cursor: pointer;
     font-size: 1.6rem;
@@ -203,24 +226,28 @@ img{
 .runTimeCart:hover .sub_runTimeCart{
     top: -1.5px;
     padding: 3px 0;
+
 }
+.runTimeCart:hover .time_hover::before{
+    display: block;
+}
+
 .cart_use-sub-actions .runTimeCart .time_hover{
     display: none;
-    width: 100% ;
-}
-.time_hover::after{
-    position: relative;
-    top: -4px;
-    left: -5.5px;
-    content: "";
-    border: 3px solid #fff;
-    border-radius: 50%;
-    padding: 0 3px;
     background-color: #fff;
+    
+    width: 0;
 }
-.cart_use-sub-actions .runTimeCart:hover .time_hover{
-    display: block;
-    background-color: #2a213a;
+.time_hover::before{
+    position: relative;
+    top: -7.5px;
+    left: 6px;
+    content: "";
+    border: 7px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    float: right;
+    display: none;
 }
 .button_play:hover{
     border-color: var(--purple-primary) ;
@@ -234,9 +261,6 @@ img{
 .cart_use-sub-left{
     opacity: 0.5;
 
-}
-.cart_use-sub-actions .cart_use_timeRun-bar{
-    
 }
 .sub_runTimeCart{
     width: 100%;
@@ -290,9 +314,6 @@ img{
     max-width: 20%;
     margin-right: 20px;
     margin-left: 0;
-}
-.cart_use-player-right .cart_use_timeRun-bar{
-    background-color: #fff;
 }
 .fa-list-music:before{
     content: "\f0cb";
