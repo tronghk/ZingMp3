@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
-    <link rel="stylesheet" href="./app.js">
     <title>ZingMp3</title>
 </head>
 <body>
@@ -39,17 +38,17 @@
                         <div class="cart_use_between-level-item">
                             <div  class="cart_use-actions">
                                 <button class="cart_use_action-button">
-                                    <i onclick="change_color_action(0)" class="fa-solid fa-shuffle"></i>
+                                    <i onclick="change_color_action(0)" class="randomBtn fa-solid fa-shuffle"></i>
                                 </button>
                                 <button class="cart_use_action-button">
-                                    <i   class="fa-solid fa-backward-step action_button-active"></i>
+                                    <i   class="backBtn fa-solid fa-backward-step action_button-active"></i>
                                 </button>
-                                <button onclick="change_playOrPause(this)" class="cart_use_action-button button_play">
+                                <button class="cart_use_action-button button_play">
                                     <i class="action_icon-play fa-solid fa-play "></i>
                                     <i class="fa-solid fa-pause"></i>
                                 </button>
                                 <button class="cart_use_action-button">
-                                    <i class="fa-solid fa-forward-step  action_button-active"></i>
+                                    <i class="nextBtn fa-solid fa-forward-step  action_button-active"></i>
                                 </button>
                                 <button class="cart_use_action-button">
                                     <i onclick="change_color_action(5)"  class="fa-solid fa-repeat"></i>
@@ -59,14 +58,14 @@
                         <div class="cart_use_betweem-sub-level-item">
                             <div class="cart_use-sub-actions">
                                 <div class="cart_use-sub-left">
-                                    <span>00:00</span>
+                                    <span class="duration">00:00</span>
                                 </div>
                                 <div class="cart_use_duration-bar runTimeCart ">
                                     <input id ="input_run" type="range" max="100" value="0" min="0" step="1" name="range" class="cart_use_timeRun-bar "/>
                                         <audio id="song" src="./assets/fonts/music/CuocVuiCoDon.mp3"></audio>
                                     <div class="cart_use_timeRun-bar sub_runTimeCart  time_hover"></div>
                                 </div>
-                                <div class="cart_use-sub-right"><span> 01:40</span></div>
+                                <div class="cart_use-sub-right"><span class="remaining"> 03:50</span></div>
                             </div>
                         </div>
                     </div>
@@ -238,148 +237,6 @@
          </div>
        
      </div>
+     <script src="./app.js"></script>
 </body>
-    <script language="javascript">
-        //sự kiện trái tim
-        var heart_icon = document.querySelector('i.fa-heart');
-        let boolean_heart = 0;
-        
-        function display_color(){
-            if(!Boolean(boolean_heart)){
-                Object.assign(heart_icon.style,{
-                    color: '#c662ef',
-                    fontWeight: '1000',
-                } );
-                boolean_heart = 1;
-            }
-            else{
-                Object.assign(heart_icon.style,{
-                    color: '#fff',
-                    fontWeight: '500',
-                } );
-                boolean_heart = 0;
-            }  
-        }
-
-        // sự kiện bài hát đã làm và chưa xử lý ngẫu nhiên
-            const btn_action =document.querySelectorAll('.cart_use-actions i');
-            var arr = new Map();
-            function arr_runArrMaxLength(length){
-                for(var i = 0;i<length;i++)
-                    {
-                        arr.set(i,0);
-                    }
-                    return arr;
-            }
-            arr_runArrMaxLength(btn_action.length);
-            
-            function change_color_action(index){
-                    var value = arr.get(index);
-                    if(value == 0){
-                        btn_action[index].style.color = 'red';
-                        arr.set(index, 1);
-                    }
-                    else{
-                        btn_action[index].style.color = '#fff';
-                        arr.set(index,0);
-                    }
-            }
-            // chạy thanh crossbar
-            var input_SubtimeCart = document.querySelector('#input_run');
-            var span_MaxTimeCart = document.querySelector('.cart_use-sub-right span');
-            var icon_play = document.querySelector('.fa-play');
-            var playCart_Interval = 0;
-            var span_timeStartCart = document.querySelector('.cart_use-sub-left span');
-            var div_timeAction = document.querySelector('.cart_use-sub-actions .runTimeCart');
-            var div_timeRight = document.querySelector('.time_hover');
-            var crossbar_timePlay =document.querySelector('.runTimeCart');
-            var song = document.querySelector('#song');
-            // maxValueInput();
-            // //quy đổi thời lượng sang giây
-            // function maxTimeCart(time){
-            //     time = time.split(":");
-            //     var sum = parseInt(time[0])*60 + parseInt(time[1]);
-            //     return sum;
-            // }
-            // //trả về maxValue input range
-            // function maxValueInput(){
-            //     let sumTime = maxTimeCart(span_MaxTimeCart.innerHTML);
-            //     input_SubtimeCart.attributes.max.value= ""+sumTime;
-            // }
-            // // chơi nhạc hay dừng
-            // function change_playOrPause(e){
-            //     var children = e.children;
-            //    for(var i =0;i<children.length;i++){
-                
-            //         if(getComputedStyle(children[i]).display.endsWith("none")){
-            //             children[i].style.display = 'block';
-            //         }else{
-            //             children[i].style.display = 'none';
-            //         }
-            //    }
-            //    playOrPause();
-            // }
-
-            // function playOrPause(){
-            //     if(getComputedStyle(icon_play).display.endsWith("none"))
-            //     {
-            //         play_cart();
-            //     }else{
-            //         pauseCart();
-            //     }
-            // }
-
-            // function play_cart(){
-            //     song.play();
-            //     let valueCart =parseInt(input_SubtimeCart.attributes.value.value);
-            //     let maxValueCart = parseInt(input_SubtimeCart.attributes.max.value);
-            //     if(valueCart == maxValueCart){
-            //       input_SubtimeCart.attributes.value.value='0';
-            //       span_timeStartCart.innerHTML = "00:00";
-            //       div_timeRight.style.width = '0';
-            //     }
-            //     playCart_Interval = setInterval(function(){
-            //         valueCart = parseInt(input_SubtimeCart.attributes.value.value);
-            //         if(   valueCart +1 == maxValueCart){
-            //             pauseCart();
-            //             change_playOrPause(document.querySelector('.button_play'));
-            //         }
-            //         valueCart += 1;
-            //         input_SubtimeCart.attributes.value.value = ''+valueCart;
-            //         runTime(valueCart);
-            //         marginTimeRight(valueCart);
-            //     },1000,'false');
-            // }
-            
-            // function stopCartInterval(){
-            //     clearInterval(playCart_Interval);
-            // }
-            
-
-            // function pauseCart(){        
-            //     stopCartInterval(playCart_Interval);
-            //     song.pause();
-            // }
-
-            // function runTime(valueCart){
-            //     let minutesTime = parseInt(valueCart/60+"");
-            //     let secondTime = parseInt(valueCart%60+"");
-
-            //     if(minutesTime <10)
-            //          minutesTime  = "0" + minutesTime;
-            //     if(secondTime <10)
-            //         secondTime = "0" +secondTime;
-            //     span_timeStartCart.innerHTML = minutesTime+":"+secondTime;
-            // }
-           
-            // input_SubtimeCart.addEventListener("change", handleChangeBar);
-            // function handleChangeBar(){
-            //     song.currentTime = this.value;
-            // }
-            
-
-           
-           
-        
-    </script>
 </html>
