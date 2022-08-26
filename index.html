@@ -16,8 +16,8 @@
                 <div class="cart_use_info"> 
                         <img class="cart_use_img" src="./assets/fonts/img/LeBaoBinh.jpg" alt="Bài hát đang nghe">
                         <div class="cart_use_name">
-                           <a href=""> <p class="cart_use_name_Music">Cuộc vui cô đơn</p> </a>
-                           <a href=""><p class="cart_use_name_singer">Lê Bảo Bình</p>    </a>   
+                           <a href=""> <span class="cart_use_name_Music">Cuộc vui cô đơn</span> </a>
+                           <a href=""><span class="cart_use_name_singer">Lê Bảo Bình</span>    </a>   
                         </div>
                         <div class="cart_use_icon">
                             <div class="cart_use_icon-level-button">
@@ -37,21 +37,21 @@
                     <div>
                         <div class="cart_use_between-level-item">
                             <div  class="cart_use-actions">
-                                <button class="cart_use_action-button">
-                                    <i onclick="change_color_action(0)" class="randomBtn fa-solid fa-shuffle"></i>
+                                <button class="randomBtn cart_use_action-button">
+                                    <i class=" icon_SongRanBtn fa-solid fa-shuffle"></i>
                                 </button>
-                                <button class="cart_use_action-button">
-                                    <i   class="backBtn fa-solid fa-backward-step action_button-active"></i>
+                                <button class="backBtn cart_use_action-button">
+                                    <i   class=" fa-solid fa-backward-step action_button-active"></i>
                                 </button>
                                 <button class="cart_use_action-button button_play">
                                     <i class="action_icon-play fa-solid fa-play "></i>
                                     <i class="fa-solid fa-pause"></i>
                                 </button>
-                                <button class="cart_use_action-button">
-                                    <i class="nextBtn fa-solid fa-forward-step  action_button-active"></i>
+                                <button class="nextBtn cart_use_action-button">
+                                    <i class=" fa-solid fa-forward-step  action_button-active"></i>
                                 </button>
-                                <button class="cart_use_action-button">
-                                    <i onclick="change_color_action(5)"  class="fa-solid fa-repeat"></i>
+                                <button class="againSongBtn cart_use_action-button">
+                                    <i   class=" againSongBtn_icon fa-solid fa-repeat"></i>
                                 </button>
                             </div>
                         </div>
@@ -61,9 +61,10 @@
                                     <span class="duration">00:00</span>
                                 </div>
                                 <div class="cart_use_duration-bar runTimeCart ">
-                                    <input id ="input_run" type="range" max="100" value="0" min="0" step="1" name="range" class="cart_use_timeRun-bar "/>
+                                    <input id ="input_run" type="range" max="100" value="0" min="0" step="1" name="range" class="cart_use_timeRun-bar"/> 
+                                    
                                         <audio id="song" src="./assets/fonts/music/CuocVuiCoDon.mp3"></audio>
-                                    <div class="cart_use_timeRun-bar sub_runTimeCart  time_hover"></div>
+                                    
                                 </div>
                                 <div class="cart_use-sub-right"><span class="remaining"> 03:50</span></div>
                             </div>
@@ -94,7 +95,7 @@
                     </div>
                         
                     <div class="cart_use_duration-bar">
-                            <div class="cart_use_timeRun-bar"></div>
+                            <input id="input_volume" min="0" type="range" step="0.1" max="1" value="1" class="cart_use_timeRun-bar"></input>
                     </div>
 
                     <div class="cart_use_icon-level-button "><button>
@@ -158,7 +159,7 @@
                             </ul>
                         </div>
                         <div class="left_sliderbar-crossbar"></div>
-                        <div class="left_sliderbar-scrollbar">
+                        <div class="left_sliderbar-scrollbar scroll">
                             <ul class="sliderbar-navMenu">
                                 <li class="navMenu-item">
                                     <a href="#">
