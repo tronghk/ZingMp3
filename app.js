@@ -75,6 +75,30 @@ const music =[
         name: "Cuộc vui cô đơn",
         singer:"Lê Bảo Bình",
         img: "./assets/fonts/img/LeBaoBinh.jpg"
+    },
+    {
+        id: 6,
+        fileName: "TuMyNhan.mp3",
+        type : "Nhac",
+        name: "Tư Mỹ Nhân Hề",
+        singer:"Kiều Chấn Vũ",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 6,
+        fileName: "TimEm.mp3",
+        type : "Nhac",
+        name: "Tìm Em",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 6,
+        fileName: "UyenUongHoDiep.mp3",
+        type : "Nhac",
+        name: "Uyên Ương Hồ Điệp",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/GirlAll.jpg"
     }
 ];
 var arrSong = [];

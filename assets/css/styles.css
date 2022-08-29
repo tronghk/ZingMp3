@@ -535,7 +535,7 @@ img{
     top: 0;
     width: -webkit-fill-available;
 }
-.right-nav{
+.right-nav, .right-subnav{
     display: flex;
     justify-content: space-between;
     padding: 0 60px;
@@ -562,6 +562,8 @@ img{
     background-color: var(--bg-content-color);
     margin: 0 4px;
     text-align: center;
+    width: 42px;
+    height: 40px;
 }
 .list_tool-item i{
     color: #ccc;
@@ -607,7 +609,7 @@ img{
     background: none;
     padding: 0;
 }
-.avatar img{
+.avatar img, .right_subnav-title button{
     width: 42px;
     height: 40px;
     border-radius: 50%;
@@ -682,4 +684,104 @@ img{
 .subNav_item:hover{
     background-color: var(--alpha-bg);
 }
+.right-subnav{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.right_subnav-title{
+    flex: 100%;
+    display: flex;
+    justify-items: center;
+    margin-bottom: 38px;
 
+    
+}
+.right_subnav_text{
+    font-size: 4rem;
+    color: white;
+}
+.right_subnav-title button {
+    margin-top: 4px;
+    margin-left: 12px;
+    background-color: red;
+}
+.right_subnav-title button i{
+    font-size: 2rem;
+}
+.right_subnav-item{
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+}
+.right_subnav-listItem{
+    flex: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.right_subnav-listItem li{
+    list-style-type: none;
+    flex: 1;
+    max-width: 162px;
+}
+.right_subnav-listItem li p{
+    font-size: 1.6rem;
+}
+.subnav_item-img{
+    transition: transform 0.7s;
+    width: 160px;
+    height: 160px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+   
+}
+.right_subnav_item{
+    position: relative;
+}
+.subnav_item-img:hover{
+    
+    transform: scale(1.12, 1.12);
+}
+.right_subnav_item button i{
+    color: #000;
+}
+.right_subnav_item button{
+    position: absolute;
+    padding: 12px 2px;
+    right: 8px;
+    bottom: 65px;
+    background-color: white;
+    border-radius: 50%;
+}
+.right_subnav_item a{
+    text-align: center;
+    margin: 20px;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.right_subnav_item a:hover{
+ color: rgb(209, 99, 99);
+}
+.subnav_item_img-hover{
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 50%;
+    margin: 0;
+}
+.right_subnav_allItem{
+    font-size: 3rem;
+}
+.right_subnav_allItem{
+    position: relative;
+    background-color: #ccc;
+
+}
+.right_subnav_allItem i{
+    font-size: 5rem;
+    top: 35%;
+    left: 27%;
+    position: absolute;
+    color: #000;
+}
