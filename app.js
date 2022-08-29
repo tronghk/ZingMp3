@@ -1,6 +1,7 @@
 //sự kiện trái tim
 var heart_icon = document.querySelector('i.fa-heart');
 let boolean_heart = 0;
+const bodyHtml = document.querySelector("body");
 
 function display_color(){
     if(!Boolean(boolean_heart)){
@@ -304,4 +305,9 @@ const menuItemSlider = document.getElementsByClassName("navMenu-item");
     }
 }
 
+// event focus sub search
+const inp_search = document.querySelector(".right_nav-search .search");
+const resultSearch = document.querySelector(".right_subNav-search");
+const itemSearch = document.getElementsByClassName("subNav_item");
+const navSearch = document.querySelector(".right_nav-search");
 

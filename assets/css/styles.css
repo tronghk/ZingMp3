@@ -11,6 +11,7 @@ span {
     color: white;
 }
 :root{
+    --alpha-bg: hsla(0,0%,100%,0.1);
     --primary-bg: #432275;
     --layout-bg: #37075d;
     --sidebar-popup-bg: #2a213a;
@@ -549,6 +550,9 @@ img{
     display: flex;
     list-style: none;
 }
+.search:focus ~ .right_subNav-search{
+    display: flex;
+}
 .list_tools{
     margin-top: 3px;
 }
@@ -569,6 +573,7 @@ img{
     justify-items: center;
     background-color: hsla(0,0%,100%,0.05);
     border-radius: 50px;
+    position: relative;
   
 }
 .right_nav-search i{
@@ -581,6 +586,7 @@ img{
 .right_nav-search .search, .right_nav-search i{
     line-height: 34px;
     color: #ccc;
+    z-index: 2;
 }
 .right_nav-controlbar{
     display: flex;
@@ -594,6 +600,7 @@ img{
     border: 0;
     outline:none;
     text-align: left;
+   
 }
 .avatar{
     border-radius: none;
@@ -606,3 +613,73 @@ img{
     border-radius: 50%;
    
 }
+.subNav_search-list li{
+    list-style-type: none;
+}
+.right_subNav-search{
+   
+    display: none;
+    padding-top: 34px;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    background-color: var(--primary-bg);
+    width: 100%;
+    border-radius: 20px;
+    z-index: 1;
+    max-height: calc(100vh - var(--heightSizeCross));
+}
+.subNav_search-title{
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.subNav_search-title, .subNav_search-list{
+    padding: 4px 20px;
+    overflow: auto;
+    color: #fff;
+}
+.subNav_search-list{
+    overflow:auto;
+    width: 100%;
+    padding: 0; 
+    margin: 4px 20px;
+    max-height: calc(100vh - 180px);
+}
+
+.subNav_search-list::-webkit-scrollbar{
+    width: 3px;
+}
+.subNav_search-list::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+.subNav_search-list .subNav_item:last-child{
+    margin-bottom: 4px;
+}
+.sub-search{
+    display: flex;
+    flex: 100%;
+}
+.subNav_search-title{
+    flex: 100%;
+    margin-top: 10px;
+}
+.subNav_item{
+    width: 100%;
+    position: relative;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.subNav_item span{
+    font-size: 1.4rem;
+}
+.subNav_item i{
+    font-size: 14px;
+    margin-left: 0;
+    font-weight: 600;
+}
+.subNav_item:hover{
+    background-color: var(--alpha-bg);
+}
+
