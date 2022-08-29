@@ -40,7 +40,7 @@ const music =[
         fileName: "holo.mp3",
         type : "Nhac",
         name: "Holo",
-        singer:"chưa biết",
+        singer:"Chưa biết",
         img: "https://images6.alphacoders.com/785/thumb-1920-785636.png"
     },
     {
@@ -48,7 +48,7 @@ const music =[
         fileName: "summer.mp3",
         type : "Nhac",
         name: "Summer",
-        singer:"chưa biết",
+        singer:"Chưa biết",
         img: "https://images5.alphacoders.com/592/thumb-1920-592887.jpg"
     },
     {
@@ -287,6 +287,20 @@ function animationImageSong(){
         imgSong.style.animation = "mymove 10s linear infinite";
     }else{
         imgSong.style.animation = "none";
+    }
+}
+
+// hiệu ứng click trên slider
+const menuItemSlider = document.getElementsByClassName("navMenu-item");
+    for(var i = 0; i<menuItemSlider.length;i++){
+        menuItemSlider[i].onclick = function(){
+            colorDefault();
+            this.style.backgroundColor = "red";
+        }
+    }
+    function colorDefault(){
+        for(var i = 0; i<menuItemSlider.length;i++){
+            menuItemSlider[i].style.background = "none";
     }
 }
 
