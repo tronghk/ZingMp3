@@ -335,3 +335,70 @@ const resultSearch = document.querySelector(".right_subNav-search");
 const itemSearch = document.getElementsByClassName("subNav_item");
 const navSearch = document.querySelector(".right_nav-search");
 
+
+//event click perform
+const cartPerform = document.querySelectorAll(".right_cart_perform-name");
+const cartPerformSong = document.querySelector(".right_cart_perform-Song");
+const cartPerformPodcast = document.querySelector(".right_cart_perform-Podcast");
+const cartPerformAlbum = document.querySelector(".right_cart_perform-Album");
+const cartPerformMovie = document.querySelector(".right_cart_perform-movie");
+for(var i = 0;i<cartPerform.length;i++){
+    cartPerform[i].onclick = function(){
+        borderCartForm();
+        this.style.borderBottom = "2px solid #c662ef";
+        formCartPerform(this);
+    }
+}
+function borderCartForm(){
+    for(var i = 0;i<cartPerform.length;i++){
+        cartPerform[i].style.border = "none";
+    }
+}
+
+function formCartPerform(perform){
+    cartPerformSong.style.display = "none";
+    cartPerformPodcast.style.display = "none";
+    cartPerformAlbum.style.display = "none";
+    cartPerformMovie.style.display = "none";
+    var performText = perform.innerHTML+"";
+    
+    if(performText.endsWith("Bài hát")){
+    cartPerformSong.style.display = "flex";
+    }
+    if(performText.endsWith("Podcast"))
+    cartPerformPodcast.style.display = "flex";
+    if(performText.endsWith("Album"))
+    cartPerformAlbum.style.display = "flex";
+    if(performText.endsWith("Movie"))
+    cartPerformMovie.style.display = "flex";
+
+}
+cartPerform[0].style.borderBottom = "2px solid #c662ef";
+formCartPerform(cartPerform[0]);
+
+//event changeList
+const btnChangeList = document.querySelectorAll(".perform_Song-changeList button");
+
+for(var i = 0;i<btnChangeList.length;i++){
+   
+    btnChangeList[i].onmousedown = function(){
+        PerformChangeList();
+        Object.assign(this.style,{
+            pointerEvents: "none",
+            backgroundColor : "#c662ef",
+            borderColor: "#c662ef",
+          
+        });
+    }
+}
+function PerformChangeList(){
+    for(var i = 0;i<btnChangeList.length;i++){
+        
+            Object.assign(btnChangeList[i].style,{
+                pointerEvents: "auto",
+                backgroundColor : "#37075d",
+                borderColor: "#fff",
+               
+            });
+        }
+}

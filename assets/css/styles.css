@@ -545,6 +545,17 @@ img{
     align-items: center;
     margin-top: 10px;
 }
+.right-nav{
+    
+}
+.right_nav-positon{
+    width: 82.9%;
+    position: fixed;
+    z-index: 999;
+    height: 70px;
+    background-color: var(--layout-bg);
+}
+
 .right_nav-controlbar i{
     opacity: 0.5;
     
@@ -693,7 +704,7 @@ img{
 .right-subnav{
     display:flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 120px;
 }
 .right_subnav-title{
     flex: 100%;
@@ -740,6 +751,7 @@ img{
     background-size: auto 100%;
     background-repeat: no-repeat;
     border-radius: 50%;
+    cursor: pointer;
    
 }
 .right_subnav_item{
@@ -851,6 +863,7 @@ img{
    padding: 0;
    margin: 0;
    border: none;
+   cursor: pointer;
 }
 .listCart_personal-title .listCart_personal_title-showAll i{
     color: #ccc;
@@ -924,7 +937,6 @@ img{
     height: auto 100%;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-image: url('/assets/fonts/img/00256593.jpg');
 }
 .personal-playlist-item{
 }
@@ -937,9 +949,151 @@ img{
     opacity: 0.6;
     font-size: 1.3rem;
 }
+.playlist-name, .playlist-nameUser{
+    cursor: pointer;
+}
 .playlist_item-hover:hover ~ .playlist-name{
     color: var(--link-text-hover);
 }
 .playlist-name:hover{
     color: var(--link-text-hover);
+}
+.right-cart{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+}
+.right_cart-perform{
+    flex: 100%;
+    display: flex;
+    justify-content:center;
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(101, 49, 136);
+    margin-bottom: 30px;
+}
+.right_cart-perform p{
+    font-size: 1.6rem;
+    margin: 0 20px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.right_cart_perform-Song{
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.perform_Song-changeList{
+    display: flex;
+    flex: 100%;
+    
+    justify-items: center;
+    margin-bottom: 20px;
+}
+.perform_Song-changeList button{
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 50px;
+    margin-right: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+.perform_Song-changeList button:hover{
+    color: var(--link-text-hover) !important;
+    border-color: var(--link-text-hover) !important;
+}
+.perform_Song-KeyList{
+    flex: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid rgb(101, 49, 136);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+.perform_Song-KeyList p{
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 600;
+    
+}
+.perform_Song-List{
+    flex: 100%;
+}
+.perform_Song-list_cart{
+    display: flex;
+    flex-wrap: wrap;
+}
+.perform_Song-cart{
+    list-style-type: none;
+    flex: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 10px;
+    background-color: green;
+    border-bottom: 1px solid rgb(101, 49, 136);
+    border-radius: 8px;
+}
+.perform_Song-cart p{
+    font-size: 1.3rem;
+}
+.perform_Song-cart-introduce{
+    display: flex;
+    justify-items: center;
+    justify-content: left;
+}
+
+.song-cart-introduce-img{
+    position: relative;
+    margin-right: 16px;
+}
+
+.song-cart-introduce-img img{
+    width:40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 2px;
+}
+.song-cart-introduce-img i{
+    position: absolute;
+    top: -2px;
+    left: 5px;
+    font-size: 2rem;
+}
+.perform_Song-cart i, .perform_Song-cart-album a{
+    line-height: 44px;
+}
+.perform_Song-cart-introduce i:first-child{
+    opacity: 0.6;
+    
+}
+.song-cart-introduce-text p{
+    color: #fff;
+}
+.perform_Song-cart-album a{
+    color: #fff;
+}
+.song-cart-introduce-text p:first-child, .perform_Song-cart-album a{
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+.perform_Song-cart > div{
+    flex: 1;
+}
+.perform_Song-cart-album{
+    text-align: center;
+}
+.perform_Song-cart-time{
+    text-align: right;
 }
