@@ -2,7 +2,9 @@
 var heart_icon = document.querySelector('i.fa-heart');
 let boolean_heart = 0;
 const bodyHtml = document.querySelector("body");
-
+const performListCart = document.querySelector(".perform_Song-list_cart");
+const listSong = document.getElementsByClassName("perform_Song-cart");
+const containerRight = document.querySelector(".container_right");
 function display_color(){
     if(!Boolean(boolean_heart)){
         Object.assign(heart_icon.style,{
@@ -37,7 +39,7 @@ var btnPlay = document.querySelector('.button_play');
 let isPlaySong = true;
 const music =[
     {
-        id: 1,
+        id: 0,
         fileName: "holo.mp3",
         type : "Nhac",
         name: "Holo",
@@ -45,7 +47,7 @@ const music =[
         img: "https://images6.alphacoders.com/785/thumb-1920-785636.png"
     },
     {
-        id: 2,
+        id: 1,
         fileName: "summer.mp3",
         type : "Nhac",
         name: "Summer",
@@ -53,7 +55,7 @@ const music =[
         img: "https://images5.alphacoders.com/592/thumb-1920-592887.jpg"
     },
     {
-        id: 3,
+        id: 2,
         fileName: "spark.mp3",
         type : "Nhac",
         name: "Spark",
@@ -61,7 +63,7 @@ const music =[
         img: "https://images2.alphacoders.com/911/thumb-1920-911008.jpg"
     },
     {
-        id: 4,
+        id: 3,
         fileName: "home.mp3",
         type : "Nhac",
         name: "Home",
@@ -69,7 +71,7 @@ const music =[
         img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
     },
     {
-        id: 5,
+        id: 4,
         fileName: "CuocVuiCoDon.mp3",
         type : "Nhac",
         name: "Cuộc vui cô đơn",
@@ -77,7 +79,7 @@ const music =[
         img: "./assets/fonts/img/LeBaoBinh.jpg"
     },
     {
-        id: 6,
+        id: 5,
         fileName: "TuMyNhan.mp3",
         type : "Nhac",
         name: "Tư Mỹ Nhân Hề",
@@ -93,7 +95,7 @@ const music =[
         img: "./assets/fonts/img/GirlAll.jpg"
     },
     {
-        id: 6,
+        id: 7,
         fileName: "UyenUongHoDiep.mp3",
         type : "Nhac",
         name: "Uyên Ương Hồ Điệp",
@@ -101,6 +103,7 @@ const music =[
         img: "./assets/fonts/img/GirlAll.jpg"
     }
 ];
+addListSongtoPerform();
 var arrSong = [];
 let indexSong = 0;
 song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
@@ -208,7 +211,8 @@ function changeDisplay(play, pause){
 
 nextBtn.addEventListener('click', nextSong);
 function nextSong(){
-
+    removeSongSelected();
+    addSongSelected(listSong[indexSong+1]);
     if(indexSong == music.length){
         indexSong = 0;
     }
@@ -296,7 +300,7 @@ againSong.onclick = function(){
 }
 function crossColorLeft(value, obj){
     value = value/parseFloat(obj.max)*100;
-    var color = "linear-gradient(90deg, #fff "+ value+"%,"+ " rgba(30,21,47,0.9019607843137255) "+ value+"%)";
+    var color = "linear-gradient(90deg, #fff "+ value+"%,"+ " rgb(58 38 96 / 90%)"+ value+"%)";
     obj.style.background = color;
 }
 function infSong(){
@@ -401,4 +405,61 @@ function PerformChangeList(){
                
             });
         }
+}
+
+// click song
+for(var i = 0;i<listSong.length;i++){
+    listSong[i].onclick = function(){
+        removeSongSelected();
+        addSongSelected(this);
+        playSongId(parseInt(this.id+""));
+    }
+}
+//thêm class thuộc tính
+function removeSongSelected(){
+    const songIsSelect = document.querySelector(".is-selected");
+    if(songIsSelect!=null)
+    songIsSelect.classList.remove("is-selected");
+}
+// xoá class thuộc tính
+function addSongSelected(obj){
+    obj.classList.add("is-selected");
+}
+function playSongId(id){
+    song.setAttribute("src", `./assets/fonts/music/${music[id].fileName}`);
+    isPlaySong = true;
+    indexSong = id;
+    playSong();
+}
+
+//thêm danh sách bài hát vào mục trình diễn
+
+function addListSongtoPerform(){
+    for(var i=0;i<music.length;i++){
+        var nameSong = music[i].name;
+        var nameSinger = music[i].singer;
+        const id = music[i].id+"";
+        var imgSong = music[i].img;
+
+        var tagName = '<li id="'+id+'" class="perform_Song-cart">\n'
+                    +'<div class="perform_Song-cart-introduce">\n'
+                    +'<i class="fa-solid fa-music"></i>\n'
+                    +'<div class="song-cart-introduce-img">\n'
+                    +' <img src="'+imgSong+'" alt="">\n'
+                    +'<i class="action_icon-play fa-solid fa-play "></i>\n'
+                    +'</div>\n'
+                    +'<div class="song-cart-introduce-text">\n'
+                    +'<p>'+nameSong+'</p>\n'
+                    +' <p>'+nameSinger+'</p>\n'
+                    +' </div>\n'
+                    +' </div>\n'
+                    +'<div class="perform_Song-cart-album">\n'
+                    +' <a href="">'+nameSong+'</a>\n'
+                    +' </div>\n'
+                    +'<div class="perform_Song-cart-time">\n'
+                    +'<i class="fa-solid fa-microphone"></i>\n'
+                    +'</div>\n'
+                    +'</li>\n';
+                    performListCart.insertAdjacentHTML('beforebegin', tagName);
+    }
 }
