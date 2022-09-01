@@ -42,6 +42,7 @@ const music =[
         id: 0,
         fileName: "holo.mp3",
         type : "Nhac",
+        timeMax :"03:49",
         name: "Holo",
         singer:"Chưa biết",
         img: "https://images6.alphacoders.com/785/thumb-1920-785636.png"
@@ -50,6 +51,7 @@ const music =[
         id: 1,
         fileName: "summer.mp3",
         type : "Nhac",
+        timeMax :"02:46",
         name: "Summer",
         singer:"Chưa biết",
         img: "https://images5.alphacoders.com/592/thumb-1920-592887.jpg"
@@ -58,6 +60,7 @@ const music =[
         id: 2,
         fileName: "spark.mp3",
         type : "Nhac",
+        timeMax :"04:02",
         name: "Spark",
         singer:"Anh Không Thích Em",
         img: "https://images2.alphacoders.com/911/thumb-1920-911008.jpg"
@@ -66,6 +69,7 @@ const music =[
         id: 3,
         fileName: "home.mp3",
         type : "Nhac",
+        timeMax :"05:00",
         name: "Home",
         singer:"Của tui",
         img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
@@ -74,6 +78,7 @@ const music =[
         id: 4,
         fileName: "CuocVuiCoDon.mp3",
         type : "Nhac",
+        timeMax :"05:05",
         name: "Cuộc vui cô đơn",
         singer:"Lê Bảo Bình",
         img: "./assets/fonts/img/LeBaoBinh.jpg"
@@ -82,6 +87,7 @@ const music =[
         id: 5,
         fileName: "TuMyNhan.mp3",
         type : "Nhac",
+        timeMax :"03:11",
         name: "Tư Mỹ Nhân Hề",
         singer:"Kiều Chấn Vũ",
         img: "./assets/fonts/img/GirlAll.jpg"
@@ -90,20 +96,60 @@ const music =[
         id: 6,
         fileName: "TimEm.mp3",
         type : "Nhac",
+        timeMax :"04:30",
         name: "Tìm Em",
         singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/GirlAll.jpg"
+        img: "./assets/fonts/img/TimEm.jpg"
     },
     {
         id: 7,
         fileName: "UyenUongHoDiep.mp3",
         type : "Nhac",
+        timeMax :"04:31",
         name: "Uyên Ương Hồ Điệp",
         singer:"Hồ Quang Hiếu",
         img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 8,
+        fileName: "ChoDinhMenhMimCuoi.mp3",
+        type : "Nhac",
+        timeMax :"03:58",
+        name: "Chờ định mệnh mĩm cười",
+        singer:"Minh Vương M4U",
+        img: "./assets/fonts/img/ChoDinhMenhMimCuoi.jpg"
+    },
+    {
+        id: 9,
+        fileName: "MuonKiepLaAnhEm.mp3",
+        type : "Nhac",
+        timeMax :"05:16",
+        name: "Muôn kiếp là anh em",
+        singer:"Du Thiên",
+        img: "./assets/fonts/img/MuonKiepLaAnhEm.jpg"
+    },
+    {
+        id: 10,
+        fileName: "DangDo.mp3",
+        type : "Nhac",
+        timeMax :"04:50",
+        name: "Dang dở",
+        singer:"NAl",
+        img: "./assets/fonts/img/DangDo.jpg"
+    },
+    {
+        id: 11,
+        fileName: "NgaTuDuong.mp3",
+        type : "Nhac",
+        timeMax :"04:35",
+        name: "Ngã Tư Đường",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/11.jpg"
     }
 ];
 addListSongtoPerform();
+const listIdSong = document.querySelectorAll(".song-cart-introduce-img i");
+const listGitPlay = document.querySelectorAll(".gitPlay");
 var arrSong = [];
 let indexSong = 0;
 song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
@@ -130,19 +176,47 @@ function playSong(){
         isPlaySong = false;
         changeDisplay(children[0], children[1]);
         animationImageSong();
+        playAndPause(1);
     }
     else{
         song.pause();
         isPlaySong = true;    
         changeDisplay(children[1], children[0]);
         animationImageSong();
+        playAndPause(-1);
     }
 
+}
+//trường hợp bth của hiệu ứng play and pause
+function playAndPause(dir){
+    if(dir == 1){
+        listGitPlay[indexSong].style.visibility="visible";
+        listIdSong[indexSong].style.visibility = "hidden";
+        listIdSong[indexSong].style.display = "none";
+        
+    }else{
+        listGitPlay[indexSong].style.visibility="hidden";
+        listIdSong[indexSong].style.visibility = "visible";
+        listIdSong[indexSong].style.display = "block";
+    }
+    
+}
+//trường hợp next and previ 
+function playAndPauseNextPre(){
+    listGitPlay[indexSong].style.visibility="visible";
+    listIdSong[indexSong].style.visibility = "visible";
+    listIdSong[indexSong].style.display = "none";
+}
+
+//trường hợp clickSongGit
+function playClickSong(){
+    listIdSong[indexSong].style.visibility = "visible";
+    listIdSong[indexSong].style.display = "none";
 }
 function displayTimer(){
     const {duration, currentTime} = song;
     if(!duration){
-        remainingTime.textContent = "03:50";
+        remainingTime.textContent = "03:49";
     }else{
         remainingTime.textContent = formatTimer(duration);
         crossbarPlayTime.max = duration;
@@ -155,11 +229,11 @@ function runTimer(){
     const {duration, currentTime} = song;
     if(!isPlaySong){    
         durationTime.textContent = formatTimer(currentTime);
-
     }
     if(currentTime == duration){
-        if(!isAgainSong)
+        if(!isAgainSong){
         nextSong();
+        }
         else{
             song.value = 0;
             song.play();
@@ -211,11 +285,19 @@ function changeDisplay(play, pause){
 
 nextBtn.addEventListener('click', nextSong);
 function nextSong(){
-    removeSongSelected();
-    addSongSelected(listSong[indexSong+1]);
+    playAndPauseNextPre();
+    indexSong += 1;
+
     if(indexSong == music.length){
         indexSong = 0;
     }
+    removeSongSelected();
+    addSongSelected(listSong[indexSong]);
+    removeSongSelectedPlay();
+    addSongSelectedPlay(listSong[parseInt(indexSong)]);
+    SongPlayGit(indexSong);
+    
+     
 
     if(!isSongRanBtn){
         changeSong(1);
@@ -234,9 +316,17 @@ function nextSong(){
 }
 previousBtn.addEventListener('click', previousSong);
 function previousSong(){
-    if(indexSong == 0){
+    playAndPauseNextPre();
+    indexSong -= 1;
+    if(indexSong < 0){
         indexSong = music.length-1;
     }
+    removeSongSelected();
+    addSongSelected(listSong[indexSong]);
+    removeSongSelectedPlay();
+    addSongSelectedPlay(listSong[parseInt(indexSong)]);
+    SongPlayGit(indexSong);
+   
     if(!isSongRanBtn){
         changeSong(-1);
     }else{
@@ -255,11 +345,9 @@ function previousSong(){
 function changeSong(dir){
     if(dir == 1)
     {
-        indexSong += 1;
         song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);  
     }else{
 
-        indexSong -= 1;
         song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
     }
     
@@ -323,15 +411,17 @@ function animationImageSong(){
 const menuItemSlider = document.getElementsByClassName("navMenu-item");
     for(var i = 0; i<menuItemSlider.length;i++){
         menuItemSlider[i].onclick = function(){
-            colorDefault();
-            this.style.backgroundColor = "red";
+           removeBackgroundMenuSlider();
+           addBackgroundMenuSlider(this);
         }
     }
-    function colorDefault(){
-        for(var i = 0; i<menuItemSlider.length;i++){
-            menuItemSlider[i].style.background = "none";
+    function addBackgroundMenuSlider(obj){
+        obj.classList.add("isSelect-nav-item");
     }
-}
+    function removeBackgroundMenuSlider(){
+        const classSelect = document.querySelector(".isSelect-nav-item");
+        classSelect.classList.remove("isSelect-nav-item");
+    }
 
 // event focus sub search
 const inp_search = document.querySelector(".right_nav-search .search");
@@ -381,72 +471,112 @@ cartPerform[0].style.borderBottom = "2px solid #c662ef";
 formCartPerform(cartPerform[0]);
 
 //event changeList
-const btnChangeList = document.querySelectorAll(".perform_Song-changeList button");
-
-for(var i = 0;i<btnChangeList.length;i++){
+const btnChangeListSong = document.querySelectorAll(".perform_Song-changeList button");
+const btnChangeListPodcast = document.querySelectorAll(".perform_Podcast-changeList button");
+for(var i = 0;i<btnChangeListSong.length;i++){
    
-    btnChangeList[i].onmousedown = function(){
-        PerformChangeList();
-        Object.assign(this.style,{
-            pointerEvents: "none",
-            backgroundColor : "#c662ef",
-            borderColor: "#c662ef",
-          
-        });
+    btnChangeListSong[i].onclick = function(){
+        removeChangeList(".perform_Song-changeList");
+        addChangeList(this);
     }
 }
-function PerformChangeList(){
-    for(var i = 0;i<btnChangeList.length;i++){
-        
-            Object.assign(btnChangeList[i].style,{
-                pointerEvents: "auto",
-                backgroundColor : "#37075d",
-                borderColor: "#fff",
-               
-            });
-        }
+for(var i = 0;i<btnChangeListPodcast.length;i++){
+   
+    btnChangeListPodcast[i].onclick = function(){
+        removeChangeList(".perform_Podcast-changeList");
+        addChangeList(this);
+    }
 }
-
+function removeChangeList(dir){
+        var classSelect = document.querySelector( dir+" .isSelect-changeList");
+        classSelect.classList.remove("isSelect-changeList");
+}
+function addChangeList(obj){
+    obj.classList.add("isSelect-changeList");
+}
 // click song
 for(var i = 0;i<listSong.length;i++){
     listSong[i].onclick = function(){
         removeSongSelected();
         addSongSelected(this);
-        playSongId(parseInt(this.id+""));
     }
 }
+
 //thêm class thuộc tính
 function removeSongSelected(){
     const songIsSelect = document.querySelector(".is-selected");
-    if(songIsSelect!=null)
     songIsSelect.classList.remove("is-selected");
 }
 // xoá class thuộc tính
 function addSongSelected(obj){
     obj.classList.add("is-selected");
 }
+addSongSelected(listSong[0]);
+addSongSelectedPlay(listSong[0]);
+// change theo select
 function playSongId(id){
+    if(indexSong != parseInt(id)){
     song.setAttribute("src", `./assets/fonts/music/${music[id].fileName}`);
     isPlaySong = true;
-    indexSong = id;
+    indexSong = parseInt(id);
+    }
     playSong();
 }
+for(var i = 0;i<listIdSong.length;i++){
+    listIdSong[i].onclick = function(){
+        playSongId(this.id);
+       removeSongSelectedPlay();
+       addSongSelectedPlay(listSong[parseInt(this.id)]);
+       SongPlayGit(this.id);
+    }
+}
+var idGitOld = 0;
+//chạy git play
+function SongPlayGit(id){
+    id = parseInt(id);
+    listGitPlay[idGitOld].style.visibility = "hidden";
+    listIdSong[id].style.visibility = "hidden";
+    listIdSong[idGitOld].style.visibility = "visible";
+    listGitPlay[id].style.visibility = "visible";
+    if(idGitOld != id){
+        listIdSong[idGitOld].style.display = '';
+    }
+   
+    idGitOld = id;
+}
+//thêm class thuộc tính
+function removeSongSelectedPlay(){
+    const songIsSelect = document.querySelector(".perform_Song-List .isSelect-nav-item");
+    songIsSelect.classList.remove("isSelect-nav-item");
+}
+// xoá class thuộc tính
+function addSongSelectedPlay(obj){
+    obj.classList.add("isSelect-nav-item");
+}
+//dừng lại
+for(var i = 0;i<listGitPlay.length;i++){
+    listGitPlay[i].onclick = function(){
+        playSongId(indexSong);
+    }
+}
+
 
 //thêm danh sách bài hát vào mục trình diễn
-
 function addListSongtoPerform(){
     for(var i=0;i<music.length;i++){
         var nameSong = music[i].name;
         var nameSinger = music[i].singer;
         const id = music[i].id+"";
         var imgSong = music[i].img;
-
-        var tagName = '<li id="'+id+'" class="perform_Song-cart">\n'
+        var timeSong =  music[i].timeMax;
+        var tagName = '<li class="perform_Song-cart">\n'
                     +'<div class="perform_Song-cart-introduce">\n'
                     +'<i class="fa-solid fa-music"></i>\n'
+                    +'<input type="checkbox" class="checkbox-song">'
                     +'<div class="song-cart-introduce-img">\n'
+                    +'<div class="gitPlay"></div>\n'
                     +' <img src="'+imgSong+'" alt="">\n'
-                    +'<i class="action_icon-play fa-solid fa-play "></i>\n'
+                    +'<i id="'+id+'" class="action_icon-play fa-solid fa-play "></i>\n'
                     +'</div>\n'
                     +'<div class="song-cart-introduce-text">\n'
                     +'<p>'+nameSong+'</p>\n'
@@ -458,8 +588,10 @@ function addListSongtoPerform(){
                     +' </div>\n'
                     +'<div class="perform_Song-cart-time">\n'
                     +'<i class="fa-solid fa-microphone"></i>\n'
+                    +' <span>'+timeSong+'</span>\n'
                     +'</div>\n'
                     +'</li>\n';
                     performListCart.insertAdjacentHTML('beforebegin', tagName);
-    }
+    
+                }
 }
