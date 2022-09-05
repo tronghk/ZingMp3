@@ -5,6 +5,7 @@ const bodyHtml = document.querySelector("body");
 const performListCart = document.querySelector(".perform_Song-list_cart");
 const listSong = document.getElementsByClassName("perform_Song-cart");
 const containerRight = document.querySelector(".container_right");
+const listContent = document.getElementsByClassName("content");
 function display_color(){
     if(!Boolean(boolean_heart)){
         Object.assign(heart_icon.style,{
@@ -285,24 +286,20 @@ function changeDisplay(play, pause){
 
 nextBtn.addEventListener('click', nextSong);
 function nextSong(){
-    playAndPauseNextPre();
+    
     indexSong += 1;
 
     if(indexSong == music.length){
         indexSong = 0;
     }
-    removeSongSelected();
-    addSongSelected(listSong[indexSong]);
-    removeSongSelectedPlay();
-    addSongSelectedPlay(listSong[parseInt(indexSong)]);
-    SongPlayGit(indexSong);
+    
     
      
 
     if(!isSongRanBtn){
         changeSong(1);
     }else{
-        changeSongRandom(1);
+       indexSong = changeSongRandom(1);
     }
     animationImageSong();
     if(!isPlaySong){
@@ -311,26 +308,28 @@ function nextSong(){
     }else{
         playSong();
     }
-   
-
-}
-previousBtn.addEventListener('click', previousSong);
-function previousSong(){
     playAndPauseNextPre();
-    indexSong -= 1;
-    if(indexSong < 0){
-        indexSong = music.length-1;
-    }
     removeSongSelected();
     addSongSelected(listSong[indexSong]);
     removeSongSelectedPlay();
     addSongSelectedPlay(listSong[parseInt(indexSong)]);
     SongPlayGit(indexSong);
    
+
+}
+previousBtn.addEventListener('click', previousSong);
+function previousSong(){
+    
+    indexSong -= 1;
+    if(indexSong < 0){
+        indexSong = music.length-1;
+    }
+    
+   
     if(!isSongRanBtn){
         changeSong(-1);
     }else{
-        changeSongRandom(-1);
+        indexSong = changeSongRandom(-1);
     }
     animationImageSong();
     if(!isPlaySong){
@@ -339,6 +338,12 @@ function previousSong(){
     }else{
         playSong();
     }
+    playAndPauseNextPre();
+    removeSongSelected();
+    addSongSelected(listSong[indexSong]);
+    removeSongSelectedPlay();
+    addSongSelectedPlay(listSong[parseInt(indexSong)]);
+    SongPlayGit(indexSong);
    
 }
 
@@ -364,6 +369,7 @@ function changeSongRandom(dir){
     }else{
         song.setAttribute("src", `./assets/fonts/music/${music[numberRan].fileName}`);
     }
+    return numberRan;
 }
 //xử lý ngẫu nhiên
 songRanBtn.onclick = function(){
@@ -407,21 +413,6 @@ function animationImageSong(){
     }
 }
 
-// hiệu ứng click trên slider
-const menuItemSlider = document.getElementsByClassName("navMenu-item");
-    for(var i = 0; i<menuItemSlider.length;i++){
-        menuItemSlider[i].onclick = function(){
-           removeBackgroundMenuSlider();
-           addBackgroundMenuSlider(this);
-        }
-    }
-    function addBackgroundMenuSlider(obj){
-        obj.classList.add("isSelect-nav-item");
-    }
-    function removeBackgroundMenuSlider(){
-        const classSelect = document.querySelector(".isSelect-nav-item");
-        classSelect.classList.remove("isSelect-nav-item");
-    }
 
 // event focus sub search
 const inp_search = document.querySelector(".right_nav-search .search");
@@ -595,3 +586,48 @@ function addListSongtoPerform(){
     
                 }
 }
+
+// hiệu ứng click trên slider
+const menuItemSlider = document.getElementsByClassName("navMenu-item");
+    function addBackgroundMenuSlider(obj){
+        obj.classList.add("isSelect-nav-item");
+    }
+    function removeBackgroundMenuSlider(){
+        const classSelect = document.querySelector(".isSelect-nav-item");
+        classSelect.classList.remove("isSelect-nav-item");
+    }
+
+// đổi các menu chức năng trang
+displayContent(listContent[1]);
+for(var i= 0;i<menuItemSlider.length;i++){
+    menuItemSlider[i].onclick = function(){
+        var index = indexFuction(this);
+        //thêm background
+        removeBackgroundMenuSlider();
+        addBackgroundMenuSlider(this);
+        // hiển thị menu chức năng
+        nonDisplayContent();
+        displayContent(listContent[index]);
+    }
+}
+function indexFuction(obj){
+    for(var i= 0;i<menuItemSlider.length;i++){
+        if(obj == menuItemSlider[i])
+        return i;
+    }
+    return -1;
+}
+function displayContent(obj){
+    obj.classList.add("onDisplay");
+}
+function nonDisplayContent(){
+    const contentDisplay = document.querySelector(".onDisplay");
+    if(contentDisplay != null)
+    contentDisplay.classList.remove("onDisplay");
+}
+// ảnh chuyển động
+// const discoverIntroduce = document.getElementsByClassName("discover_introduce-cart");
+//  function transitionDiscoverIntroduce(){
+//     console.log("aaa");
+//  }
+// setInterval(transitionDiscoverIntroduce, "3000");

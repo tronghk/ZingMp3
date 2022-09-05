@@ -10,6 +10,9 @@ span {
     font-size: 1.6rem;
     color: white;
 }
+input{
+    border: none;
+}
 :root{
     --alpha-bg: hsla(0,0%,100%,0.1);
     --primary-bg: #432275;
@@ -837,7 +840,8 @@ img{
     display: flex;
     flex-wrap: wrap;
 }
-.listCart_personal-title{
+.listCart_personal-title,
+.discover_recently-title{
     flex: 100%;
     display: flex;
     justify-content: space-between;
@@ -845,7 +849,8 @@ img{
     margin-bottom: 20px ;
     
 }
-.listCart_personal-title p{
+.listCart_personal-title p,
+.discover-recently p{
     font-size: 2rem;
     color: #fff;
 }
@@ -1148,7 +1153,9 @@ img{
 .perform_Song-cart-time{
     text-align: right;
 }
-.right_cart_perform-Podcast{
+.right_cart_perform-Podcast,
+.right_cart_perform-Album,
+.right_cart_perform-movie{
   background-image: url('/assets/fonts/img/Podcast.png');
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -1168,4 +1175,121 @@ img{
     top: 11px;
     left: 11px;
     visibility: hidden;
+}
+.onDisplay{
+    display: flex !important;
+}
+.personal,
+.discover,
+.zingchart,
+.radio,
+.follow,
+.newSong,
+.typeSong,
+.topSong,
+.movie{ 
+    display: none;
+}
+.discover_introduce-cart{
+    height: 200px;
+    flex: 1;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: inherit;
+}
+.discover_introduce-cart .introduce_cart-img{
+    height: 200px;
+    width: 100%;
+    background-image: url('/assets/fonts/img/EmOiDungBuon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+   
+}
+.discover_introduce-cart:first-child{
+    margin-left: 0;
+}
+.discover-introduce .discover_introduce-cart:nth-child(4){
+    margin-right: 0;
+}
+.discover-introduce .discover_introduce-cart:nth-child(2){
+    margin-left: 0;
+}
+.discover-introduce,
+.discover-recently{
+    display: flex;
+    position: relative;
+    flex: 100%;
+    justify-content: space-between;
+    justify-items: center;
+}
+.dis_control{
+    text-align: center;
+   position: absolute;
+   top: 38%;
+   padding: 10px;
+   border-radius: 50%;
+   background-color: rgba(255, 255, 255, 0.15);
+
+  
+}
+.dis_control i{
+    font-size: 3.5rem;
+    color: rgb(224, 193, 193);
+   
+}
+.dis_control-right{
+right: 10px;
+}
+
+.dis_control-left{
+    left: 10px;
+}   
+.first{
+    transition: all 2s;
+    display: none;
+}
+.discover_recently-title .listCart_personal_title-showAll{
+    font-size: 1.8rem;
+}
+.discover_recently-title{
+    flex: 100%;
+}
+.discover-recently{
+    flex-wrap: wrap;
+}
+.listCart_personal-playlist .recently-content{
+    margin: 0 10px;
+    padding: 0;
+    height: auto 100%;
+    
+}
+.recently-content .playlist_item-hover
+{
+ height: 140px;
+}
+.recently-content p{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.recently-content .playlist_item{
+    height: auto 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.recently-content button{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin-right: 16px;
+    padding:0 6px;
+   
+}
+.recently-content button i{
+    font-size: 2rem;
+    margin: 0 !important;
 }
