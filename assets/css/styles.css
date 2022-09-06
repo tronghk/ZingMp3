@@ -841,7 +841,8 @@ img{
     flex-wrap: wrap;
 }
 .listCart_personal-title,
-.discover_recently-title{
+.discover_recently-title,
+.discover_newRelease-title{
     flex: 100%;
     display: flex;
     justify-content: space-between;
@@ -850,11 +851,21 @@ img{
     
 }
 .listCart_personal-title p,
-.discover-recently p{
+.discover-recently p,
+.discover-invitation p{
     font-size: 2rem;
     color: #fff;
 }
-.listCart_personal_title-text{
+.discover-invitation .playlist-nameUser{
+    margin-top: 2px;
+}
+.discover-invitation .playlist-nameUser a{
+    
+    font-size: 1.3rem;
+    color: #ccc;
+}
+.listCart_personal_title-text,
+.discover_newRelease-title{
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -874,7 +885,8 @@ img{
     top: 4.5px;
     left: -4px;
 }
-.listCart_personal-title .listCart_personal_title-showAll{
+.listCart_personal-title .listCart_personal_title-showAll,
+.newRelease_topic-right .listCart_personal_title-showAll{
    font-size: 1.8rem;
    color: #ccc;
    padding: 0;
@@ -896,7 +908,6 @@ img{
     list-style-type: none;
     flex: 1;
     margin-right: 30px;
-    margin-left: 40px;
 
 
 }
@@ -907,14 +918,23 @@ img{
 }
 .playlist_item-hover, .playlist_item{
     width: 100%;
-    height: 160px;
+    height: 200px;
     margin-bottom: 10px;
     border-radius: 10px;
    
 
 }
-.playlist_item_hover-icon .button-play{
-    border: 1px solid #fff;
+.listCart_personal-item .button_play-border,
+.discover-invitation .button_play-border {
+    padding: 10px 8px;
+    position: absolute;
+    top: -12px;
+}
+.listCart_personal-item .button-play{
+    position: relative;
+}
+.listCart_personal-item .button_play-border i{
+   margin-left: 10px !important;
 }
 .playlist_item-hover{
     overflow: hidden;
@@ -927,7 +947,7 @@ img{
     position: absolute;
     justify-content: center;
     justify-items: center;
-    top: 38%;
+    top: 40%;
     left: 12%;
     cursor: pointer;
 }
@@ -945,19 +965,20 @@ img{
     margin-right: 20px;
 }
 .playlist_item_hover-icon button i{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 .playlist_item{
     cursor: pointer;
     transition: transform 0.7s;
     width: 100%;
-    height: auto 100%;
+    background-position: center;
     background-size: auto 100%;
     background-repeat: no-repeat;
 }
-.personal-playlist-item{
-}
-.listCart_personal-item p{
+.listCart_personal-item p,
+.discover-invitation p,
+.discover-selectToday p,
+.discover_newRelease-title p{
     font-size: 1.6rem;
     color:#fff;
 }
@@ -1023,8 +1044,8 @@ img{
     pointer-events: none;
 }
 .perform_Song-changeList button,
-.perform_Podcast-changeList button
-{
+.perform_Podcast-changeList button,
+.newRelease_topic-left button{
     font-size: 1.3rem;
     padding: 5px;
     border-radius: 50px;
@@ -1194,6 +1215,7 @@ img{
     height: 200px;
     flex: 1;
     margin: 15px;
+    margin-bottom: 0;
     border-radius: 10px;
     overflow: hidden;
     box-sizing: inherit;
@@ -1218,12 +1240,17 @@ img{
     margin-left: 0;
 }
 .discover-introduce,
-.discover-recently{
+.discover-recently,
+.discover-invitation,
+.discover-selectToday,
+.discover-newRelease{
     display: flex;
     position: relative;
     flex: 100%;
     justify-content: space-between;
     justify-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 .dis_control{
     text-align: center;
@@ -1280,19 +1307,21 @@ right: 10px;
     background-size: cover;
     background-position: center;
 }
-.recently-content button{
-    position: relative;
+.playlist_item_hover-icon button{
+    margin: 0;
+    justify-content: center;
+    display: flex;
     width: 25px;
     height: 25px;
     text-align: center;
-    margin-right: 16px;
-    padding:0 6px;
+    justify-items: center;
    
 }
 .recently-content button i{
     font-size: 2rem;
     margin: 0 !important;
 }
+<<<<<<< HEAD
 
 /* Radio */
 
@@ -1392,4 +1421,110 @@ right: 10px;
 }
 .icon-radio-btn{
     font-size: 30px;
+=======
+.recently-content .button-play{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: none;
+}
+.button_play-border{
+     border: 1px solid #fff;
+     align-items: center;
+     padding: 4px 8px;
+     position: absolute;
+     top: -4px;
+     border-radius: 50%;
+}
+.playlist_item_hover-icon{
+    width: 100%;
+    left: 0;
+}
+.discover-newRelease{
+    display: flex;
+    flex-wrap: wrap;
+}
+.discover_newRelease-title,
+.discover_newRelease-topic,
+.discover_newRelease-cart{
+    flex: 100%;
+}
+.discover_newRelease-title p{
+    text-align: left;
+}
+.discover_newRelease-topic{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.newRelease_topic-left button{
+     padding: 8px 20px;
+     text-align: center;
+}
+.newRelease_cart-list{
+    list-style-type: none;
+}
+.newRelease_cart-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.newRelease_cart-list .newRelease_cart-object{
+    box-sizing: inherit;
+    width: 32%;
+    margin-right: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    border-radius: 4px;
+}
+.newRelease_cart-img{
+
+}
+.newRelease_textName{
+    font-size : 1.4rem;
+    color: #fff;
+    margin-top: 6px;
+}
+.newRelease_textSinger a,
+.newRelease_textTimeUp{
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.newRelease_cart-icon{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 35%;
+    visibility: hidden;
+}
+.newRelease_cart-object:hover .newRelease_cart-icon{
+    visibility: visible;
+}
+.newRelease_cart-object:hover{
+    background-color: var(--alpha-bg);
+}
+.newRelease_cart-img{
+    width: 60px;
+    height: 60px;
+    background-image: url('/assets/fonts/img/CuuVanDuocKhong.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+.newRelease_cart-icon i:first-child{
+   margin-left: 22px !important;
+   
+}
+.newRelease_cart-icon i:last-child{
+    margin-right: 22px !important;
+    
+ }
+.newRelease_cart-icon i{
+    font-size: 2rem;
+>>>>>>> 2855855f2e505e83ecfd9a420dfbaede3ae1492c
 }

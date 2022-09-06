@@ -598,7 +598,7 @@ const menuItemSlider = document.getElementsByClassName("navMenu-item");
     }
 
 // đổi các menu chức năng trang
-displayContent(listContent[3]);
+displayContent(listContent[1]);
 for(var i= 0;i<menuItemSlider.length;i++){
     menuItemSlider[i].onclick = function(){
         var index = indexFuction(this);
