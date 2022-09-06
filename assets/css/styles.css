@@ -1315,13 +1315,12 @@ right: 10px;
     height: 25px;
     text-align: center;
     justify-items: center;
-   
+
 }
 .recently-content button i{
     font-size: 2rem;
     margin: 0 !important;
 }
-<<<<<<< HEAD
 
 /* Radio */
 
@@ -1421,7 +1420,7 @@ right: 10px;
 }
 .icon-radio-btn{
     font-size: 30px;
-=======
+}
 .recently-content .button-play{
     position: relative;
     width: 28px;
@@ -1526,5 +1525,4 @@ right: 10px;
  }
 .newRelease_cart-icon i{
     font-size: 2rem;
->>>>>>> 2855855f2e505e83ecfd9a420dfbaede3ae1492c
 }
