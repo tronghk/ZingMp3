@@ -852,14 +852,19 @@ img{
 }
 .listCart_personal-title p,
 .discover-recently p,
-.discover-invitation p{
+.discover-invitation p,
+.discover-energy p,
+.discover_cart-six p{
     font-size: 2rem;
     color: #fff;
 }
-.discover-invitation .playlist-nameUser{
+.discover-invitation .playlist-nameUser,
+.discover-energy .playlist-nameUser,
+.discover_cart-six .playlist-nameUser{
     margin-top: 2px;
 }
-.discover-invitation .playlist-nameUser a{
+.discover-invitation .playlist-nameUser a
+{
     
     font-size: 1.3rem;
     color: #ccc;
@@ -925,7 +930,9 @@ img{
 
 }
 .listCart_personal-item .button_play-border,
-.discover-invitation .button_play-border {
+.discover-invitation .button_play-border,
+.discover-energy .button_play-border,
+.discover_cart-six .button_play-border {
     padding: 10px 8px;
     position: absolute;
     top: -12px;
@@ -978,12 +985,13 @@ img{
 .listCart_personal-item p,
 .discover-invitation p,
 .discover-selectToday p,
-.discover_newRelease-title p{
+.discover_newRelease-title p,
+.discover-energy p,
+.discover_cart-six p{
     font-size: 1.6rem;
     color:#fff;
 }
 .personal-playlist-item .playlist-nameUser{
-    color: var(--text-secondary);
     opacity: 0.6;
     font-size: 1.3rem;
 }
@@ -1243,7 +1251,9 @@ img{
 .discover-recently,
 .discover-invitation,
 .discover-selectToday,
-.discover-newRelease{
+.discover-newRelease,
+.discover-energy,
+.discover_cart-six{
     display: flex;
     position: relative;
     flex: 100%;
@@ -1307,6 +1317,35 @@ right: 10px;
     background-size: cover;
     background-position: center;
 }
+.discover_cart-six .playlist_item-hover{
+    height: 274px;
+    position: relative;
+}
+.discover_cart-six .playlist_item-hover .playlist_item{
+    height: 274px;
+}
+.discover_cart-six .playlist_item-hover .playlist_item-text{
+   
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/fonts/img/MotGocIndia.jpg');
+}
+.playlist_item-hover .playlist_item-text p:nth-child(2){
+    text-align: center;
+}
+.playlist_item-hover .playlist_item-text p:nth-child(1){
+    margin-left: 14px;
+}
+.playlist_item-hover .playlist_item-text{
+    background-color: red;
+}
+.playlist_item-text .playlist-name:hover{
+    color: #fff;
+}
+
+
 .playlist_item_hover-icon button{
     margin: 0;
     justify-content: center;
@@ -1525,4 +1564,47 @@ right: 10px;
  }
 .newRelease_cart-icon i{
     font-size: 2rem;
+}
+.sub_playlist_item{
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.9);
+    border-radius: 0 0 6px 6px;
+}
+.exit img, .enter img{
+    object-fit: cover;
+    object-position: center center;
+    max-width: 100%;
+    height: 200px;
+}
+.playlist_item_image ul li{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    margin: 0;
+}
+.playlist_item_image{
+    width: 100%;
+    height: 64px;
+    position:absolute;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+}
+.playlist_cart_six-name{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:64px;
+}
+.playlist_cart_six-name p{
+    margin-left: 10px;
+}
+.playlist_cart_six-name .playlist-name{
+    font-weight: bold;
+    margin-top: 10px;
 }

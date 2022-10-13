@@ -170,10 +170,11 @@ const againeSongIcon = document.querySelector(".againSongBtn_icon");
 var isAgainSong = false;
 const inVolume = document.getElementById("input_volume");
 btnPlay.addEventListener("click", playSong);
+        console.log(song.currentTime);
 function playSong(){
     var children = btnPlay.children;
     if(isPlaySong){
-        song.play();
+        song.play()
         isPlaySong = false;
         changeDisplay(children[0], children[1]);
         animationImageSong();
