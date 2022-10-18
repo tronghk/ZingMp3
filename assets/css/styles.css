@@ -1000,12 +1000,7 @@ img {
 
 .listCart_personal-title,
 .discover_recently-title,
-<<<<<<< HEAD
 .discover_newRelease-title {
-=======
-.discover_newRelease-title,
-.discover_careAbout-title{
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
     flex: 100%;
     display: flex;
     justify-content: space-between;
@@ -1018,24 +1013,14 @@ img {
 .discover-recently p,
 .discover-invitation p,
 .discover-energy p,
-<<<<<<< HEAD
 .discover_cart-six p {
-=======
-.discover_cart-six p,
-.discover-careAbout p{
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
     font-size: 2rem;
     color: #fff;
 }
 
 .discover-invitation .playlist-nameUser,
 .discover-energy .playlist-nameUser,
-<<<<<<< HEAD
 .discover_cart-six .playlist-nameUser {
-=======
-.discover_cart-six .playlist-nameUser,
-.discover-careAbout .playlist-nameUser{
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
     margin-top: 2px;
 }
 
@@ -1119,8 +1104,7 @@ img {
 .listCart_personal-item .button_play-border,
 .discover-invitation .button_play-border,
 .discover-energy .button_play-border,
-.discover_cart-six .button_play-border,
-.discover-careAbout .button_play-border{
+.discover_cart-six .button_play-border {
     padding: 10px 8px;
     position: absolute;
     top: -12px;
@@ -1183,12 +1167,7 @@ img {
 .discover-selectToday p,
 .discover_newRelease-title p,
 .discover-energy p,
-<<<<<<< HEAD
 .discover_cart-six p {
-=======
-.discover_cart-six p,
-.discover-careAbout p{
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
     font-size: 1.6rem;
     color: #fff;
 }
@@ -1501,12 +1480,7 @@ img {
 .discover-selectToday,
 .discover-newRelease,
 .discover-energy,
-<<<<<<< HEAD
 .discover_cart-six {
-=======
-.discover_cart-six,
-.discover-careAbout{
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
     display: flex;
     position: relative;
     flex: 100%;
@@ -1515,21 +1489,6 @@ img {
     flex-wrap: wrap;
     margin-bottom: 35px;
 }
-<<<<<<< HEAD
-=======
-
-.careAbout_title-image{
-    border-radius: 10px;
-    
-}
-.dis_control{
-    text-align: center;
-   position: absolute;
-   top: 38%;
-   padding: 10px;
-   border-radius: 50%;
-   background-color: rgba(255, 255, 255, 0.15);
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
 
 .dis_control {
     text-align: center;
@@ -1908,25 +1867,14 @@ img {
     left: 0;
     right: 0;
     margin: 0;
-    -webkit-filter: blur(40px);
-    filter: blur(40px);
 }
 
-<<<<<<< HEAD
 .playlist_item_image {
     width: 100%;
     height: 64px;
     position: absolute;
     -webkit-filter: blur(40px);
     filter: blur(40px);
-=======
-.playlist_item_image{
-    width: 100%;
-    height: 64px;
-    position:absolute;
-    background: rgba(0,0,0,.9);
-    
->>>>>>> 644a0a799fe3e4e32ba0afaf8f5db58f4b594ef7
 }
 
 .playlist_cart_six-name {
@@ -1943,23 +1891,4 @@ img {
 .playlist_cart_six-name .playlist-name {
     font-weight: bold;
     margin-top: 10px;
-}
-.discover_careAbout-title{
-    justify-content: left;
-}
-.discover_careAbout-title p{
-    color: #ccc;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    margin-top: 5px;
-    text-transform: uppercase;
-}
-.careAbout_title-image img{
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-}
-.discover_careAbout-title .careAbout_title_text_cart2{
-    color: #fff;
-    font-weight: 700;
 }
