@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,40 +10,42 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <title>Nhạc cá nhân</title>
 </head>
+
 <body>
-    
-     <div class="main">
+
+    <div class="main">
         <div class="app">
             <div class="cart_use">
-                <div class="cart_use_info"> 
-                        <img class="cart_use_img" src="https://images6.alphacoders.com/785/thumb-1920-785636.png" alt="Bài hát đang nghe">
-                        <div class="cart_use_name">
-                           <a href=""> <span class="cart_use_name_Music">Holo</span> </a>
-                           <a href=""><span class="cart_use_name_singer">Chưa biết</span>    </a>   
+                <div class="cart_use_info">
+                    <img class="cart_use_img" src="https://images6.alphacoders.com/785/thumb-1920-785636.png"
+                        alt="Bài hát đang nghe">
+                    <div class="cart_use_name">
+                        <a href=""> <span class="cart_use_name_Music">Holo</span> </a>
+                        <a href=""><span class="cart_use_name_singer">Chưa biết</span> </a>
+                    </div>
+                    <div class="cart_use_icon">
+                        <div class="cart_use_icon-level-button">
+                            <button>
+
+                                <i onclick="display_color()" class="fa-solid fa-heart"></i>
+                            </button>
                         </div>
-                        <div class="cart_use_icon">
-                            <div class="cart_use_icon-level-button">
-                                <button>
-                                    
-                                    <i onclick="display_color()" class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-                            <div class="cart_use_icon-level-button">
-                                <button>
-                                    <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
-                                </button>
-                            </div>                  
+                        <div class="cart_use_icon-level-button">
+                            <button>
+                                <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                            </button>
                         </div>
+                    </div>
                 </div>
                 <div class="cart_use_between">
                     <div>
                         <div class="cart_use_between-level-item">
-                            <div  class="cart_use-actions">
+                            <div class="cart_use-actions">
                                 <button class="randomBtn cart_use_action-button">
                                     <i class=" icon_SongRanBtn fa-solid fa-shuffle"></i>
                                 </button>
                                 <button class="backBtn cart_use_action-button">
-                                    <i   class=" fa-solid fa-backward-step action_button-active"></i>
+                                    <i class=" fa-solid fa-backward-step action_button-active"></i>
                                 </button>
                                 <button class="cart_use_action-button button_play">
                                     <i class="action_icon-play fa-solid fa-play "></i>
@@ -52,7 +55,7 @@
                                     <i class=" fa-solid fa-forward-step  action_button-active"></i>
                                 </button>
                                 <button class="againSongBtn cart_use_action-button">
-                                    <i   class=" againSongBtn_icon fa-solid fa-repeat"></i>
+                                    <i class=" againSongBtn_icon fa-solid fa-repeat"></i>
                                 </button>
                             </div>
                         </div>
@@ -62,26 +65,27 @@
                                     <span class="duration">00:00</span>
                                 </div>
                                 <div class="cart_use_duration-bar runTimeCart ">
-                                    <input id ="input_run" type="range" max="100" value="0" min="0" step="1" name="range" class="cart_use_timeRun-bar"/> 
-                                    
-                                        <audio id="song" src="./assets/fonts/music/CuocVuiCoDon.mp3"></audio>
-                                    
+                                    <input id="input_run" type="range" max="100" value="0" min="0" step="1" name="range"
+                                        class="cart_use_timeRun-bar" />
+
+                                    <audio id="song" src="./assets/fonts/music/CuocVuiCoDon.mp3"></audio>
+
                                 </div>
                                 <div class="cart_use-sub-right"><span class="remaining"> 03:49</span></div>
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
 
 
                 <div class="cart_use-player-right">
                     <div class="cart_use_icon-level-button"><button>
-                        <i class="fa-solid fa-clapperboard"></i>
+                            <i class="fa-solid fa-clapperboard"></i>
                         </button>
                     </div>
 
                     <div class="cart_use_icon-level-button"><button>
-                        <i class="fa-solid fa-headphones-simple"></i>
+                            <i class="fa-solid fa-headphones-simple"></i>
                         </button>
                     </div>
 
@@ -94,28 +98,29 @@
                             <i class="fa-solid fa-volume-high"></i>
                         </button>
                     </div>
-                        
+
                     <div class="cart_use_duration-bar">
-                            <input id="input_volume" min="0" type="range" step="0.1" max="1" value="1" class="cart_use_timeRun-bar"></input>
+                        <input id="input_volume" min="0" type="range" step="0.1" max="1" value="1"
+                            class="cart_use_timeRun-bar"></input>
                     </div>
 
                     <div class="cart_use_icon-level-button "><button>
-                    <span class="player_right-jamb"></span>
-                        <i class="fa-solid fa-list-music" style="background: none;"></i>
-                    </button>
+                            <span class="player_right-jamb"></span>
+                            <i class="fa-solid fa-list-music" style="background: none;"></i>
+                        </button>
+                    </div>
                 </div>
-                </div>
-                
-                
+
+
 
             </div>
-        
+
             <div class="container">
                 <div class="container_left">
                     <div class="container_left-siderbar">
-                        
+
                         <div class="left_siderbar-logo">
-                            <div class="left_siderbar-logo-img"></div> 
+                            <div class="left_siderbar-logo-img"></div>
                             <!-- xong -->
                         </div>
 
@@ -140,7 +145,7 @@
                                         </i>
                                         <span>#zingchart</span>
                                         <button class="navMenu_item-play">
-                                            
+
                                         </button>
                                     </a>
                                 </li>
@@ -234,35 +239,36 @@
                                     </div>
                                     <div class="right_nav-search">
                                         <i class="fa-solid fa-magnifying-glass"></i>
-                                        <input type="text" class="search" placeholder="Tìm kiếm bài hát, nghệ sĩ lời bài hát">
-                                    <div class="right_subNav-search">
+                                        <input type="text" class="search"
+                                            placeholder="Tìm kiếm bài hát, nghệ sĩ lời bài hát">
+                                        <div class="right_subNav-search">
 
-                                        <p class="subNav_search-title">Đề xuất cho bạn</p>
-                                    
-                                        <ul class="subNav_search-list">
-                                            <li class="subNav_item">
-                                                <i class="fa-solid fa-arrow-trend-up"></i>
-                                                <span>Nhạc mới</span>
-                                            </li>
-                                            <li class="subNav_item">
-                                                <i class="fa-solid fa-arrow-trend-up"></i>
-                                                <span>Top ưa thích</span>
-                                            </li>
-                                            <li class="subNav_item">
-                                                <i class="fa-solid fa-arrow-trend-up"></i>
-                                                <span>Trending</span>
-                                            </li>
-                                            <li class="subNav_item">
-                                                <i class="fa-solid fa-arrow-trend-up"></i>
-                                            <span> Summer</span>
-                                            </li>
-                                            <li class="subNav_item">
-                                                <i class="fa-solid fa-arrow-trend-up"></i>
-                                                <span>Weather</span>
-                                            </li>
-                                        </ul>
-                                        
-                                    </div>
+                                            <p class="subNav_search-title">Đề xuất cho bạn</p>
+
+                                            <ul class="subNav_search-list">
+                                                <li class="subNav_item">
+                                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    <span>Nhạc mới</span>
+                                                </li>
+                                                <li class="subNav_item">
+                                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    <span>Top ưa thích</span>
+                                                </li>
+                                                <li class="subNav_item">
+                                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    <span>Trending</span>
+                                                </li>
+                                                <li class="subNav_item">
+                                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    <span> Summer</span>
+                                                </li>
+                                                <li class="subNav_item">
+                                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                                    <span>Weather</span>
+                                                </li>
+                                            </ul>
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tools_Personal">
@@ -292,9 +298,9 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
-                    
+
                     <!-- cá nhân -->
                     <div class="content personal">
                         <div class="right-subnav">
@@ -311,187 +317,225 @@
                                 <ul class="right_subnav-listItem">
                                     <li class="right_subnav_item">
                                         <div class="subnav_item_img-hover">
-                                            <div class="subnav_item-img" style=" background-image: url('/assets/fonts/img/78ac905010ee21fda640f67ce2881950~c5_720x720.jpeg'); ">
-                                               
+                                            <div class="subnav_item-img"
+                                                style=" background-image: url('/assets/fonts/img/78ac905010ee21fda640f67ce2881950~c5_720x720.jpeg'); ">
+
                                             </div>
-                                      </div>
-                                      <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
-                                        <a href=""><p>Diệu Kiên</p></a>
+                                        </div>
+                                        <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
+                                        <a href="">
+                                            <p>Diệu Kiên</p>
+                                        </a>
                                     </li>
 
                                     <li class="right_subnav_item">
                                         <div class="subnav_item_img-hover">
-                                            <div class="subnav_item-img" style="background-image: url('/assets/fonts/img/6-15916991664791092695087-1591759532962-1591759533710973968047.jpg');">
-                                               
+                                            <div class="subnav_item-img"
+                                                style="background-image: url('/assets/fonts/img/6-15916991664791092695087-1591759532962-1591759533710973968047.jpg');">
+
                                             </div>
-                                      </div>
-                                      <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
-                                        <a href=""><p>Đặng Tử Kỳ</p></a>
+                                        </div>
+                                        <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
+                                        <a href="">
+                                            <p>Đặng Tử Kỳ</p>
+                                        </a>
                                     </li>
 
                                     <li class="right_subnav_item">
                                         <div class="subnav_item_img-hover">
-                                            <div class="subnav_item-img" style="background-image: url('/assets/fonts/img/tieu-su-ca-si-ho-gia-khanh.jpg');">
-                                               
+                                            <div class="subnav_item-img"
+                                                style="background-image: url('/assets/fonts/img/tieu-su-ca-si-ho-gia-khanh.jpg');">
+
                                             </div>
-                                      </div>
-                                      <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
-                                        <a href=""><p>Hồ Gia Khánh</p></a>
+                                        </div>
+                                        <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
+                                        <a href="">
+                                            <p>Hồ Gia Khánh</p>
+                                        </a>
                                     </li>
 
                                     <li class="right_subnav_item">
                                         <div class="subnav_item_img-hover">
-                                            <div class="subnav_item-img" style="background-image: url('/assets/fonts/img/LeBaoBinh.jpg');">
-                                               
+                                            <div class="subnav_item-img"
+                                                style="background-image: url('/assets/fonts/img/LeBaoBinh.jpg');">
+
                                             </div>
-                                      </div>
-                                      <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
-                                        <a href=""><p>Lê Bảo Bình</p></a>
+                                        </div>
+                                        <button><i class=" icon_SongRanBtn fa-solid fa-shuffle"></i></button>
+                                        <a href="">
+                                            <p>Lê Bảo Bình</p>
+                                        </a>
                                     </li>
 
                                     <li class="right_subnav_item">
                                         <div class="subnav_item_img-hover">
-                                            <div class="subnav_item-img right_subnav_allItem" >
-                                                
+                                            <div class="subnav_item-img right_subnav_allItem">
+
                                                 <i class="fa-solid fa-arrow-right-long right_subnav_allItem"></i>
                                             </div>
-                                      </div>
-                                    
-                                        <a href="#"><p>Xem tất cả</p></a>
+                                        </div>
+
+                                        <a href="#">
+                                            <p>Xem tất cả</p>
+                                        </a>
                                     </li>
 
                                 </ul>
                             </div>
                         </div>
-                            <div class="listCart-Personal">
-                                <div class="listCart_personal-title">
-                                    <p class="listCart_personal_title-text">
-                                        PlayList
-                                       <button><i class="fa-solid fa-plus"></i></button>
-                                    </p>
-                                    <p class="listCart_personal_title-showAll">
-                                        Tất cả
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </p>
-                                </div>
-
-                                <div class="listCart_personal-item">
-                                    <ul class="listCart_personal-playlist">
-                                        <li class="personal-playlist-item">
-                                            <div class="playlist_item-hover">
-                                                <div class="playlist_item_hover-icon">
-                                                    <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                    <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                    <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                                </div>
-                                                <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacCuaTui.jpg');"></div>
-                                                
-                                               
-                                            </div>
-                                            <p class="playlist-name">Nhạc của tui</p>
-                                            <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
-                                        </li>
-
-                                        <li class="personal-playlist-item">
-                                            <div class="playlist_item-hover">
-                                                <div class="playlist_item_hover-icon">
-                                                    <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                    <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                    <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                                </div>
-                                                <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
-                                                
-                                               
-                                            </div>
-                                            <p class="playlist-name">Nhạc trẻ</p>
-                                            <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
-                                        </li>
-
-                                        <li class="personal-playlist-item">
-                                            <div class="playlist_item-hover">
-                                                <div class="playlist_item_hover-icon">
-                                                    <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                    <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                    <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                                </div>
-                                                <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacT8.png');"></div>
-                                               
-                                               
-                                            </div>
-                                            <p class="playlist-name">Nhạc mới</p>
-                                            <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
-                                        </li>
-
-                                        <li class="personal-playlist-item">
-                                            <div class="playlist_item-hover">
-                                                <div class="playlist_item_hover-icon">
-                                                    <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                    <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                    <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                                </div>
-                                                <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                               
-                                               
-                                            </div>
-                                            <p class="playlist-name">Nhạc Trung</p>
-                                            <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                        <div class="listCart-Personal">
+                            <div class="listCart_personal-title">
+                                <p class="listCart_personal_title-text">
+                                    PlayList
+                                    <button><i class="fa-solid fa-plus"></i></button>
+                                </p>
+                                <p class="listCart_personal_title-showAll">
+                                    Tất cả
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </p>
                             </div>
 
-                            <div class="right-cart">
-                                <div class="right_cart-perform">
-                                    <p class="right_cart_perform-name">Bài hát</p>
-                                    <p class="right_cart_perform-name">Podcast</p>
-                                    <p class="right_cart_perform-name">Album</p>
-                                    <p class="right_cart_perform-name">Movie</p>
-                                </div>
+                            <div class="listCart_personal-item">
+                                <ul class="listCart_personal-playlist">
+                                    <li class="personal-playlist-item">
+                                        <div class="playlist_item-hover">
+                                            <div class="playlist_item_hover-icon">
+                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                                <button class="button-play">
+                                                    <div class="button_play-border"> <i
+                                                            class="action_icon-play fa-solid fa-play "></i> </div>
+                                                </button>
+                                                <button><i class="fa-solid fa-ellipsis"
+                                                        style="font-weight: 1000; color: white;"></i></button>
+                                            </div>
+                                            <div class="playlist_item"
+                                                style="background-image: url('/assets/fonts/img/NhacCuaTui.jpg');">
+                                            </div>
 
-                                <div class="right_cart_perform-Song ">
-                                   <div class="perform_Song-changeList">
+
+                                        </div>
+                                        <p class="playlist-name">Nhạc của tui</p>
+                                        <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
+                                    </li>
+
+                                    <li class="personal-playlist-item">
+                                        <div class="playlist_item-hover">
+                                            <div class="playlist_item_hover-icon">
+                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                                <button class="button-play">
+                                                    <div class="button_play-border"> <i
+                                                            class="action_icon-play fa-solid fa-play "></i> </div>
+                                                </button>
+                                                <button><i class="fa-solid fa-ellipsis"
+                                                        style="font-weight: 1000; color: white;"></i></button>
+                                            </div>
+                                            <div class="playlist_item"
+                                                style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');">
+                                            </div>
+
+
+                                        </div>
+                                        <p class="playlist-name">Nhạc trẻ</p>
+                                        <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
+                                    </li>
+
+                                    <li class="personal-playlist-item">
+                                        <div class="playlist_item-hover">
+                                            <div class="playlist_item_hover-icon">
+                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                                <button class="button-play">
+                                                    <div class="button_play-border"> <i
+                                                            class="action_icon-play fa-solid fa-play "></i> </div>
+                                                </button>
+                                                <button><i class="fa-solid fa-ellipsis"
+                                                        style="font-weight: 1000; color: white;"></i></button>
+                                            </div>
+                                            <div class="playlist_item"
+                                                style="background-image: url('/assets/fonts/img/NhacT8.png');"></div>
+
+
+                                        </div>
+                                        <p class="playlist-name">Nhạc mới</p>
+                                        <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
+                                    </li>
+
+                                    <li class="personal-playlist-item">
+                                        <div class="playlist_item-hover">
+                                            <div class="playlist_item_hover-icon">
+                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                                <button class="button-play">
+                                                    <div class="button_play-border"> <i
+                                                            class="action_icon-play fa-solid fa-play "></i> </div>
+                                                </button>
+                                                <button><i class="fa-solid fa-ellipsis"
+                                                        style="font-weight: 1000; color: white;"></i></button>
+                                            </div>
+                                            <div class="playlist_item"
+                                                style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                            </div>
+
+
+                                        </div>
+                                        <p class="playlist-name">Nhạc Trung</p>
+                                        <p class="playlist-nameUser">Nguyễn Hửu Trọng</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="right-cart">
+                            <div class="right_cart-perform">
+                                <p class="right_cart_perform-name">Bài hát</p>
+                                <p class="right_cart_perform-name">Podcast</p>
+                                <p class="right_cart_perform-name">Album</p>
+                                <p class="right_cart_perform-name">Movie</p>
+                            </div>
+
+                            <div class="right_cart_perform-Song ">
+                                <div class="perform_Song-changeList">
                                     <button class="isSelect-changeList">Yêu thích</button>
                                     <button>Đã tải lên</button>
-                                    
-                                   </div>
-                                   <div class="perform_Song-KeyList">
-                                        <p class="perform_Song_KeyList-name">Bài hát</p>
-                                        <p class="perform_Song_KeyList-name">Album</p>
-                                        <p class="perform_Song_KeyList-name">Thời gian</p>
-                                   </div>
-                                   
-                                   <div class="perform_Song-List">
-                                        <ul class="perform_Song-list_cart">
-                                        </ul>
-                                   </div>
 
                                 </div>
-
-                                <div class="right_cart_perform-Podcast">
-                                    <div class="perform_Podcast-changeList">
-                                        <button class="isSelect-changeList">Tập mới</button>
-                                        <button>Tập đã lưu</button>
-                                        <button>Chương trình</button>
-                                    </div>
-                                   
+                                <div class="perform_Song-KeyList">
+                                    <p class="perform_Song_KeyList-name">Bài hát</p>
+                                    <p class="perform_Song_KeyList-name">Album</p>
+                                    <p class="perform_Song_KeyList-name">Thời gian</p>
                                 </div>
 
-                                <div class="right_cart_perform-Album">
-                                    
-                                </div>
-
-                                <div class="right_cart_perform-movie">
-                                    
+                                <div class="perform_Song-List">
+                                    <ul class="perform_Song-list_cart">
+                                    </ul>
                                 </div>
 
                             </div>
-                    </div>  
+
+                            <div class="right_cart_perform-Podcast">
+                                <div class="perform_Podcast-changeList">
+                                    <button class="isSelect-changeList">Tập mới</button>
+                                    <button>Tập đã lưu</button>
+                                    <button>Chương trình</button>
+                                </div>
+
+                            </div>
+
+                            <div class="right_cart_perform-Album">
+
+                            </div>
+
+                            <div class="right_cart_perform-movie">
+
+                            </div>
+
+                        </div>
+                    </div>
 
                     <!-- khám phá -->
                     <div class="content discover">
                         <div class="discover-introduce">
-                           <button class="dis_control-left dis_control"> <i class="fa-sharp fa-solid fa-chevron-left"></i></button>
+                            <button class="dis_control-left dis_control"> <i
+                                    class="fa-sharp fa-solid fa-chevron-left"></i></button>
                             <div class="discover_introduce-cart">
                                 <div class="introduce_cart-img"></div>
                             </div>
@@ -503,14 +547,15 @@
                             <div class="discover_introduce-cart">
                                 <div class="introduce_cart-img"></div>
                             </div>
-                           <button class="dis_control-right dis_control"><i class="fa-sharp fa-solid fa-chevron-right"></i></button>
+                            <button class="dis_control-right dis_control"><i
+                                    class="fa-sharp fa-solid fa-chevron-right"></i></button>
                         </div>
 
                         <div class="discover-recently">
                             <div class="discover_recently-title">
                                 <p class="listCart_personal_title-text">
                                     Gần đây
-                                   <button><i class="fa-solid fa-plus"></i></button>
+                                    <button><i class="fa-solid fa-plus"></i></button>
                                 </p>
                                 <p class="listCart_personal_title-showAll">
                                     Tất cả
@@ -524,13 +569,16 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                 <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div>
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacCuaTui.jpg');"></div>
-                                        
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacCuaTui.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Top 100 bài hát nhạc trẻ hay nhất</p>
                                 </li>
@@ -540,16 +588,19 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                     <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> 
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
-                                        
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Những bài hát hay nhất của Hồ Việt Trung</p>
-                                   
+
                                 </li>
 
                                 <li class="personal-playlist-item recently-content">
@@ -557,16 +608,19 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                 <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div>
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacT8.png');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacT8.png');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">K-Pop Solo</p>
-                                   
+
                                 </li>
 
                                 <li class="personal-playlist-item recently-content">
@@ -574,13 +628,17 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                 <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div>
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                        </div>
+
+
                                     </div>
                                     <p class="playlist-name">Ca Nhạc cải lương</p>
                                 </li>
@@ -590,13 +648,17 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                 <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div>
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                        </div>
+
+
                                     </div>
                                     <p class="playlist-name">Góc Nhạc IU</p>
                                 </li>
@@ -606,13 +668,17 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                 <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div>
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                        </div>
+
+
                                     </div>
                                     <p class="playlist-name">Tình yêu hết hạn</p>
                                 </li>
@@ -622,13 +688,17 @@
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-regular fa-heart"></i> </button>
                                             <button class="button-play">
-                                                 <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div>
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
                                             </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                        </div>
+
+
                                     </div>
                                     <p class="playlist-name">#Zingchart</p>
                                 </li>
@@ -642,7 +712,7 @@
                             <div class="discover_recently-title">
                                 <p class="listCart_personal_title-text">
                                     Có thể bạn muốn nghe
-                                   
+
                                 </p>
                             </div>
                             <ul class="listCart_personal-playlist">
@@ -650,12 +720,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');"></div>
-                                        
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Một Góc Indie</p>
                                     <p class="playlist-nameUser">
@@ -672,12 +747,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
-                                        
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">K-Hip-Hop Beats</p>
                                     <p class="playlist-nameUser">
@@ -694,12 +774,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/DaebakSolo.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DaebakSolo.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Daebak Solo</p>
                                     <p class="playlist-nameUser">
@@ -716,12 +801,18 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                        </div>
+
+
                                     </div>
                                     <p class="playlist-name">Cover Nhạc Hoa Gây Bão</p>
                                     <p class="playlist-nameUser">
@@ -738,12 +829,18 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacHotTikTo2019.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacHotTikTo2019.jpg');">
+                                        </div>
+
+
                                     </div>
                                     <p class="playlist-name">Nhạc hot Tik tok 2019</p>
                                     <p class="playlist-nameUser">
@@ -757,15 +854,15 @@
                                 </li>
 
                             </ul>
-                            
-                            
+
+
                         </div>
 
                         <div class="discover-selectToday">
                             <div class="discover_recently-title">
                                 <p class="listCart_personal_title-text">
                                     Lựa chọn hôm nay
-                                   
+
                                 </p>
                             </div>
                             <ul class="listCart_personal-playlist">
@@ -773,12 +870,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');"></div>
-                                        
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Đoá hồng nhạc Việt</p>
                                     <p class="playlist-nameUser">
@@ -790,12 +892,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacViet.jpg');"></div>
-                                        
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacViet.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">V-Pop Rising</p>
                                     <p class="playlist-nameUser">
@@ -807,12 +914,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacEDM.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacEDM.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Everyday EDM</p>
                                     <p class="playlist-nameUser">
@@ -824,12 +936,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacNewbie.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacNewbie.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">K-Pop Newbie</p>
                                     <p class="playlist-nameUser">
@@ -841,12 +958,17 @@
                                     <div class="playlist_item-hover">
                                         <div class="playlist_item_hover-icon">
                                             <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                            <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                            <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <div class="playlist_item" style="background-image: url('/assets/fonts/img/animeHienNay.jpg');"></div>
-                                       
-                                       
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/animeHienNay.jpg');"></div>
+
+
                                     </div>
                                     <p class="playlist-name">Anime Now</p>
                                     <p class="playlist-nameUser">
@@ -859,16 +981,17 @@
 
                         <div class="discover-newRelease">
                             <div class="discover_newRelease-title">
-                                <p >
+                                <p>
                                     Mới Phát Hành
                                 </p>
                             </div>
-                            
+
                             <div class="discover_newRelease-topic">
 
                                 <div class="newRelease_topic-left">
-                                        <button class="newRelease_left-ob1" style="background-color: #c662ef; border: none;">Bài Hát</button>
-                                        <button class="newRelease_left-ob2">Album</button>
+                                    <button class="newRelease_left-ob1"
+                                        style="background-color: #c662ef; border: none;">Bài Hát</button>
+                                    <button class="newRelease_left-ob2">Album</button>
                                 </div>
 
                                 <div class="newRelease_topic-right">
@@ -882,7 +1005,8 @@
                             <div class="discover_newRelease-cart">
                                 <ul class="newRelease_cart-list">
                                     <li class="newRelease_cart-object">
-                                        <div class="newRelease_cart-img" style="background-image: url('/assets/fonts/img/helpNo.jpg')">
+                                        <div class="newRelease_cart-img"
+                                            style="background-image: url('/assets/fonts/img/helpNo.jpg')">
 
                                         </div>
 
@@ -892,7 +1016,7 @@
                                             </p>
 
                                             <p class="newRelease_textSinger">
-                                               <a href="#" >Vương Anh Tú</a>
+                                                <a href="#">Vương Anh Tú</a>
                                             </p>
 
                                             <p class="newRelease_textTimeUp">
@@ -902,13 +1026,15 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
 
                                     <li class="newRelease_cart-object">
-                                        <div class="newRelease_cart-img" style="background-image: url('/assets/fonts/img/livingWithyou.jpg')">
+                                        <div class="newRelease_cart-img"
+                                            style="background-image: url('/assets/fonts/img/livingWithyou.jpg')">
 
                                         </div>
 
@@ -926,7 +1052,7 @@
                                                 </a> ,
                                                 <a href="">
                                                     Sam Ryder
-                                                </a> 
+                                                </a>
                                             </p>
 
                                             <p class="newRelease_textTimeUp">
@@ -936,13 +1062,15 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
 
                                     <li class="newRelease_cart-object">
-                                        <div class="newRelease_cart-img" style="background-image: url('/assets/fonts/img/followMe.jpg')">
+                                        <div class="newRelease_cart-img"
+                                            style="background-image: url('/assets/fonts/img/followMe.jpg')">
 
                                         </div>
 
@@ -952,8 +1080,8 @@
                                             </p>
 
                                             <p class="newRelease_textSinger">
-                                               <a href="">Topic</a>,
-                                               <a href="">John Martin</a>
+                                                <a href="">Topic</a>,
+                                                <a href="">John Martin</a>
                                             </p>
 
                                             <p class="newRelease_textTimeUp">
@@ -963,7 +1091,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -975,8 +1104,8 @@
 
                                         <div class="newRelease_cart-text">
                                             <p class="newRelease_textName">
-                                                Nói Em Không Tin         
-                                           </p>
+                                                Nói Em Không Tin
+                                            </p>
 
                                             <p class="newRelease_textSinger">
                                                 <a href="">14 Casper</a>,
@@ -990,7 +1119,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1016,7 +1146,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1042,7 +1173,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1068,7 +1200,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1084,7 +1217,7 @@
                                             </p>
 
                                             <p class="newRelease_textSinger">
-                                              <a href="">LOONA</a>
+                                                <a href="">LOONA</a>
                                             </p>
 
                                             <p class="newRelease_textTimeUp">
@@ -1094,7 +1227,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1110,8 +1244,8 @@
                                             </p>
 
                                             <p class="newRelease_textSinger">
-                                               <a href="">Khắc Việt</a>,
-                                               <a href="">ACV</a>
+                                                <a href="">Khắc Việt</a>,
+                                                <a href="">ACV</a>
                                             </p>
 
                                             <p class="newRelease_textTimeUp">
@@ -1121,7 +1255,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1147,7 +1282,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1173,7 +1309,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1199,7 +1336,8 @@
 
                                         <div class="newRelease_cart-icon">
                                             <i class="action_icon-play fa-solid fa-play "></i>
-                                            <i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i>
+                                            <i class="fa-solid fa-ellipsis"
+                                                style="font-weight: 1000; color: white;"></i>
                                         </div>
 
                                     </li>
@@ -1210,297 +1348,344 @@
                         </div>
 
                         <div class="discover-energy">
-                            
-                                <div class="discover_recently-title">
-                                    <p class="listCart_personal_title-text">
-                                        Năng lượng giữa tuần
-                                       
+
+                            <div class="discover_recently-title">
+                                <p class="listCart_personal_title-text">
+                                    Năng lượng giữa tuần
+
+                                </p>
+                            </div>
+                            <ul class="listCart_personal-playlist">
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+                                            <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
+                                        </div>
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');"></div>
+
+
+                                    </div>
+                                    <p class="playlist-name">Những sự kết hợp mới</p>
+                                    <p class="playlist-nameUser">
+                                        Những pha hội ngộ lần đầu nhưng không bỡ ngỡ
                                     </p>
-                                </div>
-                                <ul class="listCart_personal-playlist">
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');"></div>
-                                            
-                                           
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+                                            <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <p class="playlist-name">Những sự kết hợp mới</p>
-                                        <p class="playlist-nameUser">
-                                          Những pha hội ngộ lần đầu nhưng không bỡ ngỡ
-                                        </p>
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
-                                            
-                                           
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');"></div>
+
+
+                                    </div>
+                                    <p class="playlist-name">Hot Hit VietNam</p>
+                                    <p class="playlist-nameUser">
+                                        Hits mới nhất từ VN...
+                                    </p>
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+                                            <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <p class="playlist-name">Hot Hit VietNam</p>
-                                        <p class="playlist-nameUser">
-                                            Hits mới nhất từ VN...
-                                        </p>
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/DaebakSolo.jpg');"></div>
-                                           
-                                           
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DaebakSolo.jpg');"></div>
+
+
+                                    </div>
+                                    <p class="playlist-name">V-Pop Rising</p>
+                                    <p class="playlist-nameUser">
+                                        Khám phá tài năng Gen-Z của V-Pop trước khi họ bùng nổ
+                                    </p>
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+                                            <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <p class="playlist-name">V-Pop Rising</p>
-                                        <p class="playlist-nameUser">
-                                           Khám phá tài năng Gen-Z của V-Pop trước khi họ bùng nổ
-                                        </p>
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');"></div>
-                                           
-                                           
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
                                         </div>
-                                        <p class="playlist-name">Hits Cover nghe là thích </p>
-                                        <p class="playlist-nameUser">
-                                           Những bản Cover không kém gì bản gốc
-                                        </p>
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                <button><i class="fa-solid fa-circle-minus"></i> </button>
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                <button><i class="fa-solid fa-ellipsis" style="font-weight: 1000; color: white;"></i></button>
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacHotTikTo2019.jpg');"></div>
-                                           
-                                           
+
+
+                                    </div>
+                                    <p class="playlist-name">Hits Cover nghe là thích </p>
+                                    <p class="playlist-nameUser">
+                                        Những bản Cover không kém gì bản gốc
+                                    </p>
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+                                            <button><i class="fa-solid fa-circle-minus"></i> </button>
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+                                            <button><i class="fa-solid fa-ellipsis"
+                                                    style="font-weight: 1000; color: white;"></i></button>
                                         </div>
-                                        <p class="playlist-name">Rap Việt ngày nay</p>
-                                        <p class="playlist-nameUser">
-                                            Tan ra cùng những track rap Việt ngày nay
-                                        </p>
-                                    </li>
-    
-                                </ul>
-                                
-                                
-                           
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacHotTikTo2019.jpg');">
+                                        </div>
+
+
+                                    </div>
+                                    <p class="playlist-name">Rap Việt ngày nay</p>
+                                    <p class="playlist-nameUser">
+                                        Tan ra cùng những track rap Việt ngày nay
+                                    </p>
+                                </li>
+
+                            </ul>
+
+
+
                         </div>
 
                         <div class="discover_cart-six">
-                            
-                            
-                                <div class="discover_recently-title">
-                                    <p class="listCart_personal_title-text">
-                                        Mix riêng của bạn
-                                       
-                                    </p>
-                                </div>
-                                <ul class="listCart_personal-playlist">
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');">
-                                            
-                                                
-                                            </div>
-                                            <div class="sub_playlist_item">
-                                                <div class="playlist_item_image">
-                                                    <ul>
-                                                        <li class="exit">
-                                                            <img src="/assets/fonts/img/MotGocIndia.jpg" alt="">
-                                                        </li>
-                                                        <li class="enter">
-                                                            <img src="/assets/fonts/img/MotGocIndia.jpg" alt="">
-                                                        </li>
-                                                    </ul> 
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="playlist_cart_six-name">
-                                                <p class="playlist-name">Mixtape Vương Anh Tú</p>
-                                                <p class="playlist-nameUser">
-                                                Ngô Kiến Huy, Vương Anh Tú
-                                                </p> 
-                                            </div>
-                                            
+
+
+                            <div class="discover_recently-title">
+                                <p class="listCart_personal_title-text">
+                                    Mix riêng của bạn
+
+                                </p>
+                            </div>
+                            <ul class="listCart_personal-playlist">
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+
                                         </div>
-                                        
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');">
-                                            
-                                            </div>
-                                            <div class="sub_playlist_item">
-                                                <div class="playlist_item_image">
-                                                    <ul>
-                                                        <li class="exit">
-                                                            <img src="/assets/fonts/img/NhacTreEDM.jpg" alt="">
-                                                        </li>
-                                                        <li class="enter">
-                                                            <img src="/assets/fonts/img/NhacTreEDM.jpg" alt="">
-                                                        </li>
-                                                    </ul> 
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="playlist_cart_six-name">
-                                                <p class="playlist-name">Mixtape Vương Anh Tú</p>
-                                                <p class="playlist-nameUser">
-                                                Ngô Kiến Huy, Vương Anh Tú
-                                                </p> 
-                                            </div>
-                                            
-                                           
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/MotGocIndia.jpg');">
+
+
                                         </div>
-                                        
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                
+                                        <div class="sub_playlist_item">
+                                            <div class="playlist_item_image">
+                                                <ul>
+                                                    <li class="exit">
+                                                        <img src="/assets/fonts/img/MotGocIndia.jpg" alt="">
+                                                    </li>
+                                                    <li class="enter">
+                                                        <img src="/assets/fonts/img/MotGocIndia.jpg" alt="">
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/DaebakSolo.jpg');">
-                                            </div>
-                                            <div class="sub_playlist_item">
-                                                <div class="playlist_item_image">
-                                                    <ul>
-                                                        <li class="exit">
-                                                            <img src="/assets/fonts/img/DaebakSolo.jpg" alt="">
-                                                        </li>
-                                                        <li class="enter">
-                                                            <img src="/assets/fonts/img/DaebakSolo.jpg" alt="">
-                                                        </li>
-                                                    </ul> 
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="playlist_cart_six-name">
-                                                <p class="playlist-name">Mixtape Vương Anh Tú</p>
-                                                <p class="playlist-nameUser">
-                                                Ngô Kiến Huy, Vương Anh Tú
-                                                </p> 
-                                            </div>
-                                           
-                                           
+
+
                                         </div>
-                                        
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                
-                                            </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
-                                            </div>
-                                            <div class="sub_playlist_item">
-                                                <div class="playlist_item_image">
-                                                    <ul>
-                                                        <li class="exit">
-                                                            <img src="/assets/fonts/img/DienVienHoaNgu.jpg" alt="">
-                                                        </li>
-                                                        <li class="enter">
-                                                            <img src="/assets/fonts/img/DienVienHoaNgu.jpg" alt="">
-                                                        </li>
-                                                    </ul> 
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="playlist_cart_six-name">
-                                                <p class="playlist-name">Mixtape Vương Anh Tú</p>
-                                                <p class="playlist-nameUser">
+                                        <div class="playlist_cart_six-name">
+                                            <p class="playlist-name">Mixtape Vương Anh Tú</p>
+                                            <p class="playlist-nameUser">
                                                 Ngô Kiến Huy, Vương Anh Tú
-                                                </p> 
-                                            </div>
-                                           
-                                           
+                                            </p>
                                         </div>
-                                       
-                                    </li>
-    
-                                    <li class="personal-playlist-item">
-                                        <div class="playlist_item-hover">
-                                            <div class="playlist_item_hover-icon">
-                                                
-                                                <button class="button-play">  <div class="button_play-border"> <i class="action_icon-play fa-solid fa-play "></i> </div> </button>
-                                                
+
+                                    </div>
+
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+
+                                        </div>
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacTreEDM.jpg');">
+
+                                        </div>
+                                        <div class="sub_playlist_item">
+                                            <div class="playlist_item_image">
+                                                <ul>
+                                                    <li class="exit">
+                                                        <img src="/assets/fonts/img/NhacTreEDM.jpg" alt="">
+                                                    </li>
+                                                    <li class="enter">
+                                                        <img src="/assets/fonts/img/NhacTreEDM.jpg" alt="">
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="playlist_item" style="background-image: url('/assets/fonts/img/NhacHotTikTo2019.jpg');">
-                                            </div>
-                                            <div class="sub_playlist_item">
-                                                <div class="playlist_item_image">
-                                                    <ul>
-                                                        <li class="exit">
-                                                            <img src="/assets/fonts/img/NhacHotTikTo2019.jpg" alt="">
-                                                        </li>
-                                                        <li class="enter">
-                                                            <img src="/assets/fonts/img/NhacHotTikTo2019.jpg" alt="">
-                                                        </li>
-                                                    </ul> 
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="playlist_cart_six-name">
-                                                <p class="playlist-name">Mixtape Vương Anh Tú</p>
-                                                <p class="playlist-nameUser">
+
+
+                                        </div>
+                                        <div class="playlist_cart_six-name">
+                                            <p class="playlist-name">Mixtape Vương Anh Tú</p>
+                                            <p class="playlist-nameUser">
                                                 Ngô Kiến Huy, Vương Anh Tú
-                                                </p> 
-                                            </div>
-                                           
-                                           
+                                            </p>
                                         </div>
-                                        
-                                    </li>
-    
-                                </ul>
-                                
-                                
-                           
-                        
+
+
+                                    </div>
+
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+
+                                        </div>
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DaebakSolo.jpg');">
+                                        </div>
+                                        <div class="sub_playlist_item">
+                                            <div class="playlist_item_image">
+                                                <ul>
+                                                    <li class="exit">
+                                                        <img src="/assets/fonts/img/DaebakSolo.jpg" alt="">
+                                                    </li>
+                                                    <li class="enter">
+                                                        <img src="/assets/fonts/img/DaebakSolo.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="playlist_cart_six-name">
+                                            <p class="playlist-name">Mixtape Vương Anh Tú</p>
+                                            <p class="playlist-nameUser">
+                                                Ngô Kiến Huy, Vương Anh Tú
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+
+                                        </div>
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');">
+                                        </div>
+                                        <div class="sub_playlist_item">
+                                            <div class="playlist_item_image">
+                                                <ul>
+                                                    <li class="exit">
+                                                        <img src="/assets/fonts/img/DienVienHoaNgu.jpg" alt="">
+                                                    </li>
+                                                    <li class="enter">
+                                                        <img src="/assets/fonts/img/DienVienHoaNgu.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="playlist_cart_six-name">
+                                            <p class="playlist-name">Mixtape Vương Anh Tú</p>
+                                            <p class="playlist-nameUser">
+                                                Ngô Kiến Huy, Vương Anh Tú
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+
+                                </li>
+
+                                <li class="personal-playlist-item">
+                                    <div class="playlist_item-hover">
+                                        <div class="playlist_item_hover-icon">
+
+                                            <button class="button-play">
+                                                <div class="button_play-border"> <i
+                                                        class="action_icon-play fa-solid fa-play "></i> </div>
+                                            </button>
+
+                                        </div>
+                                        <div class="playlist_item"
+                                            style="background-image: url('/assets/fonts/img/NhacHotTikTo2019.jpg');">
+                                        </div>
+                                        <div class="sub_playlist_item">
+                                            <div class="playlist_item_image">
+                                                <ul>
+                                                    <li class="exit">
+                                                        <img src="/assets/fonts/img/NhacHotTikTo2019.jpg" alt="">
+                                                    </li>
+                                                    <li class="enter">
+                                                        <img src="/assets/fonts/img/NhacHotTikTo2019.jpg" alt="">
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="playlist_cart_six-name">
+                                            <p class="playlist-name">Mixtape Vương Anh Tú</p>
+                                            <p class="playlist-nameUser">
+                                                Ngô Kiến Huy, Vương Anh Tú
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+
+
+
                         </div>
 
                         <div class="discover-">
@@ -1560,167 +1745,167 @@
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
                                 </li>
 
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
                                 </li>
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
                                 </li>
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
                                 </li>
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
                                 </li>
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
                                 </li>
                                 <li class="radio-listening_container ">
                                     <div class="listening_container_top-content">
                                         <div class="container_top-content_card-image">
-                                            <div class="top-content_card-image">                                                                  
+                                            <div class="top-content_card-image">
+                                            </div>
+                                            <button class="btn-radio">
+                                                <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
+                                            </button>
                                         </div>
-                                        <button class="btn-radio">
-                                            <i class="action_icon-play fa-solid fa-play icon-radio-btn "></i>
-                                        </button>  
-                                    </div>
-                                    <div class="top-content_icon-image">
-                                        </div>                                                                    
-                                    <div class="top-content_status-image">live
+                                        <div class="top-content_icon-image">
                                         </div>
-                                            
+                                        <div class="top-content_status-image">live
+                                        </div>
+
                                     </div>
 
-                                     
-                                <div class="listening_container_bot-content">
-                                    <h3 class="listening_title">K-POP</h3>
-                                    <h3 class="listening_subtitle">1201 đang nghe</h3>
-                                </div>
-                                </li>                               
+
+                                    <div class="listening_container_bot-content">
+                                        <h3 class="listening_title">K-POP</h3>
+                                        <h3 class="listening_subtitle">1201 đang nghe</h3>
+                                    </div>
+                                </li>
                             </ul>
 
                         </div>
-                    <!-- radio broadcast channel -->
+                        <!-- radio broadcast channel -->
                         <div class="radio-">
 
                         </div>
                         <!--radio discover  -->
-                        <div class="radio-discover">    
+                        <div class="radio-discover">
                             <div class="radio-discover_title">
                                 Khám Phá Podcast
                             </div>
@@ -1761,11 +1946,323 @@
                     </div>
                     <!-- theo dõi -->
                     <div class="content follow">
-                        
+
                     </div>
                     <!-- Nhạc mới  -->
                     <div class="content newSong">
-
+                        <div class="right_subnav-title">
+                            <h2 class="right_subnav_text">
+                                Nhạc Mới
+                            </h2>
+                            <button>
+                                <i class="action_icon-play fa-solid fa-play "></i>
+                            </button>
+                        </div>
+                        <div class="perform_Song-List">
+                            <li class="perform_Song-cart isSelect-nav-item is-selected">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-1"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay" style="visibility: hidden;"></div>
+                                        <img src="https://images6.alphacoders.com/785/thumb-1920-785636.png" alt="">
+                                        <i id="0" class="action_icon-play fa-solid fa-play "
+                                            style="visibility: visible; display: block;"></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Holo</p>
+                                        <p>Chưa biết</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Holo</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>03:49</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-2"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="https://images5.alphacoders.com/592/thumb-1920-592887.jpg" alt="">
+                                        <i id="1" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Summer</p>
+                                        <p>Chưa biết</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Summer</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>02:46</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-3"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="https://images2.alphacoders.com/911/thumb-1920-911008.jpg" alt="">
+                                        <i id="2" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Spark</p>
+                                        <p>Anh Không Thích Em</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Spark</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>04:02</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-4"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="https://images.alphacoders.com/781/thumb-1920-781562.jpg" alt="">
+                                        <i id="3" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Home</p>
+                                        <p>Của tui</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Home</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>05:00</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-5"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/LeBaoBinh.jpg" alt="">
+                                        <i id="4" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Cuộc vui cô đơn</p>
+                                        <p>Lê Bảo Bình</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Cuộc vui cô đơn</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>05:05</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-6"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/GirlAll.jpg" alt="">
+                                        <i id="5" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Tư Mỹ Nhân Hề</p>
+                                        <p>Kiều Chấn Vũ</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Tư Mỹ Nhân Hề</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>03:11</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-7"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/TimEm.jpg" alt="">
+                                        <i id="6" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Tìm Em</p>
+                                        <p>Hồ Quang Hiếu</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Tìm Em</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>04:30</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-8"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/GirlAll.jpg" alt="">
+                                        <i id="7" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Uyên Ương Hồ Điệp</p>
+                                        <p>Hồ Quang Hiếu</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Uyên Ương Hồ Điệp</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>04:31</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-9"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/ChoDinhMenhMimCuoi.jpg" alt="">
+                                        <i id="8" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Chờ định mệnh mĩm cười</p>
+                                        <p>Minh Vương M4U</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Chờ định mệnh mĩm cười</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>03:58</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-1"></i><i class="fa-solid fa-0"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/MuonKiepLaAnhEm.jpg" alt="">
+                                        <i id="9" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Muôn kiếp là anh em</p>
+                                        <p>Du Thiên</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Muôn kiếp là anh em</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>05:16</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/DangDo.jpg" alt="">
+                                        <i id="10" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Dang dở</p>
+                                        <p>NAl</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Dang dở</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>04:50</span>
+                                </div>
+                            </li>
+                            <li class="perform_Song-cart">
+                                <div class="perform_Song-cart-introduce">
+                                    <div class="number-rate">
+                                        <i class="fa-solid fa-1"></i><i class="fa-solid fa-2"></i>
+                                    </div>
+                                    <i class="fa-solid fa-music"></i>
+                                    <input type="checkbox" class="checkbox-song">
+                                    <div class="song-cart-introduce-img">
+                                        <div class="gitPlay"></div>
+                                        <img src="./assets/fonts/img/11.jpg" alt="">
+                                        <i id="11" class="action_icon-play fa-solid fa-play "></i>
+                                    </div>
+                                    <div class="song-cart-introduce-text">
+                                        <p>Ngã Tư Đường</p>
+                                        <p>Hồ Quang Hiếu</p>
+                                    </div>
+                                </div>
+                                <div class="perform_Song-cart-album">
+                                    <a href="">Ngã Tư Đường</a>
+                                </div>
+                                <div class="perform_Song-cart-time">
+                                    <i class="fa-solid fa-microphone"></i>
+                                    <span>04:35</span>
+                                </div>
+                            </li>
+                            <ul class="perform_Song-list_cart">
+                            </ul>
+                        </div>
                     </div>
                     <!-- Thể loại -->
                     <div class="content typeSong">
@@ -1780,12 +2277,13 @@
 
                     </div>
                 </div>
-                
+
 
             </div>
-         </div>
-       
-     </div>
-     <script src="./app.js"></script>
+        </div>
+
+    </div>
+    <script src="./app.js"></script>
 </body>
+
 </html>

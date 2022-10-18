@@ -589,7 +589,7 @@ function addListSongtoPerform(){
 }
 
 // hiệu ứng click trên slider
-const menuItemSlider = document.getElementsByClassName("navMenu-item");
+    const menuItemSlider = document.getElementsByClassName("navMenu-item");
     function addBackgroundMenuSlider(obj){
         obj.classList.add("isSelect-nav-item");
     }
@@ -605,12 +605,13 @@ for(var i= 0;i<menuItemSlider.length;i++){
         var index = indexFuction(this);
         //thêm background
         removeBackgroundMenuSlider();
-        addBackgroundMenuSlider(this);
+        addBackgroundMenuSlider(this);  
         // hiển thị menu chức năng
         nonDisplayContent();
         displayContent(listContent[index]);
     }
 }
+
 function indexFuction(obj){
     for(var i= 0;i<menuItemSlider.length;i++){
         if(obj == menuItemSlider[i])
