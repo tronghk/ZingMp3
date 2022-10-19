@@ -629,13 +629,23 @@ function nonDisplayContent(){
 }
 // nút ngắt âm lượng
 var button = document.querySelector(".fa-volume-high");
+var lastVolume;
+var lastColorValue;
 button.onclick = function() {
     if (button.classList.contains("fa-volume-high")){
         button.classList.remove("fa-volume-high");
         button.classList.add("fa-volume-xmark");
+        lastVolume = song.volume;
+        lastColorValue = inVolume.value;
+        song.volume = 0;
+        inVolume.value = 0;
+        crossColorLeft(inVolume.value,inVolume);
+
     } else if (!button.classList.contains("fa-volume-high")){
         button.classList.remove("fa-volume-xmark");
         button.classList.add("fa-volume-high");
+        song.volume = lastVolume;
+        crossColorLeft(lastColorValue, inVolume);
     }
 }
 // ảnh chuyển động
