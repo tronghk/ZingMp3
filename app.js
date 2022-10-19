@@ -627,6 +627,17 @@ function nonDisplayContent(){
     if(contentDisplay != null)
     contentDisplay.classList.remove("onDisplay");
 }
+// nút ngắt âm lượng
+var button = document.querySelector(".fa-volume-high");
+button.onclick = function() {
+    if (button.classList.contains("fa-volume-high")){
+        button.classList.remove("fa-volume-high");
+        button.classList.add("fa-volume-xmark");
+    } else if (!button.classList.contains("fa-volume-high")){
+        button.classList.remove("fa-volume-xmark");
+        button.classList.add("fa-volume-high");
+    }
+}
 // ảnh chuyển động
 // const discoverIntroduce = document.getElementsByClassName("discover_introduce-cart");
 //  function transitionDiscoverIntroduce(){
