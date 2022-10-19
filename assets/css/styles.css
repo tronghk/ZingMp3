@@ -509,17 +509,6 @@ img {
     background-color: #ccc;
 }
 
-.newSong-List {}
-
-.number-rate {
-    width: 40px;
-}
-
-.number-rate i:nth-child(2) {
-    float: right;
-    margin-left: -10px;
-}
-
 .left_sliderbar-wrapper {
     display: flex;
     flex: 100%;
@@ -1000,7 +989,8 @@ img {
 
 .listCart_personal-title,
 .discover_recently-title,
-.discover_newRelease-title {
+.discover_newRelease-title,
+.discover_careAbout-title {
     flex: 100%;
     display: flex;
     justify-content: space-between;
@@ -1013,14 +1003,16 @@ img {
 .discover-recently p,
 .discover-invitation p,
 .discover-energy p,
-.discover_cart-six p {
+.discover_cart-six p,
+.discover-careAbout p {
     font-size: 2rem;
     color: #fff;
 }
 
 .discover-invitation .playlist-nameUser,
 .discover-energy .playlist-nameUser,
-.discover_cart-six .playlist-nameUser {
+.discover_cart-six .playlist-nameUser,
+.discover-careAbout .playlist-nameUser {
     margin-top: 2px;
 }
 
@@ -1104,7 +1096,8 @@ img {
 .listCart_personal-item .button_play-border,
 .discover-invitation .button_play-border,
 .discover-energy .button_play-border,
-.discover_cart-six .button_play-border {
+.discover_cart-six .button_play-border,
+.discover-careAbout .button_play-border {
     padding: 10px 8px;
     position: absolute;
     top: -12px;
@@ -1167,7 +1160,8 @@ img {
 .discover-selectToday p,
 .discover_newRelease-title p,
 .discover-energy p,
-.discover_cart-six p {
+.discover_cart-six p,
+.discover-careAbout p {
     font-size: 1.6rem;
     color: #fff;
 }
@@ -1480,7 +1474,8 @@ img {
 .discover-selectToday,
 .discover-newRelease,
 .discover-energy,
-.discover_cart-six {
+.discover_cart-six,
+.discover-careAbout {
     display: flex;
     position: relative;
     flex: 100%;
@@ -1488,6 +1483,11 @@ img {
     justify-items: center;
     flex-wrap: wrap;
     margin-bottom: 35px;
+}
+
+.careAbout_title-image {
+    border-radius: 10px;
+
 }
 
 .dis_control {
@@ -1842,6 +1842,17 @@ img {
     font-size: 2rem;
 }
 
+.newSong-List {}
+
+.number-rate {
+    width: 40px;
+}
+
+.number-rate i:nth-child(2) {
+    float: right;
+    margin-left: -10px;
+}
+
 .sub_playlist_item {
     width: 100%;
     height: 64px;
@@ -1867,14 +1878,16 @@ img {
     left: 0;
     right: 0;
     margin: 0;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
 }
 
 .playlist_item_image {
     width: 100%;
     height: 64px;
     position: absolute;
-    -webkit-filter: blur(40px);
-    filter: blur(40px);
+    background: rgba(0, 0, 0, .9);
+
 }
 
 .playlist_cart_six-name {
@@ -1891,4 +1904,27 @@ img {
 .playlist_cart_six-name .playlist-name {
     font-weight: bold;
     margin-top: 10px;
+}
+
+.discover_careAbout-title {
+    justify-content: left;
+}
+
+.discover_careAbout-title p {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.careAbout_title-image img {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.discover_careAbout-title .careAbout_title_text_cart2 {
+    color: #fff;
+    font-weight: 700;
 }
