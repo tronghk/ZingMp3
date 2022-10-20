@@ -999,6 +999,8 @@ button .fa-volume-xmark {
     display: flex;
     justify-content: space-between;
     justify-items: center;
+    margin-top: 75px;
+    margin-bottom: 20px;
     margin-bottom: 20px;
 
 }
@@ -1094,7 +1096,6 @@ button .fa-volume-xmark {
     margin-bottom: 10px;
     border-radius: 10px;
 
-
 }
 
 .listCart_personal-item .button_play-border,
@@ -1168,6 +1169,10 @@ button .fa-volume-xmark {
 .discover-careAbout p {
     font-size: 1.6rem;
     color: #fff;
+}
+
+.personal-playlist-item {
+    position: relative;
 }
 
 .personal-playlist-item .playlist-nameUser {
@@ -1577,7 +1582,7 @@ button .fa-volume-xmark {
     background-image: url('/assets/fonts/img/MotGocIndia.jpg');
 }
 
-.playlist_item-hover .playlist_item-text p:nth-child(2) {
+.typeSong .playlist_item-hover .playlist_item-text p:nth-child(2) {
     text-align: center;
 }
 
@@ -1846,7 +1851,6 @@ button .fa-volume-xmark {
     font-size: 2rem;
 }
 
-.newSong-List {}
 
 .number-rate {
     width: 40px;
