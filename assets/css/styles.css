@@ -1579,11 +1579,56 @@ button .fa-volume-xmark {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: url('/assets/fonts/img/MotGocIndia.jpg');
 }
 
-.typeSong .playlist_item-hover .playlist_item-text p:nth-child(2) {
-    text-align: center;
+
+
+.heading-photo {
+    margin-top: 70px;
+    width: 100%;
+}
+
+.type-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 15px 15px;
+    margin-top: 85px;
+    z-index: 1;
+}
+
+.type-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px -2px 10px black, -2px 2px 12px black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.thumb-items {
+    display: flex;
+    width: 254px;
+    height: 50px;
+    align-items: center;
+    position: absolute;
+}
+
+.thumb-item {
+    height: 100%;
+    position: relative;
+    margin-right: -45px;
+}
+
+.thumb-item img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.heading-photo img {
+    max-width: 100%;
 }
 
 .playlist_item-hover .playlist_item-text p:nth-child(1) {
