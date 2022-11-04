@@ -1631,6 +1631,8 @@ button .fa-volume-xmark {
     max-width: 100%;
 }
 
+.type-songs-clicked {}
+
 .playlist_item-hover .playlist_item-text p:nth-child(1) {
     margin-left: 14px;
 }
