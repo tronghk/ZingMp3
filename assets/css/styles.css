@@ -665,7 +665,6 @@ button .fa-volume-xmark {
     position: fixed;
     z-index: 999;
     height: 70px;
-    background-color: var(--layout-bg);
 }
 
 .right_nav-controlbar i {
@@ -1189,6 +1188,9 @@ button .fa-volume-xmark {
 .personal-playlist-item .playlist-nameUser {
     opacity: 0.6;
     font-size: 1.3rem;
+}
+.personal-playlist-item:last-child{
+    margin-right: 0;
 }
 
 .playlist-name,
@@ -2301,4 +2303,35 @@ button .fa-volume-xmark {
     margin-left: 8px;
     margin-top: 14px;
     border-radius: 8px;
+}
+.perform_Song-cart-text{
+    color: white;
+    font-size: 2rem !important;
+    margin-top:10px;
+}
+.zingchart-title{
+}
+.zingchart-header{
+    position: relative;
+    width: 100%;
+}
+.zingchart_header-background{
+    position: relative;
+    border-radius: 10px;
+    top: 0;
+    width: 100%;
+    height: 450px;
+    background-image: url('/assets/fonts/img/DienVienHoaNgu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+.zingchart-title{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+#myChart{
+    position: absolute;
+    top: 120px;
 }
