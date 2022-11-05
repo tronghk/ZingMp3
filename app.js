@@ -599,7 +599,8 @@ function addListSongtoPerform(){
     }
 
 // đổi các menu chức năng trang
-displayContent(listContent[1]);
+//hiển thị content đầu tiên
+displayContent(listContent[0]);
 for(var i= 0;i<menuItemSlider.length;i++){
     menuItemSlider[i].onclick = function(){
         var index = indexFuction(this);
