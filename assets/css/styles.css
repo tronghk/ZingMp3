@@ -1901,6 +1901,7 @@ button .fa-volume-xmark {
 .top-content_card-image:hover {
     transform: scale(1.12, 1.12);
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .container_top-content_card-image:hover .btn-radio {
@@ -1917,6 +1918,68 @@ button .fa-volume-xmark {
 .icon-radio-btn {
     font-size: 30px;
 }
+/* Discover */
+.radio-discover-container{
+   
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.radio-discover-container-img-font{
+    margin-left: 10px;
+    flex-grow: 1;
+}
+.radio-discover{
+    width: 100%;
+}
+.img-discover{
+    background-image: url('https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp…tars/c/5/5/0/c55064164b650dfcb4d729035e8c05ac.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 0;   
+}
+.img-discover:hover{
+    transform: scale(1.15,1.15);
+    
+    cursor: pointer;
+}
+.radio-discover_body{
+    
+    margin: 10px;
+    width: 100%;
+    height: 200px;
+    opacity: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.radio-discover_title{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 40px;
+}
+.radio-discover_subbody{
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+.radio-dicover-font{
+    display: inline;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+.radio-dicover-font:hover{
+    color: #9b4de0;
+    cursor: pointer;
+}
+/*UpComing  */
+
 
 .recently-content .button-play {
     position: relative;
