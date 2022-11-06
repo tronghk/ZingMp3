@@ -108,7 +108,7 @@ const musicPersonnal = [
         img: "./assets/fonts/img/11.jpg"
     }
 ];
-const musicTopSong =[
+const musicTopSong = [
     {
         id: 0,
         fileName: "KhucLeSau.mp3",
@@ -794,7 +794,6 @@ function changeListMusic(obj){
             listIdSong = document.querySelectorAll(".zingchart-listSong .song-cart-introduce-img i");
             listGitPlay = document.querySelectorAll(".zingchart-listSong .gitPlay");
             music = musicTopSong;
-            
             break;
         }
         case 3:{
@@ -807,6 +806,7 @@ function changeListMusic(obj){
             listSong = document.querySelectorAll(".newSong .perform_Song-List .perform_Song-cart");
             listIdSong = document.querySelectorAll(".newSong .song-cart-introduce-img i");
             listGitPlay = document.querySelectorAll(".newSong .gitPlay");
+            // music = ;
             break;
         }
         default: {break;};
