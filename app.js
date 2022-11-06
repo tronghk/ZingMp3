@@ -1,11 +1,248 @@
+const musicPersonnal = [
+    {
+        id: 0,
+        fileName: "holo.mp3",
+        type : "Nhac",
+        timeMax :"03:49",
+        name: "Holo",
+        singer:"Chưa biết",
+        img: "https://images6.alphacoders.com/785/thumb-1920-785636.png"
+    },
+    {
+        id: 1,
+        fileName: "summer.mp3",
+        type : "Nhac",
+        timeMax :"02:46",
+        name: "Summer",
+        singer:"Chưa biết",
+        img: "https://images5.alphacoders.com/592/thumb-1920-592887.jpg"
+    },
+    {
+        id: 2,
+        fileName: "spark.mp3",
+        type : "Nhac",
+        timeMax :"04:02",
+        name: "Spark",
+        singer:"Anh Không Thích Em",
+        img: "https://images2.alphacoders.com/911/thumb-1920-911008.jpg"
+    },
+    {
+        id: 3,
+        fileName: "home.mp3",
+        type : "Nhac",
+        timeMax :"05:00",
+        name: "Home",
+        singer:"Của tui",
+        img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
+    },
+    {
+        id: 4,
+        fileName: "CuocVuiCoDon.mp3",
+        type : "Nhac",
+        timeMax :"05:05",
+        name: "Cuộc vui cô đơn",
+        singer:"Lê Bảo Bình",
+        img: "./assets/fonts/img/LeBaoBinh.jpg"
+    },
+    {
+        id: 5,
+        fileName: "TuMyNhan.mp3",
+        type : "Nhac",
+        timeMax :"03:11",
+        name: "Tư Mỹ Nhân Hề",
+        singer:"Kiều Chấn Vũ",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 6,
+        fileName: "TimEm.mp3",
+        type : "Nhac",
+        timeMax :"04:30",
+        name: "Tìm Em",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/TimEm.jpg"
+    },
+    {
+        id: 7,
+        fileName: "UyenUongHoDiep.mp3",
+        type : "Nhac",
+        timeMax :"04:31",
+        name: "Uyên Ương Hồ Điệp",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 8,
+        fileName: "ChoDinhMenhMimCuoi.mp3",
+        type : "Nhac",
+        timeMax :"03:58",
+        name: "Chờ định mệnh mĩm cười",
+        singer:"Minh Vương M4U",
+        img: "./assets/fonts/img/ChoDinhMenhMimCuoi.jpg"
+    },
+    {
+        id: 9,
+        fileName: "MuonKiepLaAnhEm.mp3",
+        type : "Nhac",
+        timeMax :"05:16",
+        name: "Muôn kiếp là anh em",
+        singer:"Du Thiên",
+        img: "./assets/fonts/img/MuonKiepLaAnhEm.jpg"
+    },
+    {
+        id: 10,
+        fileName: "DangDo.mp3",
+        type : "Nhac",
+        timeMax :"04:50",
+        name: "Dang dở",
+        singer:"NAl",
+        img: "./assets/fonts/img/DangDo.jpg"
+    },
+    {
+        id: 11,
+        fileName: "NgaTuDuong.mp3",
+        type : "Nhac",
+        timeMax :"04:35",
+        name: "Ngã Tư Đường",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/11.jpg"
+    }
+];
+const musicTopSong =[
+    {
+        id: 0,
+        fileName: "KhucLeSau.mp3",
+        type : "Nhac",
+        timeMax :"03:49",
+        name: "Khúc lệ sầu",
+        singer:"Chưa biết",
+        img: "./assets/fonts/img/KhucLeSau.jpg"
+    },
+    {
+        id: 1,
+        fileName: "TongPhu.mp3",
+        type : "Nhac",
+        timeMax :"04:54",
+        name: "Tòng Phu",
+        singer:"Chưa biết",
+        img: "./assets/fonts/img/TongPhu.jpg"
+    },
+    {
+        id: 2,
+        fileName: "CoChoiCoChiu.mp3",
+        type : "Nhac",
+        timeMax :"04:02",
+        name: "Có chơi có chịu",
+        singer:"Kinak",
+        img: "./assets/fonts/img/CoChoiCoChiu.jpg"
+    },
+    {
+        id: 3,
+        fileName: "home.mp3",
+        type : "Nhac",
+        timeMax :"05:00",
+        name: "Home",
+        singer:"Của tui",
+        img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
+    },
+    {
+        id: 4,
+        fileName: "CuocVuiCoDon.mp3",
+        type : "Nhac",
+        timeMax :"05:05",
+        name: "Cuộc vui cô đơn",
+        singer:"Lê Bảo Bình",
+        img: "./assets/fonts/img/LeBaoBinh.jpg"
+    },
+    {
+        id: 5,
+        fileName: "TuMyNhan.mp3",
+        type : "Nhac",
+        timeMax :"03:11",
+        name: "Tư Mỹ Nhân Hề",
+        singer:"Kiều Chấn Vũ",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 6,
+        fileName: "TimEm.mp3",
+        type : "Nhac",
+        timeMax :"04:30",
+        name: "Tìm Em",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/TimEm.jpg"
+    },
+    {
+        id: 7,
+        fileName: "UyenUongHoDiep.mp3",
+        type : "Nhac",
+        timeMax :"04:31",
+        name: "Uyên Ương Hồ Điệp",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 8,
+        fileName: "ChoDinhMenhMimCuoi.mp3",
+        type : "Nhac",
+        timeMax :"03:58",
+        name: "Chờ định mệnh mĩm cười",
+        singer:"Minh Vương M4U",
+        img: "./assets/fonts/img/ChoDinhMenhMimCuoi.jpg"
+    },
+    {
+        id: 9,
+        fileName: "MuonKiepLaAnhEm.mp3",
+        type : "Nhac",
+        timeMax :"05:16",
+        name: "Muôn kiếp là anh em",
+        singer:"Du Thiên",
+        img: "./assets/fonts/img/MuonKiepLaAnhEm.jpg"
+    },
+    {
+        id: 10,
+        fileName: "DangDo.mp3",
+        type : "Nhac",
+        timeMax :"04:50",
+        name: "Dang dở",
+        singer:"NAl",
+        img: "./assets/fonts/img/DangDo.jpg"
+    }
+];
+var music;
 //sự kiện trái tim
+let isPlaySong = true;
+var song = document.getElementById("song");
+const menuItemSlider = document.getElementsByClassName("navMenu-item");
 var heart_icon = document.querySelector('i.fa-heart');
+const abc = document.querySelector(".listTopSong");
 let boolean_heart = 0;
 const bodyHtml = document.querySelector("body");
 const performListCart = document.querySelector(".perform_Song-list_cart");
-const listSong = document.getElementsByClassName("perform_Song-cart");
+addListSongtoPerformTopSong();
+addListSongtoPerform();
+var listSong; 
+var listIdSong;
+var listGitPlay;
+changeListMusic(0);
+var indexSong = 0;
+var num = false;
 const containerRight = document.querySelector(".container_right");
 const listContent = document.getElementsByClassName("content");
+displayContent(listContent[0]);
+for(var i= 0;i<menuItemSlider.length;i++){
+    menuItemSlider[i].onclick = function(){
+        var index = indexFuction(this);
+        //thêm background
+        removeBackgroundMenuSlider();
+        addBackgroundMenuSlider(this);  
+        // hiển thị menu chức năng
+        nonDisplayContent();
+        displayContent(listContent[index]);
+        changeListMusic(index);
+        
+    }
+}
 function display_color(){
     if(!Boolean(boolean_heart)){
         Object.assign(heart_icon.style,{
@@ -35,236 +272,9 @@ function display_color(){
             }
     }
 
-var song = document.getElementById("song");
-var btnPlay = document.querySelector('.button_play');
-let isPlaySong = true;
-const music =[
-    {
-        id: 0,
-        fileName: "holo.mp3",
-        type : "Nhac",
-        timeMax :"03:49",
-        name: "Holo",
-        singer:"Chưa biết",
-        img: "https://images6.alphacoders.com/785/thumb-1920-785636.png"
-    },
-    {
-        id: 1,
-        fileName: "summer.mp3",
-        type : "Nhac",
-        timeMax :"02:46",
-        name: "Summer",
-        singer:"Chưa biết",
-        img: "https://images5.alphacoders.com/592/thumb-1920-592887.jpg"
-    },
-    {
-        id: 2,
-        fileName: "spark.mp3",
-        type : "Nhac",
-        timeMax :"04:02",
-        name: "Spark",
-        singer:"Anh Không Thích Em",
-        img: "https://images2.alphacoders.com/911/thumb-1920-911008.jpg"
-    },
-    {
-        id: 3,
-        fileName: "home.mp3",
-        type : "Nhac",
-        timeMax :"05:00",
-        name: "Home",
-        singer:"Của tui",
-        img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
-    },
-    {
-        id: 4,
-        fileName: "CuocVuiCoDon.mp3",
-        type : "Nhac",
-        timeMax :"05:05",
-        name: "Cuộc vui cô đơn",
-        singer:"Lê Bảo Bình",
-        img: "./assets/fonts/img/LeBaoBinh.jpg"
-    },
-    {
-        id: 5,
-        fileName: "TuMyNhan.mp3",
-        type : "Nhac",
-        timeMax :"03:11",
-        name: "Tư Mỹ Nhân Hề",
-        singer:"Kiều Chấn Vũ",
-        img: "./assets/fonts/img/GirlAll.jpg"
-    },
-    {
-        id: 6,
-        fileName: "TimEm.mp3",
-        type : "Nhac",
-        timeMax :"04:30",
-        name: "Tìm Em",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/TimEm.jpg"
-    },
-    {
-        id: 7,
-        fileName: "UyenUongHoDiep.mp3",
-        type : "Nhac",
-        timeMax :"04:31",
-        name: "Uyên Ương Hồ Điệp",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/GirlAll.jpg"
-    },
-    {
-        id: 8,
-        fileName: "ChoDinhMenhMimCuoi.mp3",
-        type : "Nhac",
-        timeMax :"03:58",
-        name: "Chờ định mệnh mĩm cười",
-        singer:"Minh Vương M4U",
-        img: "./assets/fonts/img/ChoDinhMenhMimCuoi.jpg"
-    },
-    {
-        id: 9,
-        fileName: "MuonKiepLaAnhEm.mp3",
-        type : "Nhac",
-        timeMax :"05:16",
-        name: "Muôn kiếp là anh em",
-        singer:"Du Thiên",
-        img: "./assets/fonts/img/MuonKiepLaAnhEm.jpg"
-    },
-    {
-        id: 10,
-        fileName: "DangDo.mp3",
-        type : "Nhac",
-        timeMax :"04:50",
-        name: "Dang dở",
-        singer:"NAl",
-        img: "./assets/fonts/img/DangDo.jpg"
-    },
-    {
-        id: 11,
-        fileName: "NgaTuDuong.mp3",
-        type : "Nhac",
-        timeMax :"04:35",
-        name: "Ngã Tư Đường",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/11.jpg"
-    }
-];
 
-const musicTopSong =[
-    {
-        id: 0,
-        fileName: "holo.mp3",
-        type : "Nhac",
-        timeMax :"03:49",
-        name: "Holo",
-        singer:"Chưa biết",
-        img: "https://images6.alphacoders.com/785/thumb-1920-785636.png"
-    },
-    {
-        id: 1,
-        fileName: "summer.mp3",
-        type : "Nhac",
-        timeMax :"02:46",
-        name: "Summer",
-        singer:"Chưa biết",
-        img: "https://images5.alphacoders.com/592/thumb-1920-592887.jpg"
-    },
-    {
-        id: 2,
-        fileName: "spark.mp3",
-        type : "Nhac",
-        timeMax :"04:02",
-        name: "Spark",
-        singer:"Anh Không Thích Em",
-        img: "https://images2.alphacoders.com/911/thumb-1920-911008.jpg"
-    },
-    {
-        id: 3,
-        fileName: "home.mp3",
-        type : "Nhac",
-        timeMax :"05:00",
-        name: "Home",
-        singer:"Của tui",
-        img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
-    },
-    {
-        id: 4,
-        fileName: "CuocVuiCoDon.mp3",
-        type : "Nhac",
-        timeMax :"05:05",
-        name: "Cuộc vui cô đơn",
-        singer:"Lê Bảo Bình",
-        img: "./assets/fonts/img/LeBaoBinh.jpg"
-    },
-    {
-        id: 5,
-        fileName: "TuMyNhan.mp3",
-        type : "Nhac",
-        timeMax :"03:11",
-        name: "Tư Mỹ Nhân Hề",
-        singer:"Kiều Chấn Vũ",
-        img: "./assets/fonts/img/GirlAll.jpg"
-    },
-    {
-        id: 6,
-        fileName: "TimEm.mp3",
-        type : "Nhac",
-        timeMax :"04:30",
-        name: "Tìm Em",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/TimEm.jpg"
-    },
-    {
-        id: 7,
-        fileName: "UyenUongHoDiep.mp3",
-        type : "Nhac",
-        timeMax :"04:31",
-        name: "Uyên Ương Hồ Điệp",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/GirlAll.jpg"
-    },
-    {
-        id: 8,
-        fileName: "ChoDinhMenhMimCuoi.mp3",
-        type : "Nhac",
-        timeMax :"03:58",
-        name: "Chờ định mệnh mĩm cười",
-        singer:"Minh Vương M4U",
-        img: "./assets/fonts/img/ChoDinhMenhMimCuoi.jpg"
-    },
-    {
-        id: 9,
-        fileName: "MuonKiepLaAnhEm.mp3",
-        type : "Nhac",
-        timeMax :"05:16",
-        name: "Muôn kiếp là anh em",
-        singer:"Du Thiên",
-        img: "./assets/fonts/img/MuonKiepLaAnhEm.jpg"
-    },
-    {
-        id: 10,
-        fileName: "DangDo.mp3",
-        type : "Nhac",
-        timeMax :"04:50",
-        name: "Dang dở",
-        singer:"NAl",
-        img: "./assets/fonts/img/DangDo.jpg"
-    },
-    {
-        id: 11,
-        fileName: "NgaTuDuong.mp3",
-        type : "Nhac",
-        timeMax :"04:35",
-        name: "Ngã Tư Đường",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/11.jpg"
-    }
-];
-addListSongtoPerform();
-const listIdSong = document.querySelectorAll(".song-cart-introduce-img i");
-const listGitPlay = document.querySelectorAll(".gitPlay");
-var arrSong = [];
-let indexSong = 0;
-song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
+var btnPlay = document.querySelector('.button_play');
+
 var nextBtn = document.querySelector(".nextBtn");
 const previousBtn = document.querySelector(".backBtn");
 const songRanBtn = document.querySelector('.randomBtn');
@@ -281,11 +291,16 @@ const againeSongIcon = document.querySelector(".againSongBtn_icon");
 var isAgainSong = false;
 const inVolume = document.getElementById("input_volume");
 btnPlay.addEventListener("click", playSong);
-        console.log(song.currentTime);
+        var maxTime;
 function playSong(){
     var children = btnPlay.children;
+    maxTime = setInterval(displayTimer, 500);
     if(isPlaySong){
-        song.play()
+        if(!num){
+             song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
+             num = true;
+        }
+        song.play();
         isPlaySong = false;
         changeDisplay(children[0], children[1]);
         animationImageSong();
@@ -327,6 +342,7 @@ function playClickSong(){
     listIdSong[indexSong].style.display = "none";
 }
 function displayTimer(){
+    console.log()
     const {duration, currentTime} = song;
     if(!duration){
         remainingTime.textContent = "03:49";
@@ -334,7 +350,7 @@ function displayTimer(){
         remainingTime.textContent = formatTimer(duration);
         crossbarPlayTime.max = duration;
         //tư duy thêm (false)
-        clearInterval(displayTimer);
+        clearInterval(maxTime);
     }
 
 }
@@ -390,7 +406,7 @@ inVolume.oninput = function(){
 }
 
 
-setInterval(displayTimer, 500);
+ 
 function changeDisplay(play, pause){
     play.style.display = 'none';
     pause.style.display = 'block';
@@ -418,6 +434,7 @@ function nextSong(){
         song.play();
        
     }else{
+        
         playSong();
     }
     playAndPauseNextPre();
@@ -460,6 +477,7 @@ function previousSong(){
 }
 
 function changeSong(dir){
+    
     if(dir == 1)
     {
         song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);  
@@ -514,7 +532,6 @@ function infSong(){
     singerSong.textContent = music[indexSong].singer;
     nameSong.textContent = music[indexSong].name;
 }
-setInterval(infSong, 1000);
 
 // animation avatar
 function animationImageSong(){
@@ -597,13 +614,17 @@ function removeChangeList(dir){
 function addChangeList(obj){
     obj.classList.add("isSelect-changeList");
 }
-// click song
-for(var i = 0;i<listSong.length;i++){
-    listSong[i].onclick = function(){
-        removeSongSelected();
-        addSongSelected(this);
+//click song
+function isSelectSong(){
+    for(var i = 0;i<listSong.length;i++){
+        listSong[i].onclick = function(){
+            removeSongSelected();
+            addSongSelected(this);
+            
+        }
     }
 }
+
 
 //thêm class thuộc tính
 function removeSongSelected(){
@@ -612,27 +633,35 @@ function removeSongSelected(){
 }
 // xoá class thuộc tính
 function addSongSelected(obj){
+    
     obj.classList.add("is-selected");
 }
 addSongSelected(listSong[0]);
 addSongSelectedPlay(listSong[0]);
 // change theo select
 function playSongId(id){
+    
     if(indexSong != parseInt(id)){
     song.setAttribute("src", `./assets/fonts/music/${music[id].fileName}`);
     isPlaySong = true;
     indexSong = parseInt(id);
     }
+    infSong();
+    
     playSong();
 }
-for(var i = 0;i<listIdSong.length;i++){
-    listIdSong[i].onclick = function(){
-        playSongId(this.id);
-       removeSongSelectedPlay();
-       addSongSelectedPlay(listSong[parseInt(this.id)]);
-       SongPlayGit(this.id);
+function playlistSongId(){
+    for(var i = 0;i<listIdSong.length;i++){
+        listIdSong[i].onclick = function(){
+            playSongId(this.id);
+        removeSongSelectedPlay();
+        addSongSelectedPlay(listSong[parseInt(this.id)]);
+        SongPlayGit(this.id);
+        }
     }
+    
 }
+
 var idGitOld = 0;
 //chạy git play
 function SongPlayGit(id){
@@ -666,12 +695,12 @@ for(var i = 0;i<listGitPlay.length;i++){
 
 //thêm danh sách bài hát vào mục trình diễn
 function addListSongtoPerform(){
-    for(var i=0;i<music.length;i++){
-        var nameSong = music[i].name;
-        var nameSinger = music[i].singer;
-        const id = music[i].id+"";
-        var imgSong = music[i].img;
-        var timeSong =  music[i].timeMax;
+    for(var i=0;i<musicPersonnal.length;i++){
+        var nameSong = musicPersonnal[i].name;
+        var nameSinger = musicPersonnal[i].singer;
+        const id = musicPersonnal[i].id+"";
+        var imgSong = musicPersonnal[i].img;
+        var timeSong =  musicPersonnal[i].timeMax;
         var tagName = '<li class="perform_Song-cart">\n'
                     +'<div class="perform_Song-cart-introduce">\n'
                     +'<i class="fa-solid fa-music"></i>\n'
@@ -699,8 +728,8 @@ function addListSongtoPerform(){
                 }
 }
 //thêm bài hát musicTopSong
-const abc = document.querySelector(".listTopSong");
-addListSongtoPerformTopSong();
+
+
 function addListSongtoPerformTopSong(){
     for(var i=0;i<musicTopSong.length;i++){
         var nameSong = musicTopSong[i].name;
@@ -738,7 +767,7 @@ function addListSongtoPerformTopSong(){
 }
 
 // hiệu ứng click trên slider
-    const menuItemSlider = document.getElementsByClassName("navMenu-item");
+    
     function addBackgroundMenuSlider(obj){
         obj.classList.add("isSelect-nav-item");
     }
@@ -746,21 +775,50 @@ function addListSongtoPerformTopSong(){
         const classSelect = document.querySelector(".isSelect-nav-item");
         classSelect.classList.remove("isSelect-nav-item");
     }
+function changeListMusic(obj){
+    switch (obj){
+        case 0:{
+            //sai logic length chua fix duoc chay van ok
+            listSong = document.querySelectorAll(".perform_Song-cart");
+            listIdSong = document.querySelectorAll(".song-cart-introduce-img i");
+            listGitPlay = document.querySelectorAll(".gitPlay");
+            music = musicPersonnal;
+            
+            break;
+        }
+        case 1:{
+            break;
+        }
+        case 2:{
+            listSong = document.querySelectorAll(".zingchart-listSong .perform_Song-cart");
+            listIdSong = document.querySelectorAll(".zingchart-listSong .song-cart-introduce-img i");
+            listGitPlay = document.querySelectorAll(".zingchart-listSong .gitPlay");
+            music = musicTopSong;
+            
+            break;
+        }
+        case 3:{
+            break;
+        }
+        case 4:{
+            break;
+        }
+        case 5:{
+            listSong = document.querySelectorAll(".newSong .perform_Song-List .perform_Song-cart");
+            listIdSong = document.querySelectorAll(".newSong .song-cart-introduce-img i");
+            listGitPlay = document.querySelectorAll(".newSong .gitPlay");
+            break;
+        }
+        default: {break;};
+    }
+   
+    playlistSongId();
+    isSelectSong();
+}
 
 // đổi các menu chức năng trang
 //hiển thị content đầu tiên
-displayContent(listContent[0]);
-for(var i= 0;i<menuItemSlider.length;i++){
-    menuItemSlider[i].onclick = function(){
-        var index = indexFuction(this);
-        //thêm background
-        removeBackgroundMenuSlider();
-        addBackgroundMenuSlider(this);  
-        // hiển thị menu chức năng
-        nonDisplayContent();
-        displayContent(listContent[index]);
-    }
-}
+
 
 function indexFuction(obj){
     for(var i= 0;i<menuItemSlider.length;i++){
@@ -798,12 +856,6 @@ button.onclick = function() {
         crossColorLeft(lastColorValue, inVolume);
     }
 }
-// ảnh chuyển động
-// const discoverIntroduce = document.getElementsByClassName("discover_introduce-cart");
-//  function transitionDiscoverIntroduce(){
-//     console.log("aaa");
-//  }
-// setInterval(transitionDiscoverIntroduce, "3000");
 
 const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
@@ -811,7 +863,7 @@ const myChart = new Chart(ctx, {
     data: {
         labels: ['19:00', '21:00', '23:00', '01:00', '03:00', '05:00', '07:00', '09:00', '11:00', '13:00', '15:00', '17:00'],
         datasets: [{
-            label: 'Lệ sầu tương tư ',
+            label: 'Khúc lệ sầu ',
             data: [8,6,8,14,18,22,24,25,27,26,29,20],
 
             borderColor: [
@@ -834,7 +886,7 @@ const myChart = new Chart(ctx, {
             borderWidth: 1
         },
         {
-            label: 'Trúc xanh',
+            label: 'Tòng phu',
             data: [7,5,7,9,6,14,16,18,21,20,18,15],
 
             borderColor: [
@@ -859,7 +911,7 @@ const myChart = new Chart(ctx, {
             borderWidth: 1
         },
         {
-            label: 'Khóc thầm',
+            label: 'Có chơi có chịu',
             data: [3,4,5,7,9,10,11,13,11,9,8,6],
 
             borderColor: [
