@@ -1465,7 +1465,7 @@ button .fa-volume-xmark {
 }
 
 .newSong .perform_Song-List {
-    height: 85% !important;
+    overflow: visible !important;
 }
 
 .discover_introduce-cart {
