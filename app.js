@@ -709,6 +709,10 @@ function crossColorLeft(value, obj){
     var color = "linear-gradient(90deg, #fff "+ value+"%,"+ " rgb(58 38 96 / 90%)"+ value+"%)";
     obj.style.background = color;
 }
+function muteVolumeBar(value, obj){
+    var color = "linear-gradient(90deg, #FF0000 "+ value+"%,"+ " rgb(58 38 96 / 90%)"+ value+"%)";
+    obj.style.background = color;
+}
 function infSong(){
     imgSong.setAttribute("src", `${music[indexSong].img}`);
     singerSong.textContent = music[indexSong].singer;
@@ -1028,8 +1032,7 @@ button.onclick = function() {
         lastVolume = song.volume;
         lastColorValue = inVolume.value;
         song.volume = 0;
-        inVolume.value = 0;
-        crossColorLeft(inVolume.value,inVolume);
+        muteVolumeBar(inVolume.value,inVolume);
 
     } else if (!button.classList.contains("fa-volume-high")){
         button.classList.remove("fa-volume-xmark");
