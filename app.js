@@ -581,10 +581,12 @@ crossbarPlayTime.oninput = function(){
 
 // thay đổi giá trị âm lượng
 inVolume.oninput = function(){
+    button.classList.remove("fa-volume-xmark");
+    button.classList.add("fa-volume-high");
     crossColorLeft(inVolume.value, inVolume);
-
     // xử lý thay đổi âm lượng
     song.volume = ""+inVolume.value;
+    
 }
 
 
@@ -1041,6 +1043,8 @@ button.onclick = function() {
         crossColorLeft(lastColorValue, inVolume);
     }
 }
+
+
 
 const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
