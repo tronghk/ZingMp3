@@ -209,13 +209,9 @@ const musicTopSong = [
         img: "./assets/fonts/img/DangDo.jpg"
     }
 ];
-<<<<<<< HEAD
-var indexSelect = 0;
-var music = musicPersonnal.concat(musicTopSong);
-=======
 const newSongList = [
 		{	
-			id: 0,
+			id: 23,
 			fileName: "EmThich.mp3",
 			type: "Nhac",
 			timeMax: "02:56",
@@ -224,7 +220,7 @@ const newSongList = [
 			img: "./assets/fonts/img/EmThich.jpg"
 	    	},
 		{ 
-			id: 1,
+			id: 24,
 			fileName : "HenMotMai.mp3",
 			type : "Nhac",
 			timeMax : "04:43",
@@ -233,7 +229,7 @@ const newSongList = [
 			img : "./assets/fonts/img/HenMotMai.jpg"
 		},
 		{ 
-			id: 2,
+			id: 25,
 			fileName : "TinhDau.mp3",
 			type : "Nhac",
 			timeMax : "04:56",
@@ -242,7 +238,7 @@ const newSongList = [
 			img : "./assets/fonts/img/TinhDau.jpg"
 		},
 		{ 
-			id: 3,
+			id: 26,
 			fileName : "Yeu5.mp3",
 			type : "Nhac",
 			timeMax : "04:00",
@@ -251,7 +247,7 @@ const newSongList = [
 			img : "./assets/fonts/img/Yeu5.jpg"
 		},
 		{ 
-			id: 4,
+			id: 27,
 			fileName : "AnhDanhRoiNguoiYeuNay.mp3",
 			type : "Nhac",
 			timeMax : "03:37",
@@ -260,7 +256,7 @@ const newSongList = [
 			img : "./assets/fonts/img/AnhDanhRoiNguoiYeuNay.jpg"
 		},
 		{ 
-			id: 5,
+			id: 28,
 			fileName : "MotNganNoiDau.mp3",
 			type : "Nhac",
 			timeMax : "05:21",
@@ -269,7 +265,7 @@ const newSongList = [
 			img : "./assets/fonts/img/MotNganNoiDau.jpg"
 		},
 		{ 
-			id: 6,
+			id: 29,
 			fileName : "ChuyenDoiTa.mp3",
 			type : "Nhac",
 			timeMax : "03:28",
@@ -278,7 +274,7 @@ const newSongList = [
 			img : "./assets/fonts/img/ChuyenDoiTa.jpg "
 		},
 		{ 
-			id: 7,
+			id: 30,
 			fileName : "DauDeTruongThanh.mp3",
 			type : "Nhac",
 			timeMax : "05:30",
@@ -287,7 +283,7 @@ const newSongList = [
 			img : "./assets/fonts/img/DauDeTruongThanh.jpg"
 		},
 		{ 
-			id: 8,
+			id: 31,
 			fileName : "TuSu.mp3",
 			type : "Nhac",
 			timeMax : "04:17",
@@ -296,7 +292,7 @@ const newSongList = [
 			img : "./assets/fonts/img/TuSu.jpg"
 		},
 		{ 
-			id: 9,
+			id: 32,
 			fileName : "SuytNuaThi.mp3",
 			type : "Nhac",
 			timeMax : "04:43",
@@ -305,7 +301,7 @@ const newSongList = [
 			img : "./assets/fonts/img/SuytNuaThi.jpg"
 		},
 		{ 
-			id: 10,
+			id: 33,
 			fileName : "PhoCuConAnh.mp3",
 			type : "Nhac",
 			timeMax : "03:53",
@@ -314,7 +310,7 @@ const newSongList = [
 			img : "./assets/fonts/img/PhoCuConAnh.jpg"
 		},
 		{ 
-			id: 11,
+			id: 34,
 			fileName : "NoAiDoLoiXinLoi.mp3",
 			type : "Nhac",
 			timeMax : "05:37",
@@ -323,7 +319,7 @@ const newSongList = [
 			img : "./assets/fonts/img/NoAiDoLoiXinLoi.jpg"
 		},
 		{ 
-			id: 12,
+			id: 35,
 			fileName : "AnhThuongEmNhatMa.mp3",
 			type : "Nhac",
 			timeMax : "03:13",
@@ -332,7 +328,7 @@ const newSongList = [
 			img : "./assets/fonts/img/AnhThuongEmNhatMa.jpg"
 		},
 		{ 
-			id: 13,
+			id: 36,
 			fileName : "MotBuocYeuDamVanDau.mp3",
 			type : "Nhac",
 			timeMax : "04:58",
@@ -341,7 +337,7 @@ const newSongList = [
 			img : "./assets/fonts/img/MotBuocYeuDamVanDau.jpg"
 		},
 		{ 
-			id: 14,
+			id: 37,
 			fileName : "BoEmVaoBalo.mp3",
 			type : "Nhac",
 			timeMax : "03:12",
@@ -350,7 +346,7 @@ const newSongList = [
 			img : "./assets/fonts/img/BoEmVaoBalo.jpg"
 		},
 		{ 
-			id: 15,
+			id: 38,
 			fileName : "CoHenVoiThanhXuan.mp3",
 			type : "Nhac",
 			timeMax : "03:38",
@@ -359,7 +355,7 @@ const newSongList = [
 			img : "./assets/fonts/img/CoHenVoiThanhXuan.jpg"
 		},
 		{ 
-			id: 16,
+			id: 39,
 			fileName : "TinhYeuKhungLong.mp3",
 			type : "Nhac",
 			timeMax : "03:10",
@@ -368,7 +364,7 @@ const newSongList = [
 			img : "./assets/fonts/img/TinhYeuKhungLong.jpg"
 		},
 		{ 
-			id: 17,
+			id: 40,
 			fileName : "TrenTinhBanDuoiTinhYeu.mp3",
 			type : "Nhac",
 			timeMax : "03:19",
@@ -377,7 +373,7 @@ const newSongList = [
 			img : "./assets/fonts/img/TrenTinhBanDuoiTinhYeu.jpg"
 		},
 		{ 
-			id: 18,
+			id: 41,
 			fileName : "MotNha.mp3",
 			type : "Nhac",
 			timeMax : "03:05",
@@ -386,7 +382,7 @@ const newSongList = [
 			img : "./assets/fonts/img/MotNha.jpg"
 		},
 		{ 
-			id: 19,
+			id: 42,
 			fileName : "MinhCungNhauDongBang.mp3",
 			type : "Nhac",
 			timeMax : "04:12",
@@ -395,8 +391,9 @@ const newSongList = [
 			img : "./assets/fonts/img/MinhCungNhauDongBang.jpg"
 		}
 	];
-var music;
->>>>>>> 5e619a435d1a9e486c2d82c7823c44e5b9edee95
+var indexSelect = 0;
+var music = musicPersonnal.concat(musicTopSong);
+music = music.concat(newSongList);
 //sự kiện trái tim
 let isPlaySong = true;
 var song = document.getElementById("song");
@@ -1001,12 +998,8 @@ function changeListMusic(obj){
         case 2:{
             listIdSong = document.querySelectorAll(".zingchart-listSong .song-cart-introduce-img i");
             listGitPlay = document.querySelectorAll(".zingchart-listSong .gitPlay");
-<<<<<<< HEAD
            
             
-=======
-            music = musicTopSong;
->>>>>>> 5e619a435d1a9e486c2d82c7823c44e5b9edee95
             break;
         }
         case 3:{
@@ -1018,7 +1011,7 @@ function changeListMusic(obj){
         case 5:{
             listIdSong = document.querySelectorAll(".newSong .song-cart-introduce-img i");
             listGitPlay = document.querySelectorAll(".newSong .gitPlay");
-            music = newSongList;
+
             break;
         }
         default: {break;};
