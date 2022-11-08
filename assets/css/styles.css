@@ -2337,3 +2337,14 @@ button .fa-volume-xmark {
     position: absolute;
     top: 120px;
 }
+.zingchart-listSong{
+    margin-top: 10px;
+}
+.textLogin{
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: rgb(50, 151, 75);
+}
+.textLogin:hover{
+    font-weight: 700;
+}
