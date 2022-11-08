@@ -1,3 +1,13 @@
+const listUser = [{
+    userName:"admin",
+    password:"123",
+    img:"./assets/fonts/img/GirlAll.jpg"
+    },
+    {userName:"customer",
+    password:"123",
+    img:"./assets/fonts/img/LeBaoBinh.jpg"
+    }
+]
 const musicPersonnal = [
     {
         id: 0,
@@ -209,194 +219,8 @@ const musicTopSong = [
         img: "./assets/fonts/img/DangDo.jpg"
     }
 ];
-<<<<<<< HEAD
 var indexSelect = 0;
 var music = musicPersonnal.concat(musicTopSong);
-=======
-const newSongList = [
-		{	
-			id: 0,
-			fileName: "EmThich.mp3",
-			type: "Nhac",
-			timeMax: "02:56",
-			name: "Em Thích",
-			singer: "Seen, Lửa",
-			img: "./assets/fonts/img/EmThich.jpg"
-	    	},
-		{ 
-			id: 1,
-			fileName : "HenMotMai.mp3",
-			type : "Nhac",
-			timeMax : "04:43",
-			name : "Hẹn Một Mai",
-			singer : "Bùi Tuấn Anh",
-			img : "./assets/fonts/img/HenMotMai.jpg"
-		},
-		{ 
-			id: 2,
-			fileName : "TinhDau.mp3",
-			type : "Nhac",
-			timeMax : "04:56",
-			name : "Tình Đầu",
-			singer : "Tăng Duy Tân",
-			img : "./assets/fonts/img/TinhDau.jpg"
-		},
-		{ 
-			id: 3,
-			fileName : "Yeu5.mp3",
-			type : "Nhac",
-			timeMax : "04:00",
-			name : "Yêu 5",
-			singer : "Rhymastic",
-			img : "./assets/fonts/img/Yeu5.jpg"
-		},
-		{ 
-			id: 4,
-			fileName : "AnhDanhRoiNguoiYeuNay.mp3",
-			type : "Nhac",
-			timeMax : "03:37",
-			name : "Anh Đánh Rơi Người Yêu Này",
-			singer : "Andiez",
-			img : "./assets/fonts/img/AnhDanhRoiNguoiYeuNay.jpg"
-		},
-		{ 
-			id: 5,
-			fileName : "MotNganNoiDau.mp3",
-			type : "Nhac",
-			timeMax : "05:21",
-			name : "Một Ngàn Nỗi Đau",
-			singer : "Văn Mai Hương, Hứa Kim Tuyền",
-			img : "./assets/fonts/img/MotNganNoiDau.jpg"
-		},
-		{ 
-			id: 6,
-			fileName : "ChuyenDoiTa.mp3",
-			type : "Nhac",
-			timeMax : "03:28",
-			name : "Chuyện Đôi Ta",
-			singer : "Emcee L",
-			img : "./assets/fonts/img/ChuyenDoiTa.jpg "
-		},
-		{ 
-			id: 7,
-			fileName : "DauDeTruongThanh.mp3",
-			type : "Nhac",
-			timeMax : "05:30",
-			name : "Đau Để Trưởng Thành",
-			singer : "Only C",
-			img : "./assets/fonts/img/DauDeTruongThanh.jpg"
-		},
-		{ 
-			id: 8,
-			fileName : "TuSu.mp3",
-			type : "Nhac",
-			timeMax : "04:17",
-			name : "Tự Sự (Qua Bển Làm Chi OST)",
-			singer : "Orange",
-			img : "./assets/fonts/img/TuSu.jpg"
-		},
-		{ 
-			id: 9,
-			fileName : "SuytNuaThi.mp3",
-			type : "Nhac",
-			timeMax : "04:43",
-			name : "Suýt Nữa Thì (Chuyến Đi Của Thanh Xuân OST)",
-			singer : "Andiez",
-			img : "./assets/fonts/img/SuytNuaThi.jpg"
-		},
-		{ 
-			id: 10,
-			fileName : "PhoCuConAnh.mp3",
-			type : "Nhac",
-			timeMax : "03:53",
-			name : "Phố Cũ Còn Anh",
-			singer : " Quinn, Chilly",
-			img : "./assets/fonts/img/PhoCuConAnh.jpg"
-		},
-		{ 
-			id: 11,
-			fileName : "NoAiDoLoiXinLoi.mp3",
-			type : "Nhac",
-			timeMax : "05:37",
-			name : "Nợ Ai Đó Lời Xin Lỗi",
-			singer : "Bozitt",
-			img : "./assets/fonts/img/NoAiDoLoiXinLoi.jpg"
-		},
-		{ 
-			id: 12,
-			fileName : "AnhThuongEmNhatMa.mp3",
-			type : "Nhac",
-			timeMax : "03:13",
-			name : "Anh Thương Em Nhất Mà",
-			singer : "Lã. Log, TiB",
-			img : "./assets/fonts/img/AnhThuongEmNhatMa.jpg"
-		},
-		{ 
-			id: 13,
-			fileName : "MotBuocYeuDamVanDau.mp3",
-			type : "Nhac",
-			timeMax : "04:58",
-			name : "Một Bước Yêu Dặm Vạn Đau",
-			singer : "Mr.Siro",
-			img : "./assets/fonts/img/MotBuocYeuDamVanDau.jpg"
-		},
-		{ 
-			id: 14,
-			fileName : "BoEmVaoBalo.mp3",
-			type : "Nhac",
-			timeMax : "03:12",
-			name : "Bỏ Em Vào Balo",
-			singer : "Tân Trần, Freak D",
-			img : "./assets/fonts/img/BoEmVaoBalo.jpg"
-		},
-		{ 
-			id: 15,
-			fileName : "CoHenVoiThanhXuan.mp3",
-			type : "Nhac",
-			timeMax : "03:38",
-			name : "Có Hẹn Với Thanh Xuân",
-			singer : "MONSTAR",
-			img : "./assets/fonts/img/CoHenVoiThanhXuan.jpg"
-		},
-		{ 
-			id: 16,
-			fileName : "TinhYeuKhungLong.mp3",
-			type : "Nhac",
-			timeMax : "03:10",
-			name : "Tình Yêu Khủng Long",
-			singer : "Fay",
-			img : "./assets/fonts/img/TinhYeuKhungLong.jpg"
-		},
-		{ 
-			id: 17,
-			fileName : "TrenTinhBanDuoiTinhYeu.mp3",
-			type : "Nhac",
-			timeMax : "03:19",
-			name : "Trên Tình Bạn Dưới Tình Yêu",
-			singer : "MIN",
-			img : "./assets/fonts/img/TrenTinhBanDuoiTinhYeu.jpg"
-		},
-		{ 
-			id: 18,
-			fileName : "MotNha.mp3",
-			type : "Nhac",
-			timeMax : "03:05",
-			name : "Một Nhà",
-			singer : "Da LAB",
-			img : "./assets/fonts/img/MotNha.jpg"
-		},
-		{ 
-			id: 19,
-			fileName : "MinhCungNhauDongBang.mp3",
-			type : "Nhac",
-			timeMax : "04:12",
-			name : "Mình Cùng Nhau Đóng Băng",
-			singer : "Thùy Chi",
-			img : "./assets/fonts/img/MinhCungNhauDongBang.jpg"
-		}
-	];
-var music;
->>>>>>> 5e619a435d1a9e486c2d82c7823c44e5b9edee95
 //sự kiện trái tim
 let isPlaySong = true;
 var song = document.getElementById("song");
@@ -1001,12 +825,8 @@ function changeListMusic(obj){
         case 2:{
             listIdSong = document.querySelectorAll(".zingchart-listSong .song-cart-introduce-img i");
             listGitPlay = document.querySelectorAll(".zingchart-listSong .gitPlay");
-<<<<<<< HEAD
            
             
-=======
-            music = musicTopSong;
->>>>>>> 5e619a435d1a9e486c2d82c7823c44e5b9edee95
             break;
         }
         case 3:{
@@ -1169,4 +989,103 @@ const myChart = new Chart(ctx, {
         }
     }
 });
+//chuyển đăng nhập đăng ký
+const btn_login = document.querySelector(".form-register .formSelect .fun-login");
+const btn_register = document.querySelector(".form-login .formSelect .fun-register");
+const obLogin = document.querySelector(".form-login");
+const obRegister = document.querySelector(".form-register");
+
+btn_login.addEventListener("click",clickBtnLogin);
+function clickBtnLogin(){
+    
+    obRegister.style.display = 'none';
+    obLogin.style.display = '';
+
+}
+
+btn_register.addEventListener("click",clickBtnResgister);
+function clickBtnResgister(){
+    obRegister.style.display = '';
+    obLogin.style.display = 'none';
+
+}
+// đóng form user về menu chính
+const formUser = document.querySelector(".form-user");
+function closeFormUser(){
+        obRegister.style.display = 'none';
+        obLogin.style.display = '';
+        formUser.style.display = 'none';
+}
+
+// hiển thị form đăng nhập
+const clickLogin = document.querySelector(".textLogin");
+clickLogin.addEventListener("click",showFormLogin);
+function showFormLogin(){
+    formUser.style.display = '';
+}
+// xử lý đăng nhập
+const avatar = document.querySelector(".avatar img");
+const lUserName = document.querySelector("#loginUser");
+const lPasswrod = document.querySelector("#loginPass");
+const formLogin = document.getElementById("form-login");
+const loginSubmit = document.getElementById("login");
+loginSubmit.addEventListener("click",loginClick);
+function loginClick(){
+    var userName = lUserName.value;
+    var password = lPasswrod.value;
+    var index = checkUser(userName,password);
+    if(index != -1){
+        alert("Đăng nhập thành công");
+        changeAvatar(index);
+        closeFormUser();
+    }else{
+        alert("Sai tài khoản hoặc mật khẩu");
+    }
+}
+function changeAvatar(index){
+    avatar.setAttribute("src", `${listUser[index].img}`);
+    avatar.style.display ='';
+    clickLogin.style.display = 'none';
+}
+
+function checkUser(username, password){
+    var index = -1;
+    for(var i = 0;i<listUser.length;i++){
+        if(listUser[i].userName == username && listUser[i].password == password){
+            index = i;
+            break;
+        }
+    }
+    
+    return index;
+}
+// xử lý đăng ký
+const rUserName = document.querySelector("#reUsername");
+const rPassword = document.querySelector("#rePassword");
+const rConfirmPassword = document.querySelector("#reConfirmPassword");
+const re = document.getElementById("register");
+re.addEventListener("click",register );
+function register(){
+    
+    var username = rUserName.value;
+    var pwd = rPassword.value;
+    var confirmPassword = rConfirmPassword.value;
+    var index = checkUser(username,pwd);
+    if(index != -1){
+        alert("Trùng lặp tên khoản đã có");
+    }else if(pwd != confirmPassword)
+        alert("Mật khẩu không trùng khớp");
+    else{
+        var user = {
+            userName:username,
+            password:pwd,
+            img:"./assets/fonts/img/LeBaoBinh.jpg"
+        }
+        listUser.push(user);
+        alert("tạo tài khoản thành công");
+        clickBtnLogin();
+    }
+
+}
+
 
