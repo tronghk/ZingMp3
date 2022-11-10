@@ -1,44 +1,14 @@
-//sự kiện trái tim
-var heart_icon = document.querySelector('i.fa-heart');
-let boolean_heart = 0;
-const bodyHtml = document.querySelector("body");
-const performListCart = document.querySelector(".perform_Song-list_cart");
-const listSong = document.getElementsByClassName("perform_Song-cart");
-const containerRight = document.querySelector(".container_right");
-const listContent = document.getElementsByClassName("content");
-function display_color(){
-    if(!Boolean(boolean_heart)){
-        Object.assign(heart_icon.style,{
-            color: '#c662ef',
-            fontWeight: '1000',
-        } );
-        boolean_heart = 1;
+const listUser = [{
+    userName:"admin",
+    password:"123",
+    img:"./assets/fonts/img/GirlAll.jpg"
+    },
+    {userName:"customer",
+    password:"123",
+    img:"./assets/fonts/img/LeBaoBinh.jpg"
     }
-    else{
-        Object.assign(heart_icon.style,{
-            color: '#fff',
-            fontWeight: '500',
-        } );
-        boolean_heart = 0;
-    }  
-}
-
-    function change_color_action(index){
-            var value = arr.get(index);
-            if(value == 0){
-                btn_action[index].style.color = 'red';
-                arr.set(index, 1);
-            }
-            else{
-                btn_action[index].style.color = '#fff';
-                arr.set(index,0);
-            }
-    }
-
-var song = document.getElementById("song");
-var btnPlay = document.querySelector('.button_play');
-let isPlaySong = true;
-const music =[
+]
+const musicPersonnal = [
     {
         id: 0,
         fileName: "holo.mp3",
@@ -148,12 +118,359 @@ const music =[
         img: "./assets/fonts/img/11.jpg"
     }
 ];
+const musicTopSong = [
+    {
+        id: 12,
+        fileName: "KhucLeSau.mp3",
+        type : "Nhac",
+        timeMax :"03:49",
+        name: "Khúc lệ sầu",
+        singer:"Chưa biết",
+        img: "./assets/fonts/img/KhucLeSau.jpg"
+    },
+    {
+        id: 13,
+        fileName: "TongPhu.mp3",
+        type : "Nhac",
+        timeMax :"04:54",
+        name: "Tòng Phu",
+        singer:"Chưa biết",
+        img: "./assets/fonts/img/TongPhu.jpg"
+    },
+    {
+        id: 14,
+        fileName: "CoChoiCoChiu.mp3",
+        type : "Nhac",
+        timeMax :"04:02",
+        name: "Có chơi có chịu",
+        singer:"Kinak",
+        img: "./assets/fonts/img/CoChoiCoChiu.jpg"
+    },
+    {
+        id: 15,
+        fileName: "home.mp3",
+        type : "Nhac",
+        timeMax :"05:00",
+        name: "Home",
+        singer:"Của tui",
+        img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
+    },
+    {
+        id: 16,
+        fileName: "CuocVuiCoDon.mp3",
+        type : "Nhac",
+        timeMax :"05:05",
+        name: "Cuộc vui cô đơn",
+        singer:"Lê Bảo Bình",
+        img: "./assets/fonts/img/LeBaoBinh.jpg"
+    },
+    {
+        id: 17,
+        fileName: "TuMyNhan.mp3",
+        type : "Nhac",
+        timeMax :"03:11",
+        name: "Tư Mỹ Nhân Hề",
+        singer:"Kiều Chấn Vũ",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 18,
+        fileName: "TimEm.mp3",
+        type : "Nhac",
+        timeMax :"04:30",
+        name: "Tìm Em",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/TimEm.jpg"
+    },
+    {
+        id: 19,
+        fileName: "UyenUongHoDiep.mp3",
+        type : "Nhac",
+        timeMax :"04:31",
+        name: "Uyên Ương Hồ Điệp",
+        singer:"Hồ Quang Hiếu",
+        img: "./assets/fonts/img/GirlAll.jpg"
+    },
+    {
+        id: 20,
+        fileName: "ChoDinhMenhMimCuoi.mp3",
+        type : "Nhac",
+        timeMax :"03:58",
+        name: "Chờ định mệnh mĩm cười",
+        singer:"Minh Vương M4U",
+        img: "./assets/fonts/img/ChoDinhMenhMimCuoi.jpg"
+    },
+    {
+        id: 21,
+        fileName: "MuonKiepLaAnhEm.mp3",
+        type : "Nhac",
+        timeMax :"05:16",
+        name: "Muôn kiếp là anh em",
+        singer:"Du Thiên",
+        img: "./assets/fonts/img/MuonKiepLaAnhEm.jpg"
+    },
+    {
+        id: 22,
+        fileName: "DangDo.mp3",
+        type : "Nhac",
+        timeMax :"04:50",
+        name: "Dang dở",
+        singer:"NAl",
+        img: "./assets/fonts/img/DangDo.jpg"
+    }
+];
+var indexSelect = 0;
+var music = musicPersonnal.concat(musicTopSong);
+const newSongList = [
+		{	
+			id: 23,
+			fileName: "EmThich.mp3",
+			type: "Nhac",
+			timeMax: "02:56",
+			name: "Em Thích",
+			singer: "Seen, Lửa",
+			img: "./assets/fonts/img/EmThich.jpg"
+	    	},
+		{ 
+			id: 24,
+			fileName : "HenMotMai.mp3",
+			type : "Nhac",
+			timeMax : "04:43",
+			name : "Hẹn Một Mai",
+			singer : "Bùi Tuấn Anh",
+			img : "./assets/fonts/img/HenMotMai.jpg"
+		},
+		{ 
+			id: 25,
+			fileName : "TinhDau.mp3",
+			type : "Nhac",
+			timeMax : "04:56",
+			name : "Tình Đầu",
+			singer : "Tăng Duy Tân",
+			img : "./assets/fonts/img/TinhDau.jpg"
+		},
+		{ 
+			id: 26,
+			fileName : "Yeu5.mp3",
+			type : "Nhac",
+			timeMax : "04:00",
+			name : "Yêu 5",
+			singer : "Rhymastic",
+			img : "./assets/fonts/img/Yeu5.jpg"
+		},
+		{ 
+			id: 27,
+			fileName : "AnhDanhRoiNguoiYeuNay.mp3",
+			type : "Nhac",
+			timeMax : "03:37",
+			name : "Anh Đánh Rơi Người Yêu Này",
+			singer : "Andiez",
+			img : "./assets/fonts/img/AnhDanhRoiNguoiYeuNay.jpg"
+		},
+		{ 
+			id: 28,
+			fileName : "MotNganNoiDau.mp3",
+			type : "Nhac",
+			timeMax : "05:21",
+			name : "Một Ngàn Nỗi Đau",
+			singer : "Văn Mai Hương, Hứa Kim Tuyền",
+			img : "./assets/fonts/img/MotNganNoiDau.jpg"
+		},
+		{ 
+			id: 29,
+			fileName : "ChuyenDoiTa.mp3",
+			type : "Nhac",
+			timeMax : "03:28",
+			name : "Chuyện Đôi Ta",
+			singer : "Emcee L",
+			img : "./assets/fonts/img/ChuyenDoiTa.jpg "
+		},
+		{ 
+			id: 30,
+			fileName : "DauDeTruongThanh.mp3",
+			type : "Nhac",
+			timeMax : "05:30",
+			name : "Đau Để Trưởng Thành",
+			singer : "Only C",
+			img : "./assets/fonts/img/DauDeTruongThanh.jpg"
+		},
+		{ 
+			id: 31,
+			fileName : "TuSu.mp3",
+			type : "Nhac",
+			timeMax : "04:17",
+			name : "Tự Sự (Qua Bển Làm Chi OST)",
+			singer : "Orange",
+			img : "./assets/fonts/img/TuSu.jpg"
+		},
+		{ 
+			id: 32,
+			fileName : "SuytNuaThi.mp3",
+			type : "Nhac",
+			timeMax : "04:43",
+			name : "Suýt Nữa Thì (Chuyến Đi Của Thanh Xuân OST)",
+			singer : "Andiez",
+			img : "./assets/fonts/img/SuytNuaThi.jpg"
+		},
+		{ 
+			id: 33,
+			fileName : "PhoCuConAnh.mp3",
+			type : "Nhac",
+			timeMax : "03:53",
+			name : "Phố Cũ Còn Anh",
+			singer : " Quinn, Chilly",
+			img : "./assets/fonts/img/PhoCuConAnh.jpg"
+		},
+		{ 
+			id: 34,
+			fileName : "NoAiDoLoiXinLoi.mp3",
+			type : "Nhac",
+			timeMax : "05:37",
+			name : "Nợ Ai Đó Lời Xin Lỗi",
+			singer : "Bozitt",
+			img : "./assets/fonts/img/NoAiDoLoiXinLoi.jpg"
+		},
+		{ 
+			id: 35,
+			fileName : "AnhThuongEmNhatMa.mp3",
+			type : "Nhac",
+			timeMax : "03:13",
+			name : "Anh Thương Em Nhất Mà",
+			singer : "Lã. Log, TiB",
+			img : "./assets/fonts/img/AnhThuongEmNhatMa.jpg"
+		},
+		{ 
+			id: 36,
+			fileName : "MotBuocYeuDamVanDau.mp3",
+			type : "Nhac",
+			timeMax : "04:58",
+			name : "Một Bước Yêu Dặm Vạn Đau",
+			singer : "Mr.Siro",
+			img : "./assets/fonts/img/MotBuocYeuDamVanDau.jpg"
+		},
+		{ 
+			id: 37,
+			fileName : "BoEmVaoBalo.mp3",
+			type : "Nhac",
+			timeMax : "03:12",
+			name : "Bỏ Em Vào Balo",
+			singer : "Tân Trần, Freak D",
+			img : "./assets/fonts/img/BoEmVaoBalo.jpg"
+		},
+		{ 
+			id: 38,
+			fileName : "CoHenVoiThanhXuan.mp3",
+			type : "Nhac",
+			timeMax : "03:38",
+			name : "Có Hẹn Với Thanh Xuân",
+			singer : "MONSTAR",
+			img : "./assets/fonts/img/CoHenVoiThanhXuan.jpg"
+		},
+		{ 
+			id: 39,
+			fileName : "TinhYeuKhungLong.mp3",
+			type : "Nhac",
+			timeMax : "03:10",
+			name : "Tình Yêu Khủng Long",
+			singer : "Fay",
+			img : "./assets/fonts/img/TinhYeuKhungLong.jpg"
+		},
+		{ 
+			id: 40,
+			fileName : "TrenTinhBanDuoiTinhYeu.mp3",
+			type : "Nhac",
+			timeMax : "03:19",
+			name : "Trên Tình Bạn Dưới Tình Yêu",
+			singer : "MIN",
+			img : "./assets/fonts/img/TrenTinhBanDuoiTinhYeu.jpg"
+		},
+		{ 
+			id: 41,
+			fileName : "MotNha.mp3",
+			type : "Nhac",
+			timeMax : "03:05",
+			name : "Một Nhà",
+			singer : "Da LAB",
+			img : "./assets/fonts/img/MotNha.jpg"
+		},
+		{ 
+			id: 42,
+			fileName : "MinhCungNhauDongBang.mp3",
+			type : "Nhac",
+			timeMax : "04:12",
+			name : "Mình Cùng Nhau Đóng Băng",
+			singer : "Thùy Chi",
+			img : "./assets/fonts/img/MinhCungNhauDongBang.jpg"
+		}
+	];
+var indexSelect = 0;
+var music = musicPersonnal.concat(musicTopSong);
+music = music.concat(newSongList);
+//sự kiện trái tim
+let isPlaySong = true;
+var song = document.getElementById("song");
+const menuItemSlider = document.getElementsByClassName("navMenu-item");
+var heart_icon = document.querySelector('i.fa-heart');
+const abc = document.querySelector(".listTopSong");
+let boolean_heart = 0;
+const bodyHtml = document.querySelector("body");
+const performListCart = document.querySelector(".perform_Song-list_cart");
+addListSongtoPerformTopSong();
 addListSongtoPerform();
-const listIdSong = document.querySelectorAll(".song-cart-introduce-img i");
-const listGitPlay = document.querySelectorAll(".gitPlay");
-var arrSong = [];
-let indexSong = 0;
-song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
+var listSong = document.querySelectorAll(".perform_Song-cart");
+var listIdSong;
+var listGitPlay;
+changeListMusic(0);
+var indexSong = 0;
+var num = false;
+const containerRight = document.querySelector(".container_right");
+const listContent = document.getElementsByClassName("content");
+displayContent(listContent[0]);
+for(var i= 0;i<menuItemSlider.length;i++){
+    menuItemSlider[i].onclick = function(){
+        var index = indexFuction(this);
+        //thêm background
+        removeBackgroundMenuSlider();
+        addBackgroundMenuSlider(this);  
+        // hiển thị menu chức năng
+        nonDisplayContent();
+        displayContent(listContent[index]);
+        changeListMusic(index);
+        
+    }
+}
+function display_color(){
+    if(!Boolean(boolean_heart)){
+        Object.assign(heart_icon.style,{
+            color: '#c662ef',
+            fontWeight: '1000',
+        } );
+        boolean_heart = 1;
+    }
+    else{
+        Object.assign(heart_icon.style,{
+            color: '#fff',
+            fontWeight: '500',
+        } );
+        boolean_heart = 0;
+    }  
+}
+
+    function change_color_action(index){
+            var value = arr.get(index);
+            if(value == 0){
+                btn_action[index].style.color = 'red';
+                arr.set(index, 1);
+            }
+            else{
+                btn_action[index].style.color = '#fff';
+                arr.set(index,0);
+            }
+    }
+
+
+var btnPlay = document.querySelector('.button_play');
+
 var nextBtn = document.querySelector(".nextBtn");
 const previousBtn = document.querySelector(".backBtn");
 const songRanBtn = document.querySelector('.randomBtn');
@@ -170,11 +487,16 @@ const againeSongIcon = document.querySelector(".againSongBtn_icon");
 var isAgainSong = false;
 const inVolume = document.getElementById("input_volume");
 btnPlay.addEventListener("click", playSong);
-        console.log(song.currentTime);
+        var maxTime;
 function playSong(){
     var children = btnPlay.children;
+    maxTime = setInterval(displayTimer, 500);
     if(isPlaySong){
-        song.play()
+        if(!num){
+             song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
+             num = true;
+        }
+        song.play();
         isPlaySong = false;
         changeDisplay(children[0], children[1]);
         animationImageSong();
@@ -189,31 +511,42 @@ function playSong(){
     }
 
 }
+function indexSelectSong(temp){
+    var sum = 0;
+    if(temp > parseInt(musicPersonnal[musicPersonnal.length-1].id))
+    sum += musicPersonnal.length;
+    if(temp > parseInt(musicTopSong[musicTopSong.length-1].id))
+    sum += musicTopSong.length;
+    return temp-sum;
+}
 //trường hợp bth của hiệu ứng play and pause
 function playAndPause(dir){
+    indexSelect = indexSelectSong(indexSong);
     if(dir == 1){
-        listGitPlay[indexSong].style.visibility="visible";
-        listIdSong[indexSong].style.visibility = "hidden";
-        listIdSong[indexSong].style.display = "none";
+        listGitPlay[indexSelect].style.visibility="visible";
+        listIdSong[indexSelect].style.visibility = "hidden";
+        listIdSong[indexSelect].style.display = "none";
         
     }else{
-        listGitPlay[indexSong].style.visibility="hidden";
-        listIdSong[indexSong].style.visibility = "visible";
-        listIdSong[indexSong].style.display = "block";
+        listGitPlay[indexSelect].style.visibility="hidden";
+        listIdSong[indexSelect].style.visibility = "visible";
+        listIdSong[indexSelect].style.display = "block";
     }
     
 }
 //trường hợp next and previ 
 function playAndPauseNextPre(){
-    listGitPlay[indexSong].style.visibility="visible";
-    listIdSong[indexSong].style.visibility = "visible";
-    listIdSong[indexSong].style.display = "none";
+    indexSelect = indexSelectSong(indexSong);
+    listGitPlay[indexSelect].style.visibility="visible";
+    listIdSong[indexSelect].style.visibility = "visible";
+    listIdSong[indexSelect].style.display = "none";
 }
 
 //trường hợp clickSongGit
 function playClickSong(){
-    listIdSong[indexSong].style.visibility = "visible";
-    listIdSong[indexSong].style.display = "none";
+    indexSelect = indexSelectSong(indexSong);
+    listIdSong[indexSelect].style.visibility = "visible";
+    listIdSong[indexSelect].style.display = "none";
 }
 function displayTimer(){
     const {duration, currentTime} = song;
@@ -223,7 +556,7 @@ function displayTimer(){
         remainingTime.textContent = formatTimer(duration);
         crossbarPlayTime.max = duration;
         //tư duy thêm (false)
-        clearInterval(displayTimer);
+        clearInterval(maxTime);
     }
 
 }
@@ -272,14 +605,16 @@ crossbarPlayTime.oninput = function(){
 
 // thay đổi giá trị âm lượng
 inVolume.oninput = function(){
+    button.classList.remove("fa-volume-xmark");
+    button.classList.add("fa-volume-high");
     crossColorLeft(inVolume.value, inVolume);
-
     // xử lý thay đổi âm lượng
     song.volume = ""+inVolume.value;
+    
 }
 
 
-setInterval(displayTimer, 500);
+ 
 function changeDisplay(play, pause){
     play.style.display = 'none';
     pause.style.display = 'block';
@@ -288,15 +623,14 @@ function changeDisplay(play, pause){
 nextBtn.addEventListener('click', nextSong);
 function nextSong(){
     
+     restartListSong();
     indexSong += 1;
 
     if(indexSong == music.length){
         indexSong = 0;
+        changeListMusic(0);
+       
     }
-    
-    
-     
-
     if(!isSongRanBtn){
         changeSong(1);
     }else{
@@ -307,23 +641,26 @@ function nextSong(){
         song.play();
        
     }else{
+        
         playSong();
     }
     playAndPauseNextPre();
     removeSongSelected();
-    addSongSelected(listSong[indexSong]);
+    addSongSelected(listSong[indexSelectSong(indexSong)]);
     removeSongSelectedPlay();
+    
     addSongSelectedPlay(listSong[parseInt(indexSong)]);
-    SongPlayGit(indexSong);
-   
+    SongPlayGit(indexSelectSong(indexSong));
+   infSong();
 
 }
 previousBtn.addEventListener('click', previousSong);
 function previousSong(){
-    
+     restartListSong();
     indexSong -= 1;
     if(indexSong < 0){
         indexSong = music.length-1;
+        changeListMusic(2);
     }
     
    
@@ -345,10 +682,11 @@ function previousSong(){
     removeSongSelectedPlay();
     addSongSelectedPlay(listSong[parseInt(indexSong)]);
     SongPlayGit(indexSong);
-   
+    infSong();
 }
 
 function changeSong(dir){
+    
     if(dir == 1)
     {
         song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);  
@@ -398,12 +736,16 @@ function crossColorLeft(value, obj){
     var color = "linear-gradient(90deg, #fff "+ value+"%,"+ " rgb(58 38 96 / 90%)"+ value+"%)";
     obj.style.background = color;
 }
+function muteVolumeBar(value, obj){
+    var color = "linear-gradient(90deg, #FF0000 "+ value+"%,"+ " rgb(58 38 96 / 90%)"+ value+"%)";
+    obj.style.background = color;
+}
 function infSong(){
+    
     imgSong.setAttribute("src", `${music[indexSong].img}`);
     singerSong.textContent = music[indexSong].singer;
     nameSong.textContent = music[indexSong].name;
 }
-setInterval(infSong, 1000);
 
 // animation avatar
 function animationImageSong(){
@@ -486,13 +828,17 @@ function removeChangeList(dir){
 function addChangeList(obj){
     obj.classList.add("isSelect-changeList");
 }
-// click song
-for(var i = 0;i<listSong.length;i++){
-    listSong[i].onclick = function(){
-        removeSongSelected();
-        addSongSelected(this);
+//click song
+function isSelectSong(){
+    for(var i = 0;i<listSong.length;i++){
+        listSong[i].onclick = function(){
+            removeSongSelected();
+            addSongSelected(this);
+            
+        }
     }
 }
+
 
 //thêm class thuộc tính
 function removeSongSelected(){
@@ -501,30 +847,41 @@ function removeSongSelected(){
 }
 // xoá class thuộc tính
 function addSongSelected(obj){
+    
     obj.classList.add("is-selected");
 }
 addSongSelected(listSong[0]);
 addSongSelectedPlay(listSong[0]);
 // change theo select
 function playSongId(id){
+    
     if(indexSong != parseInt(id)){
     song.setAttribute("src", `./assets/fonts/music/${music[id].fileName}`);
     isPlaySong = true;
     indexSong = parseInt(id);
     }
+    infSong();
+    
     playSong();
 }
-for(var i = 0;i<listIdSong.length;i++){
-    listIdSong[i].onclick = function(){
-        playSongId(this.id);
-       removeSongSelectedPlay();
-       addSongSelectedPlay(listSong[parseInt(this.id)]);
-       SongPlayGit(this.id);
+function playlistSongId(){
+    for(var i = 0;i<listIdSong.length;i++){
+        listIdSong[i].onclick = function(){
+            restartListSong();
+            playSongId(this.id);
+        removeSongSelectedPlay();
+       
+        addSongSelectedPlay(listSong[this.id]);
+        SongPlayGit(this.id);
+        }
     }
+    
 }
+
 var idGitOld = 0;
 //chạy git play
 function SongPlayGit(id){
+    id = indexSelectSong(id);
     id = parseInt(id);
     listGitPlay[idGitOld].style.visibility = "hidden";
     listIdSong[id].style.visibility = "hidden";
@@ -543,6 +900,7 @@ function removeSongSelectedPlay(){
 }
 // xoá class thuộc tính
 function addSongSelectedPlay(obj){
+    
     obj.classList.add("isSelect-nav-item");
 }
 //dừng lại
@@ -555,12 +913,12 @@ for(var i = 0;i<listGitPlay.length;i++){
 
 //thêm danh sách bài hát vào mục trình diễn
 function addListSongtoPerform(){
-    for(var i=0;i<music.length;i++){
-        var nameSong = music[i].name;
-        var nameSinger = music[i].singer;
-        const id = music[i].id+"";
-        var imgSong = music[i].img;
-        var timeSong =  music[i].timeMax;
+    for(var i=0;i<musicPersonnal.length;i++){
+        var nameSong = musicPersonnal[i].name;
+        var nameSinger = musicPersonnal[i].singer;
+        const id = musicPersonnal[i].id+"";
+        var imgSong = musicPersonnal[i].img;
+        var timeSong =  musicPersonnal[i].timeMax;
         var tagName = '<li class="perform_Song-cart">\n'
                     +'<div class="perform_Song-cart-introduce">\n'
                     +'<i class="fa-solid fa-music"></i>\n'
@@ -587,9 +945,47 @@ function addListSongtoPerform(){
     
                 }
 }
+//thêm bài hát musicTopSong
+
+
+function addListSongtoPerformTopSong(){
+    for(var i=0;i<musicTopSong.length;i++){
+        var nameSong = musicTopSong[i].name;
+        var nameSinger = musicTopSong[i].singer;
+        const id = musicTopSong[i].id+"";
+        var imgSong = musicTopSong[i].img;
+        var timeSong =  musicTopSong[i].timeMax;
+        var index = i+1;
+        var tagName = '<li class="perform_Song-cart">\n'
+                    +'<div class="perform_Song-cart-introduce">\n'
+                    +'<p class="perform_Song-cart-text">#'+index+'</p>'
+                    +'<i class="fa-solid fa-music"></i>\n'
+                    +'<input type="checkbox" class="checkbox-song">'
+                    +'<div class="song-cart-introduce-img">\n'
+                    +'<div class="gitPlay"></div>\n'
+                    +' <img src="'+imgSong+'" alt="">\n'
+                    +'<i id="'+id+'" class="action_icon-play fa-solid fa-play "></i>\n'
+                    +'</div>\n'
+                    +'<div class="song-cart-introduce-text">\n'
+                    +'<p>'+nameSong+'</p>\n'
+                    +' <p>'+nameSinger+'</p>\n'
+                    +' </div>\n'
+                    +' </div>\n'
+                    +'<div class="perform_Song-cart-album">\n'
+                    +' <a href="">'+nameSong+'</a>\n'
+                    +' </div>\n'
+                    +'<div class="perform_Song-cart-time">\n'
+                    +'<i class="fa-solid fa-microphone"></i>\n'
+                    +' <span>'+timeSong+'</span>\n'
+                    +'</div>\n'
+                    +'</li>\n';
+                    abc.insertAdjacentHTML('beforebegin', tagName);
+    
+                }
+}
 
 // hiệu ứng click trên slider
-    const menuItemSlider = document.getElementsByClassName("navMenu-item");
+    
     function addBackgroundMenuSlider(obj){
         obj.classList.add("isSelect-nav-item");
     }
@@ -597,20 +993,62 @@ function addListSongtoPerform(){
         const classSelect = document.querySelector(".isSelect-nav-item");
         classSelect.classList.remove("isSelect-nav-item");
     }
+function changeListMusic(obj){
+    switch (obj){
+        case 0:{
+            //sai logic length chua fix duoc chay van ok
+            
+            listIdSong = document.querySelectorAll(".song-cart-introduce-img i");
+            listGitPlay = document.querySelectorAll(".gitPlay");
+            
+            
+            break;
+        }
+        case 1:{
+            break;
+        }
+        case 2:{
+            listIdSong = document.querySelectorAll(".zingchart-listSong .song-cart-introduce-img i");
+            listGitPlay = document.querySelectorAll(".zingchart-listSong .gitPlay");
+           
+            
+            break;
+        }
+        case 3:{
+            break;
+        }
+        case 4:{
+            break;
+        }
+        case 5:{
+            listIdSong = document.querySelectorAll(".newSong .song-cart-introduce-img i");
+            listGitPlay = document.querySelectorAll(".newSong .gitPlay");
+
+            break;
+        }
+        default: {break;};
+    }
+   
+    playlistSongId();
+    isSelectSong();
+}
+function restartListSong(){
+    var listGit = document.querySelectorAll(".gitPlay");
+    var listId = document.querySelectorAll(".song-cart-introduce-img i");
+    for(var i = 0;i<listGit.length;i++){
+        listGit[i].style.visibility = '';
+    }
+    for(var i = 0;i<listId.length;i++){
+        listId[i].style.display = '';
+        listId[i].style.visibility = '';
+    }
+
+}
+
 
 // đổi các menu chức năng trang
-displayContent(listContent[1]);
-for(var i= 0;i<menuItemSlider.length;i++){
-    menuItemSlider[i].onclick = function(){
-        var index = indexFuction(this);
-        //thêm background
-        removeBackgroundMenuSlider();
-        addBackgroundMenuSlider(this);  
-        // hiển thị menu chức năng
-        nonDisplayContent();
-        displayContent(listContent[index]);
-    }
-}
+//hiển thị content đầu tiên
+
 
 function indexFuction(obj){
     for(var i= 0;i<menuItemSlider.length;i++){
@@ -638,8 +1076,7 @@ button.onclick = function() {
         lastVolume = song.volume;
         lastColorValue = inVolume.value;
         song.volume = 0;
-        inVolume.value = 0;
-        crossColorLeft(inVolume.value,inVolume);
+        muteVolumeBar(inVolume.value,inVolume);
 
     } else if (!button.classList.contains("fa-volume-high")){
         button.classList.remove("fa-volume-xmark");
@@ -648,9 +1085,192 @@ button.onclick = function() {
         crossColorLeft(lastColorValue, inVolume);
     }
 }
-// ảnh chuyển động
-// const discoverIntroduce = document.getElementsByClassName("discover_introduce-cart");
-//  function transitionDiscoverIntroduce(){
-//     console.log("aaa");
-//  }
-// setInterval(transitionDiscoverIntroduce, "3000");
+
+
+
+const ctx = document.getElementById('myChart');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['19:00', '21:00', '23:00', '01:00', '03:00', '05:00', '07:00', '09:00', '11:00', '13:00', '15:00', '17:00'],
+        datasets: [{
+            label: 'Khúc lệ sầu ',
+            data: [8,6,8,14,18,22,24,25,27,26,29,20],
+
+            borderColor: [
+            
+                
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)'
+                
+            ],
+            borderWidth: 1
+        },
+        {
+            label: 'Tòng phu',
+            data: [7,5,7,9,6,14,16,18,21,20,18,15],
+
+            borderColor: [
+            
+                
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)'
+                
+                
+                
+            ],
+            borderWidth: 1
+        },
+        {
+            label: 'Có chơi có chịu',
+            data: [3,4,5,7,9,10,11,13,11,9,8,6],
+
+            borderColor: [
+            
+                
+                'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)',
+                 'rgba(255, 159, 64, 1)'
+                
+            ],
+            borderWidth: 1
+        }
+        ]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+//chuyển đăng nhập đăng ký
+const btn_login = document.querySelector(".form-register .formSelect .fun-login");
+const btn_register = document.querySelector(".form-login .formSelect .fun-register");
+const obLogin = document.querySelector(".form-login");
+const obRegister = document.querySelector(".form-register");
+
+btn_login.addEventListener("click",clickBtnLogin);
+function clickBtnLogin(){
+    
+    obRegister.style.display = 'none';
+    obLogin.style.display = '';
+
+}
+
+btn_register.addEventListener("click",clickBtnResgister);
+function clickBtnResgister(){
+    obRegister.style.display = '';
+    obLogin.style.display = 'none';
+
+}
+// đóng form user về menu chính
+const formUser = document.querySelector(".form-user");
+function closeFormUser(){
+        obRegister.style.display = 'none';
+        obLogin.style.display = '';
+        formUser.style.display = 'none';
+}
+
+// hiển thị form đăng nhập
+const clickLogin = document.querySelector(".textLogin");
+clickLogin.addEventListener("click",showFormLogin);
+function showFormLogin(){
+    formUser.style.display = '';
+}
+// xử lý đăng nhập
+const avatar = document.querySelector(".avatar img");
+const lUserName = document.querySelector("#loginUser");
+const lPasswrod = document.querySelector("#loginPass");
+const formLogin = document.getElementById("form-login");
+const loginSubmit = document.getElementById("login");
+loginSubmit.addEventListener("click",loginClick);
+function loginClick(){
+    var userName = lUserName.value;
+    var password = lPasswrod.value;
+    var index = checkUser(userName,password);
+    if(index != -1){
+        alert("Đăng nhập thành công");
+        changeAvatar(index);
+        closeFormUser();
+    }else{
+        alert("Sai tài khoản hoặc mật khẩu");
+    }
+}
+function changeAvatar(index){
+    avatar.setAttribute("src", `${listUser[index].img}`);
+    avatar.style.display ='';
+    clickLogin.style.display = 'none';
+}
+
+function checkUser(username, password){
+    var index = -1;
+    for(var i = 0;i<listUser.length;i++){
+        if(listUser[i].userName == username && listUser[i].password == password){
+            index = i;
+            break;
+        }
+    }
+    
+    return index;
+}
+// xử lý đăng ký
+const rUserName = document.querySelector("#reUsername");
+const rPassword = document.querySelector("#rePassword");
+const rConfirmPassword = document.querySelector("#reConfirmPassword");
+const re = document.getElementById("register");
+re.addEventListener("click",register );
+function register(){
+    
+    var username = rUserName.value;
+    var pwd = rPassword.value;
+    var confirmPassword = rConfirmPassword.value;
+    var index = checkUser(username,pwd);
+    if(index != -1){
+        alert("Trùng lặp tên khoản đã có");
+    }else if(pwd != confirmPassword)
+        alert("Mật khẩu không trùng khớp");
+    else{
+        var user = {
+            userName:username,
+            password:pwd,
+            img:"./assets/fonts/img/LeBaoBinh.jpg"
+        }
+        listUser.push(user);
+        alert("tạo tài khoản thành công");
+        clickBtnLogin();
+    }
+
+}
+
+
