@@ -2054,6 +2054,13 @@ button .fa-volume-xmark {
     display: flex;
    
 }
+.container-img-upcoming{
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 20px;
+}
 
 .img-upcoming{
     background-image: url('https://photo-zmp3.zmdcdn.me/banner/1/3/e/f/13ef77c1009167b46b7e6d0c933562fd.jpg');
@@ -2061,8 +2068,12 @@ button .fa-volume-xmark {
     height: 200px;
     background-repeat: no-repeat;
     flex-grow: 1;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     border-radius: 10px;
+}
+.img-upcoming:hover{
+    transform: scale(1.15,1.15);
+    cursor: pointer;
 }
 /* typePostcast */
 .radio-typePodcast{
