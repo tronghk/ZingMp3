@@ -671,6 +671,7 @@ button .fa-volume-xmark {
     position: fixed;
     z-index: 999;
     height: 70px;
+    background-color: #37075d;
 }
 
 .right_nav-controlbar i {
@@ -1593,7 +1594,8 @@ button .fa-volume-xmark {
 }
 
 .title_left-avatar p {
-    color: rgb(86, 77, 77);
+    color: #fff;
+    opacity: 0.7;
     margin-left: 10px;
     text-align: center;
     margin-top: 2px;
@@ -1834,12 +1836,16 @@ button .fa-volume-xmark {
     display: flex;
 
 }
+.cartMusicNew_item_text2 .cartMusicNew_text2-top{
+    font-size: 5rem;
+}
 
 .radio-listening_containers .radio-listening_container:last-child {
     margin: 0;
 }
 
 .radio-listening_container {
+    flex: 1;
     flex-grow: 1;
     margin-right: 20px;
     list-style-type: none;
@@ -2490,7 +2496,12 @@ button .fa-volume-xmark {
 
 .playlist_cart_six-name .playlist-name {
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 14px;
+}
+.playlist-nameUser a{
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 400;
 }
 
 .discover_careAbout-title {
@@ -2640,15 +2651,25 @@ button .fa-volume-xmark {
 }
 
 .discover_footer-cart {
-    width: 10.5%;
-    height: 65px;
+    margin: 10px;
+    flex: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    
+    border-radius: 8px;
+}
+.discover_footer-background{
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
     margin-right: 8px;
     margin-left: 8px;
     margin-top: 14px;
-    border-radius: 8px;
+    background-color: #fff;
+    width: 10.5%;
+    height: 65px;
 }
 
 .perform_Song-cart-text {
@@ -2852,6 +2873,9 @@ button .fa-volume-xmark {
     z-index: 9;
     border: 0;
   }
+.playlist_item_height-min{
+    height: 150px;
+}
 .formNonSelect:hover {
     background: #00bd68;
   }

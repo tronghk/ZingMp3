@@ -148,39 +148,39 @@ const musicTopSong = [
     },
     {
         id: 15,
-        fileName: "home.mp3",
+        fileName: "TayTraiChiTrang.mp3",
         type : "Nhac",
-        timeMax :"05:00",
-        name: "Home",
-        singer:"Của tui",
-        img: "https://images.alphacoders.com/781/thumb-1920-781562.jpg"
+        timeMax :"03:50",
+        name: "Tay Trái Chỉ Trăng",
+        singer:"Tát tát đỉnh",
+        img: "https://avatar-ex-swe.nixcdn.com/playlist/2020/11/17/a/a/3/2/1605603093650_500.jpg"
     },
     {
         id: 16,
-        fileName: "CuocVuiCoDon.mp3",
-        type : "Nhac",
-        timeMax :"05:05",
-        name: "Cuộc vui cô đơn",
-        singer:"Lê Bảo Bình",
-        img: "./assets/fonts/img/LeBaoBinh.jpg"
+        fileName: "AnhNoEm.mp3",
+        type : "Pro player",
+        timeMax :"04:27",
+        name: "Anh Nợ Em",
+        singer:"Phạm Trưởng",
+        img: "https://avatar-ex-swe.nixcdn.com/singer/avatar/2016/11/29/b/d/3/b/1480409604553.jpg"
     },
     {
         id: 17,
-        fileName: "TuMyNhan.mp3",
-        type : "Nhac",
-        timeMax :"03:11",
-        name: "Tư Mỹ Nhân Hề",
-        singer:"Kiều Chấn Vũ",
-        img: "./assets/fonts/img/GirlAll.jpg"
+        fileName: "MuonRuouToTinh.mp3",
+        type : "Pro player",
+        timeMax :"03:18",
+        name: "Mượn Rượu Tỏ Tình",
+        singer:"Emily, BigDaddy",
+        img: "https://avatar-ex-swe.nixcdn.com/playlist/2019/02/12/8/a/3/5/1549962821179.jpg"
     },
     {
         id: 18,
-        fileName: "TimEm.mp3",
-        type : "Nhac",
-        timeMax :"04:30",
-        name: "Tìm Em",
-        singer:"Hồ Quang Hiếu",
-        img: "./assets/fonts/img/TimEm.jpg"
+        fileName: "TroiGiauTroiMangDi.mp3",
+        type : "MV",
+        timeMax :"04:18",
+        name: "Trời Giấu Trời Mang Đi",
+        singer:"AMEE, ViruSs",
+        img: "https://avatar-ex-swe.nixcdn.com/playlist/2019/10/11/2/7/d/8/1570766694368.jpg"
     },
     {
         id: 19,
@@ -407,7 +407,7 @@ var indexSelect = 0;
 var music = musicPersonnal.concat(musicTopSong);
 music = music.concat(newSongList);
 //sự kiện trái tim
-let isPlaySong = true;
+
 var song = document.getElementById("song");
 const menuItemSlider = document.getElementsByClassName("navMenu-item");
 var heart_icon = document.querySelector('i.fa-heart');
@@ -488,6 +488,7 @@ var isAgainSong = false;
 const inVolume = document.getElementById("input_volume");
 btnPlay.addEventListener("click", playSong);
         var maxTime;
+let isPlaySong = true;
 function playSong(){
     var children = btnPlay.children;
     maxTime = setInterval(displayTimer, 500);
@@ -632,9 +633,9 @@ function nextSong(){
        
     }
     if(!isSongRanBtn){
-        changeSong(1);
+        changeSong();
     }else{
-       indexSong = changeSongRandom(1);
+       changeSongRandom();
     }
     animationImageSong();
     if(!isPlaySong){
@@ -652,6 +653,7 @@ function nextSong(){
     addSongSelectedPlay(listSong[parseInt(indexSong)]);
     SongPlayGit(indexSelectSong(indexSong));
    infSong();
+   
 
 }
 previousBtn.addEventListener('click', previousSong);
@@ -665,9 +667,9 @@ function previousSong(){
     
    
     if(!isSongRanBtn){
-        changeSong(-1);
+        changeSong();
     }else{
-        indexSong = changeSongRandom(-1);
+        changeSongRandom();
     }
     animationImageSong();
     if(!isPlaySong){
@@ -683,32 +685,20 @@ function previousSong(){
     addSongSelectedPlay(listSong[parseInt(indexSong)]);
     SongPlayGit(indexSong);
     infSong();
+    
 }
 
-function changeSong(dir){
-    
-    if(dir == 1)
-    {
+function changeSong(){
         song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);  
-    }else{
-
-        song.setAttribute("src", `./assets/fonts/music/${music[indexSong].fileName}`);
-    }
     
 }
-function changeSongRandom(dir){
+function changeSongRandom(){
     let numberRan = indexSong;
     while(numberRan == indexSong){
         numberRan = Math.floor(Math.random() * music.length);
     }
     indexSong = numberRan;
-    if(dir == 1)
-    {
-        song.setAttribute("src", `./assets/fonts/music/${music[numberRan].fileName}`);  
-    }else{
-        song.setAttribute("src", `./assets/fonts/music/${music[numberRan].fileName}`);
-    }
-    return numberRan;
+    song.setAttribute("src", `./assets/fonts/music/${music[numberRan].fileName}`);  
 }
 //xử lý ngẫu nhiên
 songRanBtn.onclick = function(){
@@ -745,6 +735,7 @@ function infSong(){
     imgSong.setAttribute("src", `${music[indexSong].img}`);
     singerSong.textContent = music[indexSong].singer;
     nameSong.textContent = music[indexSong].name;
+    remainingTime.textContent = music[indexSong].timeMax;
 }
 
 // animation avatar
@@ -1223,6 +1214,7 @@ function loginClick(){
         alert("Đăng nhập thành công");
         changeAvatar(index);
         closeFormUser();
+        document.querySelector(".scrollbar_isMark-card").style.display = 'none';
     }else{
         alert("Sai tài khoản hoặc mật khẩu");
     }
@@ -1272,5 +1264,5 @@ function register(){
     }
 
 }
-
+// đăng xuất
 
