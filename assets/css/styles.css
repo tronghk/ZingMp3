@@ -1990,11 +1990,11 @@ button .fa-volume-xmark {
 }
 
 .img-discover {
-    background-image: url('https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp…tars/c/5/5/0/c55064164b650dfcb4d729035e8c05ac.jpg');
+    /* background-image: url('https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp…tars/c/5/5/0/c55064164b650dfcb4d729035e8c05ac.jpg'); */
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
-    width: 100%;
+    width:  200px;
     height: 200px;
     border-radius: 10px;
     margin-bottom: 0;
@@ -2009,7 +2009,7 @@ button .fa-volume-xmark {
 .radio-discover_body {
 
     margin: 10px;
-    width: 100%;
+    width: 200px;
     height: 200px;
     opacity: 1;
     overflow: hidden;
@@ -2069,7 +2069,7 @@ button .fa-volume-xmark {
 }
 
 .img-upcoming{
-    background-image: url('https://photo-zmp3.zmdcdn.me/banner/1/3/e/f/13ef77c1009167b46b7e6d0c933562fd.jpg');
+    /* background-image: url(''); */
     width: auto;
     height: 200px;
     background-repeat: no-repeat;
@@ -2117,6 +2117,8 @@ button .fa-volume-xmark {
     background-image: url('https://photo-zmp3.zmdcdn.me/banner/1/3/e/f/13ef77c1009167b46b7e6d0c933562fd.jpg');
     width: auto;
     height: 115px;
+    background-size: cover;
+    background-position: left;
     background-repeat: no-repeat;
     flex-grow: 1;
     
@@ -2147,6 +2149,9 @@ button .fa-volume-xmark {
 .radio-chartsPostcast-img{
     width: 60px;
     height: 62px;
+     background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
     border-radius: 10px;
     padding: 19px;
     margin: 10px;
@@ -2237,6 +2242,9 @@ button .fa-volume-xmark {
 .radio-prominentNews-img{
     width: 60px;
     height: 62px;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
     border-radius: 10px;
     padding: 19px;
     margin: 10px;
