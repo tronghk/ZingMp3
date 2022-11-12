@@ -1241,7 +1241,7 @@ const rUserName = document.querySelector("#reUsername");
 const rPassword = document.querySelector("#rePassword");
 const rConfirmPassword = document.querySelector("#reConfirmPassword");
 const re = document.getElementById("register");
-re.addEventListener("click",register );
+re.addEventListener("click",register);
 function register(){
     
     var username = rUserName.value;
