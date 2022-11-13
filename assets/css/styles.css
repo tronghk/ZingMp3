@@ -1441,7 +1441,7 @@ button .fa-volume-xmark {
 .typeSong,
 .topSong,
 .movie {
-    display: none;
+   display: none; 
 }
 
 .discover_introduce-cart {
