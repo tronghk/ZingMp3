@@ -2721,7 +2721,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-      background-image: url("/ZingMp3/assets/fonts/img/kill.jpg");
+      background-image: url(/assets/fonts/img/kill.jpg);
       background-size: cover;
       background-position: center;
       background-color: #fff;
@@ -2732,7 +2732,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/tupleuvang.jpg");
+    background-image: url(/assets/fonts/img/tupleuvang.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2743,7 +2743,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/luachoncuaanh.jpg");
+    background-image: url(/assets/fonts/img/luachoncuaanh.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2754,7 +2754,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/domdom.jpg");
+    background-image: url(/assets/fonts/img/domdom.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2765,7 +2765,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/stay.jpg");
+    background-image: url(/assets/fonts/img/stay.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2776,7 +2776,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/AloneAlan.jpg");
+    background-image: url(/assets/fonts/img/AloneAlan.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2787,7 +2787,7 @@ button .fa-volume-xmark {
 
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/stweet\ dream.jpg");
+    background-image: url(/assets/fonts/img/stweet\ dream.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2800,7 +2800,7 @@ button .fa-volume-xmark {
 .box8{
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/how\ you\ like\ that.jpg");
+    background-image: url(/assets/fonts/img/how\ you\ like\ that.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2810,7 +2810,7 @@ button .fa-volume-xmark {
 .box9{
     max-width :330px;
     height: 190px;
-    background-image: url("/ZingMp3/assets/fonts/img/on\ the\ ground.jpg");
+    background-image: url(/assets/fonts/img/on\ the\ ground.jpg);
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -2913,7 +2913,7 @@ button .fa-volume-xmark {
 .boxsong{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/nhactre.jpg);
+    background-image: url(/assets/fonts/img/nhactre.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2924,7 +2924,7 @@ button .fa-volume-xmark {
 .boxsong1{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100aumy.jpg);
+    background-image: url(/assets/fonts/img/top100aumy.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2934,7 +2934,7 @@ button .fa-volume-xmark {
 .boxsong2{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100rap.jpg);
+    background-image: url(/assets/fonts/img/top100rap.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2944,7 +2944,7 @@ button .fa-volume-xmark {
 .boxsong3{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100EDM.jpg);
+    background-image: url(/assets/fonts/img/top100EDM.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2953,7 +2953,7 @@ button .fa-volume-xmark {
 .boxsong4{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100JPOP.jpg);
+    background-image: url(/assets/fonts/img/top100JPOP.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2962,7 +2962,7 @@ button .fa-volume-xmark {
 .boxsong5{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100EDMViet.jpg);
+    background-image: url(/assets/fonts/img/top100EDMViet.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2971,7 +2971,7 @@ button .fa-volume-xmark {
 .boxsong6{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhaphimV.jpg);
+    background-image: url(/assets/fonts/img/top100nhaphimV.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2980,7 +2980,7 @@ button .fa-volume-xmark {
 .boxsong7{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhactrinh.jpg);
+    background-image: url(/assets/fonts/img/top100nhactrinh.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2989,7 +2989,7 @@ button .fa-volume-xmark {
 .boxsong8{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhacdanceViet.jpg);
+    background-image: url(/assets/fonts/img/top100nhacdanceViet.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -2998,7 +2998,7 @@ button .fa-volume-xmark {
 .boxsong9{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhacphimhoa.jpg);
+    background-image: url(/assets/fonts/img/top100nhacphimhoa.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3007,7 +3007,7 @@ button .fa-volume-xmark {
 .boxsong10{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhaphhan.jpg);
+    background-image: url(/assets/fonts/img/top100nhaphhan.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3016,7 +3016,7 @@ button .fa-volume-xmark {
 .boxsong11{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhachoa.jpg);
+    background-image: url(/assets/fonts/img/top100nhachoa.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3025,7 +3025,7 @@ button .fa-volume-xmark {
 .boxsong12{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100nhachan.jpg);
+    background-image: url(/assets/fonts/img/top100nhachan.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3034,7 +3034,7 @@ button .fa-volume-xmark {
 .boxsong13{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100folk.jpg);
+    background-image: url(/assets/fonts/img/top100folk.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3043,7 +3043,7 @@ button .fa-volume-xmark {
 .boxsong14{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100rapaumy.jpg);
+    background-image: url(/assets/fonts/img/top100rapaumy.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3052,7 +3052,7 @@ button .fa-volume-xmark {
 .boxsong15{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100rockaumy.jpg);
+    background-image: url(/assets/fonts/img/top100rockaumy.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
@@ -3061,7 +3061,7 @@ button .fa-volume-xmark {
 .boxsong16{
     width: 220px;
     height: 250px;
-    background-image: url(/ZingMp3/assets/fonts/img/top100country.jpg);
+    background-image: url(/assets/fonts/img/top100country.jpg);
     border-radius: 15px;
     background-size: cover;
     background-position: center;
