@@ -1981,3 +1981,485 @@ button .fa-volume-xmark {
     color: #fff;
     font-weight: 700;
 }
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left:20px;
+}
+.movie{
+}
+._type_MV{
+    color:#fff;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.MV_list{
+    display:flex;
+    width: 100%;
+}
+
+.MV{
+    width: 33.33%;
+   
+}
+
+.add{
+    color: #ccc;
+    font-size: 16px;
+    margin-left: 250px;
+    margin-top: 5px;
+} 
+.add:hover{
+    color:#9b4de0;
+    text-decoration:underline;
+}
+.box{
+
+    max-width :330px;
+    height: 190px;
+      background-image: url("/ZingMp3/assets/fonts/img/kill.jpg");
+      background-size: cover;
+      background-position: center;
+      background-color: #fff;
+      border-radius: 14px;
+      
+}
+.box1{
+
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/tupleuvang.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.box2{
+
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/luachoncuaanh.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.box3{
+
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/domdom.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.box4{
+
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/stay.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.box5{
+
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/AloneAlan.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.box6{
+
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/stweet\ dream.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+
+
+
+.box8{
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/how\ you\ like\ that.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.box9{
+    max-width :330px;
+    height: 190px;
+    background-image: url("/ZingMp3/assets/fonts/img/on\ the\ ground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 14px;
+    
+}
+.mvtitle{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight: bold ;
+    
+}
+
+.mvtitle:hover {
+    color: #9b4de0;
+}
+.mv_artist_name{
+    color: #ccc;
+    font-size: 12px;
+    margin-left: 20px;
+   
+
+}
+.mv_artist_name:hover{
+    color:#9b4de0;
+    text-decoration:underline;
+}
+.overplay{
+    
+   height: 100%;
+   display: flex;
+   background-color: rgba(0,0,0,0.6);
+   justify-content: center;
+   align-items: center;
+   visibility: hidden;
+   border-radius: 14px;
+
+    
+}
+.box:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box1:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box2:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box3:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box3:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box4:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box5:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box6:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box8:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.box9:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.topsongtype{
+    color:#fff;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    
+}
+
+.boxsong{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/nhactre.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+
+  
+}
+.boxsong1{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100aumy.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+  
+}
+.boxsong2{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100rap.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+  
+}
+.boxsong3{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100EDM.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong4{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100JPOP.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong5{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100EDMViet.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong6{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhaphimV.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong7{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhactrinh.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong8{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhacdanceViet.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong9{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhacphimhoa.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong10{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhaphhan.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong11{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhachoa.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong12{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100nhachan.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong13{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100folk.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong14{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100rapaumy.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong15{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100rockaumy.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong16{
+    width: 220px;
+    height: 250px;
+    background-image: url(/ZingMp3/assets/fonts/img/top100country.jpg);
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+.boxsong:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong1:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong2:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong3:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong4:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong5:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong6:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong7:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong8:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong9:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+
+.boxsong10:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong11:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong12:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong13:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong14:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong15:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.boxsong16:hover .overplay{
+    visibility: visible;
+    transform: 0.5s;
+    
+}
+.top100songtittle{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 50px;
+    margin-top: 4px;
+    font-weight: bold ;
+}
+.top100songtittle:hover{
+    color: #9b4de0;
+}

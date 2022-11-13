@@ -248,7 +248,7 @@ function runCrossbarSong(){
         crossColorLeft(currentTime, crossbarPlayTime);
         crossbarPlayTime.value = currentTime;
         
-    }  
+    }
 }
 setInterval(runCrossbarSong, 20);
 setInterval(runTimer, 200);
